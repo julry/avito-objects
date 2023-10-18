@@ -1,6 +1,9 @@
 import { Screen1 } from './components/screens/Screen1';
 import { Screen2 } from './components/screens/Screen2';
 import { Screen3 } from './components/screens/Screen3';
+import { Screen4 } from './components/screens/Screen4';
+import { Screen5 } from './components/screens/Screen5';
+import { Screen6 } from './components/screens/Screen6';
 
 export const screens = [
     {
@@ -15,5 +18,16 @@ export const screens = [
         id: 2,
         component: Screen3
     },
-
+    {
+        id: 3,
+        component: Screen4
+    },
+    {
+        id: 4,
+        component: Screen5
+    },
+    {
+        id: 5,
+        component: Screen6
+    }
 ];

@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   }
 `;
 
-export const Location2 = () => {
+export const Location3 = () => {
     const { next, progress } = useProgress();
     const [isStartPopup, setIsStartPopup] = useState(true);
 
@@ -22,8 +22,8 @@ export const Location2 = () => {
             <LocationField onObjectClick={(id) => console.log(id)}/>
             {isStartPopup && (
                 <LocationStart
-                    title={'Кухня-ретровагон'}
-                    text={'Отправляйся навстречу правильным решениям'}
+                    title={'Чилл-переговорка'}
+                    text={'Тихое место, которое\nподходит для\nпродуктивной работы'}
                     onDisappear={() => setIsStartPopup(false)}
                 />
             )}

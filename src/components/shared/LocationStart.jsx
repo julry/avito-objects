@@ -10,6 +10,8 @@ const PopUpStyled = styled(PopUp)`
   top: 26vh;
   left: 50%;
   transform: translateX(-50%);
+  min-width: 63.5%;
+  text-align: center;
 `;
 
 export const LocationStart = ({title, text, onDisappear}) => {

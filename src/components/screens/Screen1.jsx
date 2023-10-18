@@ -3,7 +3,7 @@ import startBg from '../../assets/images/start-bg.svg';
 import { useProgress } from '../../hooks/useProgress';
 import { FlexWrapper } from '../shared/FlexWrapper';
 import { LogoHead } from '../shared/LogoHead';
-import { HighlightedText, TextMd, UnderlinedText } from '../shared/texts';
+import { HighlightedText, TextDivider, TextMd, UnderlinedText } from '../shared/texts';
 import { Button } from '../shared/Button';
 
 const Wrapper = styled(FlexWrapper)`
@@ -48,16 +48,16 @@ export const Screen1 = () => {
                 <TextWrapper>
                     <TextMd>
                         <b>Добро пожаловать!</b>
-                        {'\n\n'}
+                        <TextDivider />
                         Сегодня тебе предстоит почувствовать себя сотрудником отдела продаж и{'\u00A0'}погрузиться во{'\u00A0'}
                         внутреннюю кухню Авито. Приготовься — тебе нужно будет выполнить важное задание и{'\u00A0'}
                         помочь клиенту <UnderlinedText color={'blue'}>повысить прибыль</UnderlinedText>. Подключай свои навыки ведения переговоров,
                         задавай правильные вопросы и{'\u00A0'}развивай бизнес!
-                        {'\n\n'}
+                        <TextDivider />
                         Чтобы решить задачу, <HighlightedText color={'blue'}>ищи зацепки.</HighlightedText>
                         {'\n'}
                         Ценная информация <UnderlinedText color={'blue'}>прячется{'\u00A0'}в{'\u00A0'}мелочах</UnderlinedText>.
-                        {'\n\n'}
+                        <TextDivider />
                         Удачи, друллега!
                     </TextMd>
                 </TextWrapper>

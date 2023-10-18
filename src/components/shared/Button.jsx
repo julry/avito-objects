@@ -47,10 +47,14 @@ const ButtonContent = styled.div`
   }
   
   & div {
-    margin: 3px ${({$isReverse}) => $isReverse ? '10px 0 0' : '0 0 10px'};
+    margin: 0 ${({$isReverse}) => $isReverse ? '10px 0 0' : '0 0 10px'};
     transition: background 600ms;
     background: ${({$type, disabled}) => disabled ? '#FFFFFF' : TYPE_TO_COLOR[$type]};
     ${({$isReverse}) => $isReverse ? 'transform: scale(-1, 1)' : ''};
+  }
+  
+  & p {
+    margin-top: -3px;
   }
 `;
 

@@ -1,9 +1,10 @@
 import { screens } from '../screens.config';
 import { useState } from 'react';
+import { SEX_TYPES } from '../constants';
 
 const INITIAL_PROGRESS = {
     name: '',
-    sex: '',
+    sex: SEX_TYPES.male,
     isFinished: false,
     pickedObjects: [],
     isFinalCorrect: false,
@@ -41,6 +42,7 @@ export function useProgressInit() {
     return {
         progress,
         screen,
+        sex: progress.sex,
         pickedObjects: progress.pickedObjects,
         next,
         updateProgress,
