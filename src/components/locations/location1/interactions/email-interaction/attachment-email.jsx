@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { EmailWrapper } from './email-wrapper';
-import { TextSm } from '../../../../shared/texts';
+import { TextSm, TextXs } from '../../../../shared/texts';
 import { EmailChart } from './email-chart';
 
 const Content = styled.div`
@@ -33,27 +33,6 @@ const TdRight = styled(Td)`
   border-bottom: ${({$hasBottom}) => $hasBottom ? '1px solid var(--main_purple)' : 'none'};
 `;
 
-const Text = styled.p`
-  font-size: 12px;
-  line-height: 125%;
-
-  @media screen and (max-width: 320px){
-    font-size: 10px;
-  }
-
-  @media screen and (max-height: 600px) {
-    font-size: 10px;
-  }
-
-  @media screen and (min-height: 700px) {
-    font-size: 13px;
-  }
-
-  @media screen and (min-height: 900px) {
-    font-size: 16px;
-  }
-`;
-
 const Ul = styled.ul`
   --ul_padding: min(10px, 2.7vw);
   list-style-type: '— ';
@@ -83,9 +62,9 @@ export const AttachmentEmail = () => {
                           <TextSm>Проблема</TextSm>
                       </TdLeft>
                       <TdRight $borderRadius={'border-top-right-radius: 10px'}>
-                          <Text>
+                          <TextXs>
                               высокая конкуренция в{'\u00A0'}Зеленоградске — {'\n'}столице кошек
-                          </Text>
+                          </TextXs>
                       </TdRight>
                   </tr>
                   <tr>
@@ -93,7 +72,7 @@ export const AttachmentEmail = () => {
                           <TextSm>Решение</TextSm>
                       </TdLeft>
                       <TdRight>
-                          <Text>подключение тарифа{'\n'}«Максимальный»</Text>
+                          <TextXs>подключение тарифа{'\n'}«Максимальный»</TextXs>
                       </TdRight>
                   </tr>
                   <tr>
@@ -103,16 +82,16 @@ export const AttachmentEmail = () => {
                       <TdRight $hasBottom $borderRadius={'border-bottom-right-radius: 10px'}>
                           <Ul>
                               <li>
-                                  <Text>Автозагрузка объявлений</Text>
+                                  <TextXs>Автозагрузка объявлений</TextXs>
                               </li>
                               <li>
-                                  <Text>Оформление магазина</Text>
+                                  <TextXs>Оформление магазина</TextXs>
                               </li>
                               <li>
-                                  <Text>Скрытие конкурентов в{'\u00A0'}блоке рекомендаций</Text>
+                                  <TextXs>Скрытие конкурентов в{'\u00A0'}блоке рекомендаций</TextXs>
                               </li>
                               <li>
-                                  <Text>Информация о{'\u00A0'}компании на{'\u00A0'}каждом объявлении</Text>
+                                  <TextXs>Информация о{'\u00A0'}компании на{'\u00A0'}каждом объявлении</TextXs>
                               </li>
                           </Ul>
                       </TdRight>

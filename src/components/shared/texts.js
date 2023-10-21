@@ -49,6 +49,27 @@ export const TextSm = styled.p`
   }
 `;
 
+export const TextXs = styled.p`
+  font-size: 12px;
+  line-height: 125%;
+
+  @media screen and (max-width: 320px){
+    font-size: 10px;
+  }
+
+  @media screen and (max-height: 600px) {
+    font-size: 10px;
+  }
+
+  @media screen and (min-height: 700px) {
+    font-size: 13px;
+  }
+
+  @media screen and (min-height: 900px) {
+    font-size: 16px;
+  }
+`;
+
 export const HighlightedText = styled.span`
   background: var(--main_${({color}) => color});
   border-radius: 20px;

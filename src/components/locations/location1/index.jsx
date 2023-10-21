@@ -19,8 +19,7 @@ const Wrapper = styled.div`
 
 export const Location1 = ({ onStart }) => {
     const { next, progress, isFinished, setPickedObjects } = useProgress();
-    // const [isStartPopup, setIsStartPopup] =  useState(!isFinished);
-    const [isStartPopup, setIsStartPopup] =  useState(false);
+    const [isStartPopup, setIsStartPopup] =  useState(!isFinished);
     const [isChat, setIsChat] = useState(false);
     const [clicked, setClicked] = useState(null);
     const [picked, setPicked] = useState([]);

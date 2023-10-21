@@ -30,7 +30,7 @@ const Wrapper = styled(FlexWrapper)`
 `;
 
 const TitleWrapper = styled.p`
-  margin-bottom: 14px;
+  margin-bottom: min(14px, 3.7vw);
   text-align: center;
   min-width: max-content;
 `;
