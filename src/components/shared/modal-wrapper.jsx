@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { FlexWrapper } from './FlexWrapper';
+import { FlexWrapper } from './flex-wrapper';
 
 const Wrapper = styled(FlexWrapper)`
   position: absolute;

@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { LOCATION_START_DELAY } from '../../constants';
-import { ModalWrapper } from './ModalWrapper';
-import { PopUp } from './PopUp';
+import { ModalWrapper } from './modal-wrapper';
+import { PopUp } from './pop-up';
 import { TextMd } from './texts';
 
 const PopUpStyled = styled(PopUp)`
@@ -29,7 +29,7 @@ export const LocationStart = ({title, text, onDisappear}) => {
 
     useEffect(() => {
         if (isFinished) onDisappear?.();
-    }, [isFinished]);
+    }, [isFinished, onDisappear]);
 
     return (
         <ModalWrapper>

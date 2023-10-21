@@ -1,19 +1,18 @@
 import styled from 'styled-components';
-import { FlexWrapper } from '../shared/FlexWrapper';
-import { useProgress } from '../../hooks/useProgress';
+import { useState } from 'react';
 import meetingBg from '../../assets/images/meeting-bg.svg';
 import male from '../../assets/images/male.svg';
 import female from '../../assets/images/female.svg';
-import { LogoHead } from '../shared/LogoHead';
-import { HighlightedText, TextMd } from '../shared/texts';
-import { Button } from '../shared/Button';
-import { Input } from '../shared/Input';
-import { Hexagon } from '../shared/Hexagon';
-import { useState } from 'react';
+import { useProgress } from '../../hooks/useProgress';
 import { SEX_TYPES } from '../../constants';
+import { FlexWrapper } from '../shared/flex-wrapper';
+import { LogoHead } from '../shared/logo-head';
+import { HighlightedText, TextMd } from '../shared/texts';
+import { Button } from '../shared/button';
+import { Input } from '../shared/Input';
+import { Hexagon } from '../shared/hexagon';
 
 const Wrapper = styled(FlexWrapper)`
-  --screen_padding: 20px;
   height: 100%;
   padding: var(--screen_padding);
   align-items: center;

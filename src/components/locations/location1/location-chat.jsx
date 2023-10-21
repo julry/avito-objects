@@ -1,28 +1,28 @@
 import { useEffect, useMemo, useState } from 'react';
 import { getMessages } from './utils';
-import { ButtonCentered } from '../../shared/Button';
+import { ButtonCentered } from '../../shared/button';
 import styled from 'styled-components';
-import { ModalWrapper } from '../../shared/ModalWrapper';
-import { Chat } from '../../shared/Chat';
+import { ModalWrapper } from '../../shared/modal-wrapper';
+import { Chat } from '../../shared/chat';
 import buddy from '../../../assets/images/buddyFull.svg';
 import { LocationQuestion } from './location-question';
 import { LocationAnswer } from './location-answer';
 
 const ModalWrapperStyled = styled(ModalWrapper)`
-  padding: 20px 16px;
+  padding: var(--screen_padding) min(16px, 4.2vw);
 `;
 
 const ChatStyled = styled(Chat)`
-  margin: 0 auto 20px;
+  margin: 0 auto var(--screen_padding);
 `;
 
 const Buddy = styled.div`
   position: absolute;
   bottom: 0;
   right: 0;
-  height: 58.93vw; //221
+  height: 58.93vw; 
   max-height: 33vh;
-  width: 52.26vw; //196
+  width: 52.26vw;
   max-width: 29.3vh;
   background: url(${buddy}) no-repeat;
   background-size: contain;
@@ -58,7 +58,7 @@ export const LocationChat = ({ name, onStart }) => {
             >
                 {buttonTitle[part]}
             </ButtonCentered>
-            {part !== 2 && <Buddy/>}
+            {part < 2 && <Buddy/>}
         </ModalWrapperStyled>
     )
 }

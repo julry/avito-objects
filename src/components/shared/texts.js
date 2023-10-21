@@ -8,15 +8,23 @@ export const TextMd = styled.p`
   font-size: 16px;
 
   @media screen and (min-height: 700px) {
+    font-size: 17px;
+  }
+  
+  @media screen and (min-height: 800px) {
     font-size: 18px;
   }
 
   @media screen and (max-width: 320px){
-    font-size: 14px;
+    font-size: 13px;
   }
 
   @media screen and (max-height: 600px) {
-    font-size: 14px;
+    font-size: 13px;
+  }
+  
+  @media screen and (min-height: 900px) {
+    font-size: 20px;
   }
 `;
 
@@ -34,6 +42,10 @@ export const TextSm = styled.p`
   
   @media screen and (min-height: 700px) {
     font-size: 15px;
+  }
+  
+  @media screen and (min-height: 900px) {
+    font-size: 17px;
   }
 `;
 

@@ -1,5 +1,6 @@
 import buddy from '../../../assets/images/buddy.svg';
 import player from '../../../assets/images/player.svg';
+import gosha from '../../../assets/images/gosha-avatar.svg';
 import { TextDivider, UnderlinedText } from '../../shared/texts';
 
 export const getMessages = (name) => (
@@ -78,3 +79,32 @@ export const getQuestionMessages = (questionNumber) => (
         }
     ]
 );
+
+
+export const getPersonMessages = () => [
+    {
+        id: 'loc1_person0',
+        sender: 'Гоша коллега',
+        avatar: gosha,
+        color: 'red',
+        text: 'Только что вернулся от\u00A0нашего массажиста. ' +
+            'Теперь так хорошо себя чувствую, что готов выполнить все свои задачи на\u00A0месяц',
+        delay: 0,
+    },
+    {
+        id: 'loc1_person1',
+        sender: 'Я',
+        text: 'Корпоративный массажист? Не хватает только спортзала',
+        type: 'main',
+        delay: 1000,
+        avatar: player,
+    },
+    {
+        id: 'loc1_person2',
+        sender: 'Гоша коллега',
+        avatar: gosha,
+        color: 'red',
+        text: 'Очень даже хватает. Мне нравится заниматься там йогой, например. А если не любишь йогу, можно устроить силовую тренировку. Попробуй как-нибудь!',
+        delay: 2200,
+    }
+];

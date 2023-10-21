@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Message } from './Message';
+import { Message } from './message';
 import { message } from './keyframes';
 
 const MessageStyled = styled(Message)`

@@ -1,12 +1,11 @@
 import styled from 'styled-components';
-import { FlexWrapper } from '../../shared/FlexWrapper';
-import { Message } from '../../shared/Message';
-import { Chat } from '../../shared/Chat';
+import { FlexWrapper } from '../../shared/flex-wrapper';
+import { Chat } from '../../shared/chat';
 import { getQuestionMessages } from './utils';
 import { TextMd } from '../../shared/texts';
 import { scaleStaticAppear } from '../../shared/keyframes';
 import { ANIMATION_DURATION } from '../../../constants';
-import { MessageWrapper } from '../../shared/MessageWrapper';
+import { MessageWrapper } from '../../shared/message-wrapper';
 
 const Wrapper = styled(FlexWrapper)`
   margin: 0 auto 20px;

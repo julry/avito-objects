@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { MessageWrapper } from './MessageWrapper';
+import { MessageWrapper } from './message-wrapper';
 
 const Wrapper = styled.div`
   display: flex;

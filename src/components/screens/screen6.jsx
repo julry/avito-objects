@@ -3,14 +3,13 @@ import persMale from '../../assets/images/preQuestionMale.svg';
 import persFemale from '../../assets/images/preQuestionFemale.svg';
 import buddy from '../../assets/images/preQuestionBuddy.svg';
 import bg from '../../assets/images/preQuestionBg.svg';
-import { LogoHead } from '../shared/LogoHead';
-import { FlexWrapper } from '../shared/FlexWrapper';
+import { LogoHead } from '../shared/logo-head';
+import { FlexWrapper } from '../shared/flex-wrapper';
 import { HighlightedText, TextMd, UnderlinedText } from '../shared/texts';
 import { useProgress } from '../../hooks/useProgress';
-import { Button, ButtonNoIcon } from '../shared/Button';
+import { Button, ButtonNoIcon } from '../shared/button';
 
 const Wrapper = styled(FlexWrapper)`
-  --screen_padding: 20px;
   height: 100%;
   padding: var(--screen_padding) 18px;
   z-index: 2;
@@ -63,14 +62,16 @@ const ButtonsWrapper = styled.div`
 `;
 
 export const Screen6 = () => {
-    const { sex } = useProgress();
+    const { next, sex, resetToFirstLocation } = useProgress();
 
     return (
         <>
             <Wrapper>
                 <LogoHead $centered/>
                 <TextWrapper>
-                    <HighlightedText $isFirstWord color="blue">Пора рассказать о своей идее!</HighlightedText>
+                    <TextMd>
+                        <HighlightedText $isFirstWord color="blue">Пора рассказать о своей идее!</HighlightedText>
+                    </TextMd>
                     <Text>
                         Ты можешь еще погулять по{'\u00A0'}офису и{'\u00A0'}заглянуть в{'\u00A0'}подсказки.
                         Если уже придумал, <UnderlinedText color="blue"> как помочь «Дивным диванам» повысить продажи, </UnderlinedText>
@@ -78,8 +79,8 @@ export const Screen6 = () => {
                     </Text>
                 </TextWrapper>
                 <ButtonsWrapper>
-                    <Button type="dark">Дать ответ</Button>
-                    <ButtonNoIcon type="dark">Еще подумать</ButtonNoIcon>
+                    <Button type="dark" onClick={next}>Дать ответ</Button>
+                    <ButtonNoIcon type="dark" onClick={resetToFirstLocation}>Еще подумать</ButtonNoIcon>
                 </ButtonsWrapper>
             </Wrapper>
             <Background>

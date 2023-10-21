@@ -2,7 +2,7 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import { useProgress } from '../../../hooks/useProgress';
 import { LocationField } from './location-field';
-import { LocationStart } from '../../shared/LocationStart';
+import { LocationStart } from '../../shared/location-start';
 
 const Wrapper = styled.div`
   height: 100%;
@@ -14,8 +14,8 @@ const Wrapper = styled.div`
 `;
 
 export const Location2 = () => {
-    const { next, progress } = useProgress();
-    const [isStartPopup, setIsStartPopup] = useState(true);
+    const { next, progress, isFinished } = useProgress();
+    const [isStartPopup, setIsStartPopup] = useState(!isFinished);
 
     return (
         <Wrapper $isHideAdditional={isStartPopup}>

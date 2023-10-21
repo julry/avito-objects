@@ -1,8 +1,8 @@
-import { ModalWrapper } from '../shared/ModalWrapper';
+import { ModalWrapper } from '../shared/modal-wrapper';
 import styled, { keyframes } from 'styled-components';
 import { ANIMATION_DURATION } from '../../constants';
 import { HighlightedText, TextDivider, TextMd, UnderlinedText } from '../shared/texts';
-import { FlexWrapper } from '../shared/FlexWrapper';
+import { FlexWrapper } from '../shared/flex-wrapper';
 import { useState } from 'react';
 
 const Wrapper = styled(ModalWrapper)`
@@ -79,7 +79,7 @@ export const Rules = ({onClose}) => {
                         <HighlightedText $isFirstWord color='green'>Счётчик</HighlightedText> сверху показывает,
                         сколько подсказок и{'\u00A0'}взаимодействий тебе осталось пройти во{'\u00A0'}всей{'\u00A0'}игре.
                         <TextDivider/>
-                        Видишь{'\u00A0\u00A0'}<HighlightedText $isFirstWord color='purple'>подсвеченные иконки</HighlightedText>?{'\n'}
+                        Видишь{'\u00A0'}<HighlightedText color='purple'>подсвеченные иконки</HighlightedText>?{'\n'}
                         Там могут быть <UnderlinedText color='blue'>подсказки</UnderlinedText>, которые
                         помогут тебе найти решение.
                         <TextDivider/>

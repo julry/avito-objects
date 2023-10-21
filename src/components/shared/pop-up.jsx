@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { HighlightedText } from './texts';
 import { scaleAppear, scaleDisappear } from './keyframes';
 import { ANIMATION_DURATION, POPUP_DELAY } from '../../constants';
-import { FlexWrapper } from './FlexWrapper';
+import { FlexWrapper } from './flex-wrapper';
 
 const Wrapper = styled(FlexWrapper)`
   background: white;

@@ -1,9 +1,14 @@
-import { Screen1 } from './components/screens/Screen1';
-import { Screen2 } from './components/screens/Screen2';
-import { Screen3 } from './components/screens/Screen3';
-import { Screen4 } from './components/screens/Screen4';
-import { Screen5 } from './components/screens/Screen5';
-import { Screen6 } from './components/screens/Screen6';
+import { Screen1 } from './components/screens/screen1';
+import { Screen2 } from './components/screens/screen2';
+import { Screen3 } from './components/screens/screen3';
+import { Screen4 } from './components/screens/screen4';
+import { Screen5 } from './components/screens/screen5';
+import { Screen6 } from './components/screens/screen6';
+import { Screen7 } from './components/screens/screen7';
+import { Screen8 } from './components/screens/screen8';
+
+export const LOCATION_1_ID = 2;
+export const QUESTION_ID = 6;
 
 export const screens = [
     {
@@ -29,5 +34,13 @@ export const screens = [
     {
         id: 5,
         component: Screen6
+    },
+    {
+        id: 6,
+        component: Screen7
+    },
+    {
+        id: 7,
+        component: Screen8
     }
 ];

@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 import startBg from '../../assets/images/start-bg.svg';
 import { useProgress } from '../../hooks/useProgress';
-import { FlexWrapper } from '../shared/FlexWrapper';
-import { LogoHead } from '../shared/LogoHead';
+import { FlexWrapper } from '../shared/flex-wrapper';
+import { LogoHead } from '../shared/logo-head';
 import { HighlightedText, TextDivider, TextMd, UnderlinedText } from '../shared/texts';
-import { Button } from '../shared/Button';
+import { Button } from '../shared/button';
 
 const Wrapper = styled(FlexWrapper)`
   height: 100%;
-  padding: 20px;
+  padding: var(--screen_padding);
   align-items: center;
   z-index: 1;
   

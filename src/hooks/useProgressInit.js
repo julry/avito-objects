@@ -1,4 +1,4 @@
-import { screens } from '../screens.config';
+import { LOCATION_1_ID, QUESTION_ID, screens } from '../screens.config';
 import { useState } from 'react';
 import { SEX_TYPES } from '../constants';
 
@@ -22,21 +22,39 @@ export function useProgressInit() {
 
     const next = () => {
         const nextScreenIndex = currentScreenIndex + 1;
-        const canNext = nextScreenIndex <= screens.length - 1;
+        if (nextScreenIndex > screens.length - 1) return;
 
-        if (canNext) {
-            setCurrentScreenIndex(nextScreenIndex);
-        }
+        setCurrentScreenIndex(nextScreenIndex);
     };
 
     const prev = () => {
-        const nextScreenIndex = currentScreenIndex - 1;
+        const prevScreenIndex = currentScreenIndex - 1;
+        if (prevScreenIndex < LOCATION_1_ID) return;
+
+        setCurrentScreenIndex(prevScreenIndex);
 
     }
 
+    const setToQuestionScreen = () => {
+        setCurrentScreenIndex(QUESTION_ID);
+    }
+
+    const resetToFirstLocation = () => {
+        setCurrentScreenIndex(LOCATION_1_ID);
+        setProgress(prevProgress => ({...prevProgress, isFinished: true}));
+    }
 
     const updateProgress = (newProgress) => {
-        setProgress(progress => ({...progress, ...newProgress}));
+        setProgress(prevProgress => ({...prevProgress, ...newProgress}));
+    };
+
+
+    const setPickedObjects = (picked) => {
+        setProgress(prevProgress => ({
+            ...prevProgress,
+            pickedObjects: prevProgress.pickedObjects.includes(picked) ?
+                prevProgress.pickedObjects : [...prevProgress.pickedObjects, picked]
+        }));
     };
 
     return {
@@ -44,7 +62,12 @@ export function useProgressInit() {
         screen,
         sex: progress.sex,
         pickedObjects: progress.pickedObjects,
+        isFinished: progress.isFinished,
+        resetToFirstLocation,
+        setToQuestionScreen,
+        setPickedObjects,
         next,
+        prev,
         updateProgress,
     };
 }

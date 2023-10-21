@@ -1,11 +1,11 @@
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
 import logo from '../../assets/images/logo.svg';
 import info from '../../assets/images/infoSign.svg';
-import { Rules } from '../locations/Rules';
+import { Rules } from '../locations/rules';
 import { useProgress } from '../../hooks/useProgress';
 import { TOTAL_OBJECTS } from '../../constants';
-import { ButtonNoIcon } from './Button';
+import { ButtonNoIcon } from './button';
 
 const Wrapper = styled.div`
   position: absolute;
@@ -55,8 +55,7 @@ const InfoButton = styled.div`
 
 export const GameHeader = ({ isRules }) => {
     const [isShownRules, setIsShownRules] = useState(isRules);
-    const { pickedObjects } = useProgress();
-    const isFinished = useMemo(() => pickedObjects?.length >= TOTAL_OBJECTS, [pickedObjects]);
+    const { pickedObjects, isFinished, setToQuestionScreen } = useProgress();
 
     return (
         <>
@@ -64,7 +63,7 @@ export const GameHeader = ({ isRules }) => {
                 <LogoStyled />
                 <InfoWrapper>
                     {isFinished ? (
-                        <ButtonNoIcon type='action'>Дать ответ</ButtonNoIcon>
+                        <ButtonNoIcon type='action' onClick={setToQuestionScreen}>Дать ответ</ButtonNoIcon>
                     ) : (
                         <Count>
                             <Picked>{pickedObjects?.length ?? 0}</Picked>/{TOTAL_OBJECTS}

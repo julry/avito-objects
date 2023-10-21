@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { useEffect, useState } from 'react';
-import { FlexWrapper } from './components/shared/FlexWrapper';
+import { FlexWrapper } from './components/shared/flex-wrapper';
 import { ProgressProvider } from './context/ProgressContext';
 import { useProgressInit } from './hooks/useProgressInit';
 
@@ -9,10 +9,23 @@ const Wrapper = styled(FlexWrapper)`
   --main_green: #04E061;
   --main_purple: #965EEB;
   --main_red: #FF4053;
+  --screen_padding: min(20px, 5.3vw);
   height: ${({height}) => height}px;
   overflow-x: hidden;
   align-items: center;
   white-space: pre-line;
+
+  @media screen and (min-width: 640px) and (max-height: 800px) {
+    --screen_padding: 18px;
+  }
+  
+  @media screen and (min-width: 640px) and (max-height: 700px) {
+    --screen_padding: 14px;
+  }
+  
+  @media screen and (max-width: 300px) {
+    --screen_padding: 3.3vw;
+  }
 `;
 
 const ComponentWrapper = styled(FlexWrapper)`
@@ -26,7 +39,7 @@ const ComponentWrapper = styled(FlexWrapper)`
     min-width: 375px;
     border: 3px solid black;
     border-radius: 20px;
-    margin: 20px 0;
+    margin: var(--screen_padding) 0;
   }
 `;
 
