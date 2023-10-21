@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "./static/css/main.1f147228.css",
+    "main.js": "./static/js/main.4d3584db.js",
+    "static/media/Aeroport-bold.ttf": "./static/media/Aeroport-bold.2f517d3ff8af390ca151.ttf",
+    "static/media/Aeroport-regular.ttf": "./static/media/Aeroport-regular.74434805ce020eaa1ae3.ttf",
+    "static/media/Aeroport-light.ttf": "./static/media/Aeroport-light.f48ed83a242f97e4496f.ttf",
+    "static/media/Aeroport-bold.otf": "./static/media/Aeroport-bold.70da6da8bea10163e602.otf",
+    "static/media/Aeroport-regular.otf": "./static/media/Aeroport-regular.dd07158d2300315dc595.otf",
+    "static/media/Aeroport-light.otf": "./static/media/Aeroport-light.853f9885ab1f079893af.otf",
+    "static/media/note.svg": "./static/media/note.f0531bc21963e61c0cebe2eb3b4a7175.svg",
+    "static/media/start-bg.svg": "./static/media/start-bg.300c11eca6e74b5af051528a0c13ef7f.svg",
+    "static/media/poster.svg": "./static/media/poster.9c375aae5970be4cb48f93632f7b1acf.svg",
+    "static/media/preQuestionFemale.svg": "./static/media/preQuestionFemale.35cc9eac0a3ba752a4d1d1a86de94838.svg",
+    "static/media/female.svg": "./static/media/female.d4780f8fb14cb71778cff268895295cc.svg",
+    "static/media/preQuestionBuddy.svg": "./static/media/preQuestionBuddy.abd1332e9da9ddd22e489179dcb0ee49.svg",
+    "static/media/buddyFull.svg": "./static/media/buddyFull.3ca43a0d7c6ec6c9e263983d559c7108.svg",
+    "static/media/buddy.svg": "./static/media/buddy.b64cedf08261009bd3c161b1989327f7.svg",
+    "static/media/bookClosed.svg": "./static/media/bookClosed.8a266456ace1cbd3dc18ab22492c166c.svg",
+    "static/media/preQuestionMale.svg": "./static/media/preQuestionMale.b277d8b8b4af9bf44222687eb25d9ea6.svg",
+    "static/media/male.svg": "./static/media/male.f58b57c0373a18f9ee0df49337ea9e20.svg",
+    "static/media/bookOpened.svg": "./static/media/bookOpened.bbba147cde0dce7958ace5bc979ada84.svg",
+    "static/media/player.svg": "./static/media/player.c45bf8772a9042a1085b9d3506bebc2b.svg",
+    "static/media/gosha-avatar.svg": "./static/media/gosha-avatar.665f29f884dd19cc3b836a51f61eff3e.svg",
+    "static/media/logo.svg": "./static/media/logo.cbcac27063be5b8c536e396c809bb5b0.svg",
+    "static/media/questionBg.svg": "./static/media/questionBg.4a5a1fe13745dbb032d7b02f0c7ba9dd.svg",
+    "static/media/meeting-bg.svg": "./static/media/meeting-bg.cec965efe110ae08a9b143a4a78b414f.svg",
+    "static/media/finalBg.svg": "./static/media/finalBg.75343672af01ade86a317a15216bf0fd.svg",
+    "static/media/preQuestionBg.svg": "./static/media/preQuestionBg.928aa5c7bfbba85797f62d60a1c68abd.svg",
+    "index.html": "./index.html",
+    "static/media/capRightBlue.svg": "./static/media/capRightBlue.994238050e66feb3d671a5914f37edb7.svg",
+    "static/media/capRightGreen.svg": "./static/media/capRightGreen.a003418187c4262e481914bdd8627ca7.svg",
+    "static/media/capLeftBlue.svg": "./static/media/capLeftBlue.f83748d32be3221ec5cf70459e405ff1.svg",
+    "static/media/capLeftGreen.svg": "./static/media/capLeftGreen.ef96b28eb1715cd5e226321575f87a93.svg",
+    "static/media/infoSign.svg": "./static/media/infoSign.925d52b4cb75d26a435fa750b4ecf4cb.svg",
+    "main.1f147228.css.map": "./static/css/main.1f147228.css.map",
+    "main.4d3584db.js.map": "./static/js/main.4d3584db.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1f147228.css",
+    "static/js/main.4d3584db.js"
+  ]
+}
