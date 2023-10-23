@@ -122,7 +122,7 @@ export const QuestionChat = ({ onClose }) => {
                     type={'light'}
                     onClick={handleClick}
                 >
-                    {chosenQuestion ? 'Спасибо' : 'Ответить'}
+                    {chosenQuestion ? 'Спасибо!' : 'Ответить'}
                 </BottomAbsoluteButton>
             </Wrapper>
         </ModalWrapper>
