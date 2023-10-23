@@ -23,6 +23,7 @@ export const Chat = ({messages, ...props}) => {
                     avatar={message.avatar}
                     $delay={message.delay}
                     $marginTop={message.marginTop}
+                    isSmallPadding={message.isSmallPadding}
                 />
             ))}
         </div>

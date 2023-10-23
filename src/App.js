@@ -5,19 +5,22 @@ import { ProgressProvider } from './context/ProgressContext';
 import { useProgressInit } from './hooks/useProgressInit';
 
 const Wrapper = styled(FlexWrapper)`
-  
   --screen_padding: min(20px, 5.3vw);
   height: ${({height}) => height}px;
   overflow-x: hidden;
   align-items: center;
   white-space: pre-line;
-
+  
   @media screen and (min-width: 640px) and (max-height: 800px) {
     --screen_padding: 18px;
   }
   
   @media screen and (min-width: 640px) and (max-height: 700px) {
     --screen_padding: 14px;
+  }
+
+  @media screen and (max-height: 650px){
+    --screen_padding: min(14px, 3.7vw);
   }
   
   @media screen and (max-width: 300px) {

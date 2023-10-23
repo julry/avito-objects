@@ -101,3 +101,14 @@ export const ButtonNoIcon = ({className, type, children, disabled, onClick}) => 
     </ButtonStyled>
 );
 
+
+export const BottomAbsoluteButton = styled(Button)`
+  position: absolute;
+  bottom: min(28px, 7.5vw);
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media screen and (max-height: 650px) {
+    bottom: min(20px, 5.3vw);
+  }
+`;

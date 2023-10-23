@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import note from '../../../../assets/images/note.svg';
 import { ModalWrapper } from '../../../shared/modal-wrapper';
-import { Button } from '../../../shared/button';
+import { BottomAbsoluteButton } from '../../../shared/button';
 
 const NoteStyled = styled.div`
   position: absolute;
@@ -11,11 +11,7 @@ const NoteStyled = styled.div`
   background-size: cover;
 `;
 
-const ButtonStyled = styled(Button)`
-  position: absolute;
-  bottom: min(28px, 7.5vw);
-  left: 50%;
-  transform: translateX(-50%);
+const ButtonStyled = styled(BottomAbsoluteButton)`
   z-index: 4;
 `;
 

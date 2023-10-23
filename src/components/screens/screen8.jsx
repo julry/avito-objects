@@ -170,6 +170,30 @@ export const Screen8 = () => {
 
     const handleSubmit = () => {
         if (isSending) return;
+        setIsSending(true);
+        const GOOGLE_FORM_ACTION_URL = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSf6qnE9YLykqeS06pkYdu6MH8ZjP5dOPYvfnGKbUbeZ94MDaQ/formResponse';
+        const NAME_ID = 'entry.1376185839';
+        const SEX_ID = 'entry.428680492';
+        const CONTACT_ID = 'entry.1839573744';
+        const formData = new FormData();
+
+        formData.append(NAME_ID, progress?.name);
+        formData.append(SEX_ID, progress?.sex);
+        formData.append(CONTACT_ID, contact);
+
+        const myInit = {
+            method: 'POST',
+            mode: 'no-cors',
+            body: formData
+        };
+
+        const myRequest = new Request(GOOGLE_FORM_ACTION_URL, myInit);
+
+        fetch(myRequest).then(() => {
+            setIsSend(true);
+        }).finally(() => {
+            setIsSending(false);
+        });
         setIsSend(true);
     };
 
