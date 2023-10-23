@@ -1,13 +1,12 @@
 import { useMemo, useState } from 'react';
 import styled from 'styled-components';
 import { useProgress } from '../../../hooks/useProgress';
-import { LocationField } from './location-field';
 import { LocationStart } from '../../shared/location-start';
 import { CupInteraction } from './interactions/cup-interaction';
 import { VideoInteraction } from './interactions/video-interaction';
 import { InternsInteraction } from './interactions/interns-interaction';
+import { LocationField } from './location-field';
 import { OBJECTS_LENGTH } from './constants';
-
 
 const Wrapper = styled.div`
   height: 100%;
@@ -27,9 +26,8 @@ const Wrapper = styled.div`
 `;
 
 export const Location3 = () => {
-    const { next, progress, isFinished, setPickedObjects } = useProgress();
-    const [isStartPopup, setIsStartPopup] = useState(false);
-    // const [isStartPopup, setIsStartPopup] = useState(!isFinished);
+    const { next, isFinished, setPickedObjects } = useProgress();
+    const [isStartPopup, setIsStartPopup] = useState(!isFinished);
     const [clicked, setClicked] = useState(null);
     const [picked, setPicked] = useState([]);
 
@@ -46,8 +44,7 @@ export const Location3 = () => {
     const handleClose = () => {
         if (picked.length === OBJECTS_LENGTH) next();
         else setClicked(null);
-    }
-
+    };
 
     return (
         <Wrapper

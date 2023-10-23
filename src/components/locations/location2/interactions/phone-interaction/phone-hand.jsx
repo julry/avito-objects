@@ -152,4 +152,4 @@ export const PhoneHand = ({ onClick, ...props }) => (
             </clipPath>
         </defs>
     </svg>
-)
+);

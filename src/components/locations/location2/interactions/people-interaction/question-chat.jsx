@@ -1,15 +1,15 @@
 import { useMemo, useState } from 'react';
 import styled from 'styled-components';
+import { ANIMATION_DURATION, SEX_TYPES } from '../../../../../constants';
+import { useProgress } from '../../../../../hooks/useProgress';
 import { FlexWrapper } from '../../../../shared/flex-wrapper';
 import { ModalWrapper } from '../../../../shared/modal-wrapper';
 import { Chat } from '../../../../shared/chat';
-import { useProgress } from '../../../../../hooks/useProgress';
-import { getPeopleInteractionMessages } from './utils';
 import { QuestionTitle } from '../../../../shared/question-title';
 import { scaleStaticAppear } from '../../../../shared/keyframes';
-import { ANIMATION_DURATION, SEX_TYPES } from '../../../../../constants';
 import { MessageWrapper } from '../../../../shared/message-wrapper';
 import { Button } from '../../../../shared/button';
+import { getPeopleInteractionMessages } from './utils';
 
 const Wrapper = styled(FlexWrapper)`
   align-items: center;
@@ -44,7 +44,6 @@ const Answer = styled(MessageWrapper)`
   }
 `;
 
-
 export const QuestionChat = ({ onChooseQuestion }) => {
     const { sex } = useProgress();
     const [question, setQuestion] = useState(null);
@@ -76,5 +75,5 @@ export const QuestionChat = ({ onChooseQuestion }) => {
                 <Button type={'light'} onClick={() => onChooseQuestion(question)}> Ответить </Button>
             </Wrapper>
         </ModalWrapper>
-    )
-}
+    );
+};

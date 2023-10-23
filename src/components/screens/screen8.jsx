@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import bg from '../../assets/images/finalBg.svg';
-import { LogoHead } from '../shared/logo-head';
-import { HighlightedText, TextDivider, TextMd, UnderlinedText } from '../shared/texts';
-import { Button } from '../shared/button';
 import { useProgress } from '../../hooks/useProgress';
 import { SEX_TYPES } from '../../constants';
 import { Input } from '../shared/Input';
+import { Button } from '../shared/button';
+import { HighlightedText, TextDivider, TextMd, UnderlinedText } from '../shared/texts';
+import { LogoHead } from '../shared/logo-head';
 import { FlexWrapper } from '../shared/flex-wrapper';
 
 const Wrapper = styled.div`
@@ -207,18 +207,21 @@ export const Screen8 = () => {
                             <>
                                 <HighlightedText color="green">Правильно!</HighlightedText>{'\u00A0\u00A0'}
                                 Ты сегодня здорово поработал{progress.sex === SEX_TYPES.female ? 'а ' : ' '}
-                                и{'\u00A0'}отлично справил{progress.sex === SEX_TYPES.female ? 'ась' : 'ся'} с{'\u00A0'}задачей.{'\u00A0'}
+                                и{'\u00A0'}отлично справил{progress.sex === SEX_TYPES.female ? 'ась ' : 'ся '}
+                                с{'\u00A0'}задачей.{'\u00A0'}
                             </>
                         ) : (
                             <>
                                 <HighlightedText color="red">Это неверный ответ</HighlightedText>,{'\u00A0'}
-                                но ты все равно отлично сегодня поработал{progress.sex === SEX_TYPES.female ? 'а' : ''}!
+                                но ты все равно отлично сегодня
+                                поработал{progress.sex === SEX_TYPES.female ? 'а' : ''}!
                                 <TextDivider />
                             </>
                         )
                         }
-                        <UnderlinedText color="blue">Продажи </UnderlinedText> — это{'\u00A0'}важная составляющая любого бизнеса, поэтому
-                        в{'\u00A0'}Авито выстроена программа обучения, а{'\u00A0'}коллеги всегда готовы прийти на{'\u00A0'}помощь.
+                        <UnderlinedText color="blue">Продажи </UnderlinedText> — это{'\u00A0'}важная составляющая
+                        любого бизнеса, поэтому в{'\u00A0'}Авито выстроена программа обучения, а{'\u00A0'}коллеги
+                        всегда готовы прийти на{'\u00A0'}помощь.
                         <TextDivider />
                         Прокачай навыки еще больше на {'\n'}<HighlightedText color="blue">стажировке в
                         {'\u00A0'}отделе продаж</HighlightedText>{'\u00A0'}Авито!
@@ -269,17 +272,18 @@ export const Screen8 = () => {
                                     />
                                     <RadioIconStyled/>
                                     <span>
-                                         Я согласен(а) на <Link href={'https://fut.ru/personal_data_policy/'} target="_blank">
-                                        обработку персональных данных</Link> и получение информационных сообщений
+                                         Я согласен(а) на{'\u00A0'}
+                                        <Link href={'https://fut.ru/personal_data_policy/'} target="_blank">
+                                        обработку персональных данных</Link> и{'\u00A0'}получение информационных
+                                        сообщений
                                      </span>
                                 </RadioButtonLabel>
                             </>
                         )}
-
                     </Form>
                 )}
             </Wrapper>
             <Background />
         </>
-    )
-}
+    );
+};

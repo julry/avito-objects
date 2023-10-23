@@ -6,4 +6,3 @@ export const Screen5 = () => (
         <Location3 />
     </LocationWrapper>
 );
-

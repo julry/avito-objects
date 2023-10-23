@@ -48,7 +48,7 @@ export const VideoInteraction = ({ onClose }) => {
                 $timeout.current = null;
             }
         }
-    }, []);
+    }, [part]);
 
     const handleNextQuestions = (selectedQuestions) => {
         setQuestions(selectedQuestions);

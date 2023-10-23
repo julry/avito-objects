@@ -14,9 +14,9 @@ const ButtonsWrapper = styled.div`
 `;
 
 const ButtonStyled = styled(Button)`
-    & + & {
-      margin-left: min(12px, 3vw);
-    }
+  & + & {
+    margin-left: min(12px, 3vw);
+  }
 `;
 
 export const LocationWrapper = ({ children, canPrev, canNext, isRules, isShownHeader = true }) => {
@@ -45,5 +45,5 @@ export const LocationWrapper = ({ children, canPrev, canNext, isRules, isShownHe
                 </ButtonsWrapper>
             )}
         </>
-    )
-}
+    );
+};

@@ -1,11 +1,11 @@
 import { useMemo, useState } from 'react';
 import styled from 'styled-components';
+import { useProgress } from '../../../../../hooks/useProgress';
+import { QuestionTitle } from '../../../../shared/question-title';
+import { TextSm } from '../../../../shared/texts';
 import { ChatWrapper } from './chat-wrapper';
 import { getNextMessages, getStartMessages } from './messages';
 import { ChatMessage } from './chat-message';
-import { QuestionTitle } from '../../../../shared/question-title';
-import { TextSm } from '../../../../shared/texts';
-import { useProgress } from '../../../../../hooks/useProgress';
 
 const Wrapper = styled.div`
   padding: min(15px, 4vw);
@@ -44,13 +44,13 @@ const Message = styled.div`
   }
 `;
 
-export const ChatQuestion = ({ onNext }) => {
+export const ChatQuestion = () => {
     const {next} = useProgress();
     const [answer, setAnswer] = useState(null);
     const [isAnswered, setIsAnswered] = useState(false);
     const messages = useMemo(() => (
         isAnswered ? getNextMessages(answer) : getStartMessages()
-    ), [isAnswered]);
+    ), [isAnswered, answer]);
 
     const handleClick = () => {
         if (isAnswered) next();

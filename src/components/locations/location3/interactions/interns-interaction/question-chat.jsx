@@ -1,16 +1,16 @@
 import { useMemo, useState } from 'react';
 import styled from 'styled-components';
+import { useProgress } from '../../../../../hooks/useProgress';
 import { FlexWrapper } from '../../../../shared/flex-wrapper';
 import { ModalWrapper } from '../../../../shared/modal-wrapper';
 import { Chat } from '../../../../shared/chat';
-import { useProgress } from '../../../../../hooks/useProgress';
-import { getAnswerMessages, getPeopleInteractionMessages } from './utils';
 import { QuestionTitle } from '../../../../shared/question-title';
 import { scaleStaticAppear } from '../../../../shared/keyframes';
 import { ANIMATION_DURATION, SEX_TYPES } from '../../../../../constants';
 import { MessageWrapper } from '../../../../shared/message-wrapper';
-import { BottomAbsoluteButton, Button } from '../../../../shared/button';
+import { BottomAbsoluteButton } from '../../../../shared/button';
 import { TextSm } from '../../../../shared/texts';
+import { getAnswerMessages, getPeopleInteractionMessages } from './utils';
 
 const Wrapper = styled(FlexWrapper)`
   align-items: center;
@@ -56,6 +56,7 @@ export const QuestionChat = ({ onClose }) => {
     const { sex } = useProgress();
     const [question, setQuestion] = useState(null);
     const [chosenQuestion, setChosenQuestion] = useState(null);
+
     const messages = useMemo(() => (
         getPeopleInteractionMessages().map((mess, i) => ({
             ...mess,

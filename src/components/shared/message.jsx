@@ -30,4 +30,4 @@ export const Message = ({ className, type, avatar, ...props }) => (
         <MessageWrapper type={type} {...props} />
         <Avatar src={avatar}/>
     </Wrapper>
-)
+);

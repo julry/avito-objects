@@ -1,10 +1,8 @@
-import { PhoneHand } from './phone-hand';
+import { useState } from 'react';
 import styled from 'styled-components';
 import { shakeWithStop } from '../../../../shared/keyframes';
-import { useState } from 'react';
-import { ChatWrapper } from './chat-wrapper';
 import { ChatQuestion } from './chat-question';
-import { useProgress } from '../../../../../hooks/useProgress';
+import { PhoneHand } from './phone-hand';
 
 const Wrapper = styled.div`
   position: absolute;
@@ -23,5 +21,5 @@ export const PhoneInteraction = () => {
             {stage === 0 && <PhoneHand onClick={() => setStage(prevStage => prevStage + 1)}/>}
             {stage === 1 && <ChatQuestion />}
         </Wrapper>
-    )
-}
+    );
+};

@@ -15,4 +15,4 @@ export const AnswerChat = ({ onClose }) => (
         </Wrapper>
         <BottomAbsoluteButton type="light" onClick={onClose}>Круто, спасибо!</BottomAbsoluteButton>
     </ModalWrapper>
-)
+);

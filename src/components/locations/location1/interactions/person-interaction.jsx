@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import { ModalWrapper } from '../../../shared/modal-wrapper';
 import { FlexWrapper } from '../../../shared/flex-wrapper';
 import { Chat } from '../../../shared/chat';
-import { getPersonMessages } from '../utils';
 import { Button } from '../../../shared/button';
+import { getPersonMessages } from '../utils';
 
 const Wrapper = styled(FlexWrapper)`
   height: 100%;

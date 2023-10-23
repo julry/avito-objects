@@ -32,22 +32,20 @@ export function useProgressInit() {
         if (prevScreenIndex < LOCATION_1_ID) return;
 
         setCurrentScreenIndex(prevScreenIndex);
-
-    }
+    };
 
     const setToQuestionScreen = () => {
         setCurrentScreenIndex(QUESTION_ID);
-    }
+    };
 
     const resetToFirstLocation = () => {
         setCurrentScreenIndex(LOCATION_1_ID);
         setProgress(prevProgress => ({...prevProgress, isFinished: true}));
-    }
+    };
 
     const updateProgress = (newProgress) => {
         setProgress(prevProgress => ({...prevProgress, ...newProgress}));
     };
-
 
     const setPickedObjects = (picked) => {
         setProgress(prevProgress => ({

@@ -43,7 +43,6 @@ const ComponentWrapper = styled(FlexWrapper)`
   }
 `;
 
-
 function App() {
   const [height, setHeight] = useState(100);
   const progress = useProgressInit();

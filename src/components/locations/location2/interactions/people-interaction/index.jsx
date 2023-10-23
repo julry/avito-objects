@@ -37,5 +37,5 @@ export const PeopleInteraction = ({onClose}) => {
             {stage === 2 && (<AnswerChat onClose={onClose} />)}
             <People $isFront={stage === 0} />
         </>
-    )
-}
+    );
+};

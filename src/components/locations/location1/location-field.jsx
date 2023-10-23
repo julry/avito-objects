@@ -429,5 +429,4 @@ export const LocationField = ({ onObjectClick, ...props }) => (
             </clipPath>
         </defs>
     </svg>
-
-)
+);

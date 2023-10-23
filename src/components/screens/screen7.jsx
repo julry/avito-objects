@@ -60,11 +60,11 @@ const ButtonWrapper = styled.div`
 export const Screen7 = () => {
     const { next, updateProgress } = useProgress();
     const [chosenAnswer, setChosenAnswer] = useState(0);
+
     const handleNext = () => {
         if (chosenAnswer === 0) updateProgress({isFinalCorrect: true});
-
         next();
-    }
+    };
 
     return (
         <>
@@ -130,5 +130,5 @@ export const Screen7 = () => {
             </Wrapper>
             <Background />
         </>
-    )
-}
+    );
+};

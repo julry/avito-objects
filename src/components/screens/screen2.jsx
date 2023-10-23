@@ -1,5 +1,5 @@
-import styled from 'styled-components';
 import { useState } from 'react';
+import styled from 'styled-components';
 import meetingBg from '../../assets/images/meeting-bg.svg';
 import male from '../../assets/images/male.svg';
 import female from '../../assets/images/female.svg';
@@ -135,5 +135,5 @@ export const Screen2 = () => {
             </Wrapper>
             <Image />
         </>
-    )
-}
+    );
+};

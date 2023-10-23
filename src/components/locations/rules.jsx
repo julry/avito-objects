@@ -1,9 +1,9 @@
-import { ModalWrapper } from '../shared/modal-wrapper';
+import { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { ANIMATION_DURATION } from '../../constants';
+import { ModalWrapper } from '../shared/modal-wrapper';
 import { HighlightedText, TextDivider, TextMd, UnderlinedText } from '../shared/texts';
 import { FlexWrapper } from '../shared/flex-wrapper';
-import { useState } from 'react';
 
 const Wrapper = styled(ModalWrapper)`
   z-index: 98;
@@ -62,6 +62,7 @@ const Content = styled.div`
 
 export const Rules = ({onClose}) => {
     const [isClosing, setIsClosing] = useState(false);
+
     const handleClose = () => {
         if (isClosing) return;
         setIsClosing(true);

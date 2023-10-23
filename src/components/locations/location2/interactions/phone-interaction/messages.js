@@ -141,4 +141,4 @@ export const getNextMessages = (answer) => [
         ),
         delay: 800,
     },
-]
+];

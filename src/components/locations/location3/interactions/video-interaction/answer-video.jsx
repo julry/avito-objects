@@ -5,7 +5,7 @@ import { BottomAbsoluteButton } from '../../../../shared/button';
 import { getMessages } from './constants';
 
 const Wrapper = styled.div`
-    padding: var(--screen_padding);
+  padding: var(--screen_padding);
 `;
 
 export const AnswerVideo = ({ questions, onNext }) => {
@@ -16,5 +16,5 @@ export const AnswerVideo = ({ questions, onNext }) => {
             </Wrapper>
             <BottomAbsoluteButton type="light" onClick={onNext}>Спасибо за мастер-класс!</BottomAbsoluteButton>
         </ModalWrapper>
-    )
-}
+    );
+};

@@ -1,12 +1,11 @@
 import styled from 'styled-components';
+import { ANIMATION_DURATION } from '../../../constants';
 import { FlexWrapper } from '../../shared/flex-wrapper';
 import { Chat } from '../../shared/chat';
-import { getQuestionMessages } from './utils';
-import { TextMd } from '../../shared/texts';
 import { scaleStaticAppear } from '../../shared/keyframes';
-import { ANIMATION_DURATION } from '../../../constants';
 import { MessageWrapper } from '../../shared/message-wrapper';
 import { QuestionTitle } from '../../shared/question-title';
+import { getQuestionMessages } from './utils';
 
 const Wrapper = styled(FlexWrapper)`
   margin: 0 auto 20px;
@@ -59,4 +58,5 @@ export const LocationQuestion = ({ chosenAnswer, onChooseAnswer }) => (
             </Answers>
         </QuestionBlock>
     </Wrapper>
-)
+);
+

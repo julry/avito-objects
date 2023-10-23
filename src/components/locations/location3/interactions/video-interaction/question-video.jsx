@@ -1,7 +1,7 @@
 import styled from 'styled-components';
+import { useState } from 'react';
 import { PopUp } from '../../../../shared/pop-up';
 import { TextDivider, TextSm } from '../../../../shared/texts';
-import { useState } from 'react';
 import { QuestionTitle } from '../../../../shared/question-title';
 import { MessageWrapper } from '../../../../shared/message-wrapper';
 import { FlexWrapper } from '../../../../shared/flex-wrapper';
@@ -51,7 +51,7 @@ export const QuestionVideo = ({ onNext }) => {
 
     const handleClick = () => {
         onNext(questions.sort());
-    }
+    };
 
     return (
         <>

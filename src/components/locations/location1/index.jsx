@@ -2,11 +2,11 @@ import { useMemo, useState } from 'react';
 import styled from 'styled-components';
 import { useProgress } from '../../../hooks/useProgress';
 import { LocationStart } from '../../shared/location-start';
+import { PersonInteraction } from './interactions/person-interaction';
+import { EmailInteraction } from './interactions/email-interaction';
 import { LocationField } from './location-field';
 import { LocationChat } from './location-chat';
-import { PersonInteraction } from './interactions/person-interaction';
 import { OBJECTS_LENGTH } from './constants';
-import { EmailInteraction } from './interactions/email-interaction';
 
 const Wrapper = styled.div`
   height: 100%;
@@ -59,12 +59,8 @@ export const Location1 = ({ onStart }) => {
             )}
             <LocationField onObjectClick={handleObjectClick}/>
             {isChat && <LocationChat name={progress.name} onStart={handleStart} />}
-            {clicked === 'gosha' && (
-                <PersonInteraction onClose={handleClose} />
-            )}
-            {clicked === 'email' && (
-                <EmailInteraction onClose={handleClose} />
-            )}
+            {clicked === 'gosha' && <PersonInteraction onClose={handleClose} />}
+            {clicked === 'email' && <EmailInteraction onClose={handleClose} />}
         </Wrapper>
     );
 };

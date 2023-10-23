@@ -9,4 +9,3 @@ const Wrapper = styled(FlexWrapper)`
 `;
 
 export const ModalWrapper = (props) => <Wrapper {...props} />
-

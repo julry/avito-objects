@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { EmailWrapper } from './email-wrapper';
 import { TextSm, TextXs } from '../../../../shared/texts';
 import { EmailChart } from './email-chart';
+import { EmailWrapper } from './email-wrapper';
 
 const Content = styled.div`
   width: 100%;
@@ -53,55 +53,53 @@ const Chart = styled.div`
   }
 `;
 
-export const AttachmentEmail = () => {
-  return (
-      <EmailWrapper>
-          <Content>
-              <Table>
-                  <tr>
-                      <TdLeft $borderRadius={'border-top-left-radius: 10px'}>
-                          <TextSm>Проблема</TextSm>
-                      </TdLeft>
-                      <TdRight $borderRadius={'border-top-right-radius: 10px'}>
-                          <TextXs>
-                              высокая конкуренция в{'\u00A0'}Зеленоградске — {'\n'}столице кошек
-                          </TextXs>
-                      </TdRight>
-                  </tr>
-                  <tr>
-                      <TdLeft>
-                          <TextSm>Решение</TextSm>
-                      </TdLeft>
-                      <TdRight>
-                          <TextXs>подключение тарифа{'\n'}«Максимальный»</TextXs>
-                      </TdRight>
-                  </tr>
-                  <tr>
-                      <Td $borderRadius={'border-bottom-left-radius: 10px'}>
-                          <TextSm>Услуги</TextSm>
-                      </Td>
-                      <TdRight $hasBottom $borderRadius={'border-bottom-right-radius: 10px'}>
-                          <Ul>
-                              <li>
-                                  <TextXs>Автозагрузка объявлений</TextXs>
-                              </li>
-                              <li>
-                                  <TextXs>Оформление магазина</TextXs>
-                              </li>
-                              <li>
-                                  <TextXs>Скрытие конкурентов в{'\u00A0'}блоке рекомендаций</TextXs>
-                              </li>
-                              <li>
-                                  <TextXs>Информация о{'\u00A0'}компании на{'\u00A0'}каждом объявлении</TextXs>
-                              </li>
-                          </Ul>
-                      </TdRight>
-                  </tr>
-              </Table>
-              <Chart>
-                  <EmailChart />
-              </Chart>
-          </Content>
-      </EmailWrapper>
-  );
-};
+export const AttachmentEmail = () => (
+    <EmailWrapper>
+      <Content>
+          <Table>
+              <tr>
+                  <TdLeft $borderRadius={'border-top-left-radius: 10px'}>
+                      <TextSm>Проблема</TextSm>
+                  </TdLeft>
+                  <TdRight $borderRadius={'border-top-right-radius: 10px'}>
+                      <TextXs>
+                          высокая конкуренция в{'\u00A0'}Зеленоградске — {'\n'}столице кошек
+                      </TextXs>
+                  </TdRight>
+              </tr>
+              <tr>
+                  <TdLeft>
+                      <TextSm>Решение</TextSm>
+                  </TdLeft>
+                  <TdRight>
+                      <TextXs>подключение тарифа{'\n'}«Максимальный»</TextXs>
+                  </TdRight>
+              </tr>
+              <tr>
+                  <Td $borderRadius={'border-bottom-left-radius: 10px'}>
+                      <TextSm>Услуги</TextSm>
+                  </Td>
+                  <TdRight $hasBottom $borderRadius={'border-bottom-right-radius: 10px'}>
+                      <Ul>
+                          <li>
+                              <TextXs>Автозагрузка объявлений</TextXs>
+                          </li>
+                          <li>
+                              <TextXs>Оформление магазина</TextXs>
+                          </li>
+                          <li>
+                              <TextXs>Скрытие конкурентов в{'\u00A0'}блоке рекомендаций</TextXs>
+                          </li>
+                          <li>
+                              <TextXs>Информация о{'\u00A0'}компании на{'\u00A0'}каждом объявлении</TextXs>
+                          </li>
+                      </Ul>
+                  </TdRight>
+              </tr>
+          </Table>
+          <Chart>
+              <EmailChart />
+          </Chart>
+      </Content>
+    </EmailWrapper>
+);

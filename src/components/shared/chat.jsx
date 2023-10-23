@@ -10,22 +10,20 @@ const MessageStyled = styled(Message)`
   margin-top: ${({$marginTop}) => $marginTop ? $marginTop + '!important' : ''};
 `;
 
-export const Chat = ({messages, ...props}) => {
-    return (
-        <div {...props}>
-            {messages.map(message => (
-                <MessageStyled
-                    key={message.id}
-                    title={message.sender}
-                    text={message.text}
-                    type={message.type}
-                    color={message.color}
-                    avatar={message.avatar}
-                    $delay={message.delay}
-                    $marginTop={message.marginTop}
-                    isSmallPadding={message.isSmallPadding}
-                />
-            ))}
-        </div>
-    );
-};
+export const Chat = ({messages, ...props}) => (
+    <div {...props}>
+        {messages.map(message => (
+            <MessageStyled
+                key={message.id}
+                title={message.sender}
+                text={message.text}
+                type={message.type}
+                color={message.color}
+                avatar={message.avatar}
+                $delay={message.delay}
+                $marginTop={message.marginTop}
+                isSmallPadding={message.isSmallPadding}
+            />
+        ))}
+    </div>
+);

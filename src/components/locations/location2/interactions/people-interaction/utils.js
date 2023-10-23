@@ -54,4 +54,3 @@ export const getPeopleInteractionAnswerMessages = () => [
         delay: 1000,
     }
 ];
-

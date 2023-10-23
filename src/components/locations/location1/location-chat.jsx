@@ -1,12 +1,12 @@
 import { useEffect, useMemo, useState } from 'react';
-import { getMessages } from './utils';
-import { ButtonCentered } from '../../shared/button';
 import styled from 'styled-components';
+import buddy from '../../../assets/images/buddyFull.svg';
+import { ButtonCentered } from '../../shared/button';
 import { ModalWrapper } from '../../shared/modal-wrapper';
 import { Chat } from '../../shared/chat';
-import buddy from '../../../assets/images/buddyFull.svg';
 import { LocationQuestion } from './location-question';
 import { LocationAnswer } from './location-answer';
+import { getMessages } from './utils';
 
 const ModalWrapperStyled = styled(ModalWrapper)`
   padding: var(--screen_padding) min(16px, 4.2vw);
@@ -42,11 +42,11 @@ export const LocationChat = ({ name, onStart }) => {
         0: () => <ChatStyled messages={getMessages(name)} />,
         1: () => <LocationQuestion chosenAnswer={questionNumber} onChooseAnswer={(q) => setQuestionNumber(q)}/>,
         2: () => <LocationAnswer chosenAnswer={questionNumber} />,
-    }), [questionNumber, setQuestionNumber]);
+    }), [questionNumber, setQuestionNumber, name]);
 
     useEffect(() => {
         if (part > 2) onStart?.();
-    }, [part]);
+    }, [part, onStart]);
 
     return (
         <ModalWrapperStyled>
@@ -60,5 +60,5 @@ export const LocationChat = ({ name, onStart }) => {
             </ButtonCentered>
             {part < 2 && <Buddy/>}
         </ModalWrapperStyled>
-    )
-}
+    );
+};

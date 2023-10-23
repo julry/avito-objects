@@ -1,14 +1,14 @@
 import { useMemo, useState } from 'react';
 import styled from 'styled-components';
 import { useProgress } from '../../../hooks/useProgress';
-import { LocationField } from './location-field';
 import { LocationStart } from '../../shared/location-start';
 import { PosterInteraction } from './interactions/poster-interaction';
-import { OBJECTS_LENGTH } from './constants';
 import { NoteInteraction } from './interactions/note-interaction';
 import { FolderInteraction } from './interactions/folder-interaction';
 import { PeopleInteraction } from './interactions/people-interaction';
 import { PhoneInteraction } from './interactions/phone-interaction';
+import { LocationField } from './location-field';
+import { OBJECTS_LENGTH } from './constants';
 
 const Wrapper = styled.div`
   height: 100%;
@@ -52,7 +52,7 @@ export const Location2 = () => {
             setPickedObjects('phoneChat');
             setIsAllPicked(true);
         }
-    }
+    };
 
     const showReadyPoster = useMemo(() => picked.includes('poster'), [picked]);
     const isFirstHandHidden = useMemo(() => (

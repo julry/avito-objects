@@ -3,10 +3,10 @@ import persMale from '../../assets/images/preQuestionMale.svg';
 import persFemale from '../../assets/images/preQuestionFemale.svg';
 import buddy from '../../assets/images/preQuestionBuddy.svg';
 import bg from '../../assets/images/preQuestionBg.svg';
+import { useProgress } from '../../hooks/useProgress';
 import { LogoHead } from '../shared/logo-head';
 import { FlexWrapper } from '../shared/flex-wrapper';
 import { HighlightedText, TextMd, UnderlinedText } from '../shared/texts';
-import { useProgress } from '../../hooks/useProgress';
 import { Button, ButtonNoIcon } from '../shared/button';
 
 const Wrapper = styled(FlexWrapper)`
@@ -88,5 +88,5 @@ export const Screen6 = () => {
                 <Buddy />
             </Background>
         </>
-    )
-}
+    );
+};

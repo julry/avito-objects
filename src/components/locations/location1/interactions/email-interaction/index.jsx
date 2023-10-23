@@ -34,5 +34,5 @@ export const EmailInteraction = ({ onClose }) => {
                 </>
             )}
         </ModalWrapper>
-    )
-}
+    );
+};

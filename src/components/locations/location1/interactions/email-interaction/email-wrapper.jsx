@@ -40,4 +40,4 @@ export const EmailWrapper = ({ children }) => (
         </Header>
         {children}
     </Wrapper>
-)
+);

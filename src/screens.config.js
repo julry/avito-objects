@@ -42,5 +42,5 @@ export const screens = [
     {
         id: 7,
         component: Screen8
-    }
+    },
 ];

@@ -30,5 +30,5 @@ export const InternsInteraction = ({onClose}) => {
             {stage === 1 && (<QuestionChat onClose={onClose} />)}
             {stage === 0 && <People />}
         </>
-    )
-}
+    );
+};
