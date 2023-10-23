@@ -37,6 +37,7 @@ const Ul = styled.ul`
   --ul_padding: min(10px, 2.7vw);
   list-style-type: '— ';
   padding-left: calc(var(--ul_padding) + 8px);
+  
   & li + li {
     margin-top: 5px;
   }

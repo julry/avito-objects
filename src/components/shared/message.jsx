@@ -4,7 +4,7 @@ import { MessageWrapper } from './message-wrapper';
 const Wrapper = styled.div`
   display: flex;
   align-items: flex-end;
-  justify-content: ${({$type}) => $type === 'main' ? 'space-between' : 'flex-end'};
+  justify-content: flex-end;
   flex-direction: ${({$type}) => $type === 'main' ? 'row' : 'row-reverse'};
 
   & + & {

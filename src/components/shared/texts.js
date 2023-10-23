@@ -24,7 +24,7 @@ export const TextMd = styled.p`
   }
   
   @media screen and (min-height: 900px) {
-    font-size: 20px;
+    font-size: 22px;
   }
 `;
 
@@ -41,11 +41,11 @@ export const TextSm = styled.p`
   }
   
   @media screen and (min-height: 700px) {
-    font-size: 15px;
+    font-size: 17px;
   }
   
   @media screen and (min-height: 900px) {
-    font-size: 17px;
+    font-size: 19px;
   }
 `;
 

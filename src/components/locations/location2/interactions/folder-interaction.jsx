@@ -24,7 +24,7 @@ const Question = styled.div`
 const Book = styled.div`
   margin-top: var(--screen_padding);
   background: no-repeat center center;
-  background-size: cover;
+  background-size: contain;
   height: min(139px, 37.06vw);
 `;
 

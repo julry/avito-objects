@@ -16,11 +16,15 @@ const Wrapper = styled(FlexWrapper)`
 `;
 
 const PopupStyled = styled(PopUp)`
-    width: 100%;
+  width: 100%;
 `;
 
 const QuestionTitleStyled = styled(QuestionTitle)`
   margin-top: min(26px, 7.6vw);
+
+  @media screen and (max-height: 650px) {
+    margin-top: min(15px, 4vw);
+  }
 `;
 
 const Poster = styled.div`
@@ -29,6 +33,11 @@ const Poster = styled.div`
   height: min(211px, 56.26vw);
   background: url(${poster}) no-repeat center center;
   background-size: cover;
+  
+  @media screen and (max-height: 650px) {
+    width: min(141px, 37.6vw);
+    height: min(190px, 50.66vw);
+  }
 `;
 
 const Answer = styled.div`
@@ -40,6 +49,7 @@ const Answer = styled.div`
   align-items: baseline;
   border-radius: 10px;
   background: white;
+  cursor: pointer;
   box-shadow: inset 0 0 0 3px var(--main_${({$isActive, $isAnswered, $isCorrect}) => (
       $isActive ? $isAnswered ? ($isCorrect ? 'green' : 'red') : 'blue' : ''
   )});
@@ -54,6 +64,10 @@ const Answer = styled.div`
   
   &:last-of-type {
     margin-bottom: min(28px, 7.5vw);
+    
+    @media screen and (max-height: 650px) {
+      margin-bottom: min(15px, 4vw);
+    }
   }
 `;
 
@@ -123,7 +137,7 @@ export const PosterInteraction = ({onClose}) => {
                     $isAnswered={isAnswered}
                 >
                     <Number>3</Number>
-                    <TextSm>Один из стажеров</TextSm>
+                    <TextSm>Один из стажёров</TextSm>
                     {isAnswered && answer === 3 && (
                         <AdditionalText $isError>
                             Почти! Так любит говорить твой{'\u00A0'}наставник

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import styled from 'styled-components';
 import { useProgress } from '../../../hooks/useProgress';
 import { LocationField } from './location-field';
@@ -7,26 +7,37 @@ import { PosterInteraction } from './interactions/poster-interaction';
 import { OBJECTS_LENGTH } from './constants';
 import { NoteInteraction } from './interactions/note-interaction';
 import { FolderInteraction } from './interactions/folder-interaction';
+import { PeopleInteraction } from './interactions/people-interaction';
+import { PhoneInteraction } from './interactions/phone-interaction';
 
 const Wrapper = styled.div`
   height: 100%;
   width: 100%;
   
   & .object {
+    cursor: pointer;
     opacity: ${({$isHideAdditional}) => $isHideAdditional ? 0 : 1};
   }
   
+  & .people {
+    opacity: ${({$isPeopleHidden}) => $isPeopleHidden ? 0 : 1};
+  }
+  
   & #note_object {
-    opacity: ${({$clicked}) => $clicked === 'note' ? 0 : 1};
+    opacity: ${({$isFirstHandHidden}) => $isFirstHandHidden ? 0 : 1};
+  }
+  
+  & #poster_ready {
+    opacity: ${({$showReadyPoster}) => $showReadyPoster ? 1 : 0};
   }
 `;
 
 export const Location2 = () => {
-    const { next, progress, isFinished, setPickedObjects } = useProgress();
-    // const [isStartPopup, setIsStartPopup] = useState(!isFinished);
-    const [isStartPopup, setIsStartPopup] = useState(false);
+    const { isFinished, setPickedObjects } = useProgress();
+    const [isStartPopup, setIsStartPopup] = useState(!isFinished);
     const [clicked, setClicked] = useState(null);
     const [picked, setPicked] = useState([]);
+    const [isAllPicked, setIsAllPicked] = useState(false);
 
     const handleObjectClick = (id) => {
         setClicked(id);
@@ -36,12 +47,27 @@ export const Location2 = () => {
     };
 
     const handleClose = () => {
-        if (picked.length === OBJECTS_LENGTH) next();
-        else setClicked(null);
+        setClicked(null);
+        if (picked.length === OBJECTS_LENGTH) {
+            setPickedObjects('phoneChat');
+            setIsAllPicked(true);
+        }
     }
 
+    const showReadyPoster = useMemo(() => picked.includes('poster'), [picked]);
+    const isFirstHandHidden = useMemo(() => (
+        clicked === 'note' || clicked === 'people' || isAllPicked
+    ), [clicked, isAllPicked]);
+    const isPeopleHidden = useMemo(() => clicked === 'people', [clicked]);
+    const isHideAdditional = useMemo(() => isStartPopup || isAllPicked, [isStartPopup, isAllPicked]);
+
     return (
-        <Wrapper $isHideAdditional={isStartPopup} $clicked={clicked}>
+        <Wrapper 
+            $isHideAdditional={isHideAdditional}
+            $isFirstHandHidden={isFirstHandHidden} 
+            $isPeopleHidden={isPeopleHidden}
+            $showReadyPoster={showReadyPoster}
+        >
             <LocationField onObjectClick={handleObjectClick}/>
             {isStartPopup && (
                 <LocationStart
@@ -58,6 +84,12 @@ export const Location2 = () => {
             )}
             {clicked === 'folder' && (
                 <FolderInteraction onClose={handleClose} />
+            )}
+            {clicked === 'people' && (
+                <PeopleInteraction onClose={handleClose} />
+            )}
+            {isAllPicked && (
+                <PhoneInteraction />
             )}
         </Wrapper>
     );

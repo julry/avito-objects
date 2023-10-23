@@ -18,6 +18,10 @@ const Wrapper = styled(FlexWrapper)`
     font-size: ${({$isMain}) => $isMain ? 20 : 18}px;
   }
   
+  @media screen and (min-height: 900px) {
+    font-size: ${({$isMain}) => $isMain ? 24 : 22}px;
+  }
+  
   @media screen and (max-height: 600px) {
     padding: 26px 24px;
     font-size: ${({$isMain}) => $isMain ? 16 : 14}px;

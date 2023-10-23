@@ -5,10 +5,7 @@ import { ProgressProvider } from './context/ProgressContext';
 import { useProgressInit } from './hooks/useProgressInit';
 
 const Wrapper = styled(FlexWrapper)`
-  --main_blue: #00AAFF;
-  --main_green: #04E061;
-  --main_purple: #965EEB;
-  --main_red: #FF4053;
+  
   --screen_padding: min(20px, 5.3vw);
   height: ${({height}) => height}px;
   overflow-x: hidden;

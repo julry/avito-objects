@@ -55,6 +55,7 @@ const ButtonContent = styled.div`
   
   & p {
     margin-top: -3px;
+    width: max-content;
   }
 `;
 

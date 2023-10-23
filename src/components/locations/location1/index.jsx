@@ -15,6 +15,10 @@ const Wrapper = styled.div`
   & .object, & #person_location1 {
     opacity: ${({$isHideAdditional}) => $isHideAdditional ? 0 : 1};
   }
+
+  & .object {
+    cursor: pointer;
+  }
 `;
 
 export const Location1 = ({ onStart }) => {

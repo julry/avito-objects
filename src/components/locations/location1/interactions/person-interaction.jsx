@@ -14,7 +14,7 @@ const Wrapper = styled(FlexWrapper)`
 `;
 
 const ButtonStyled = styled(Button)`
-    margin: min(28px, 7.5vw) auto 0;
+  margin: min(28px, 7.5vw) auto 0;
 `;
 
 export const PersonInteraction = ({ onClose }) => (
