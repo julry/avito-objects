@@ -1,7 +1,7 @@
 import buddy from '../../../assets/images/buddy.svg';
 import player from '../../../assets/images/player.svg';
 import gosha from '../../../assets/images/gosha-avatar.svg';
-import { TextDivider, UnderlinedText } from '../../shared/texts';
+import { TextDivider, TextSm, UnderlinedText } from '../../shared/texts';
 
 export const getMessages = (name) => (
     [
@@ -10,7 +10,7 @@ export const getMessages = (name) => (
             sender: 'Наставник',
             avatar: buddy,
             text: () => (
-                <>
+                <TextSm>
                     Привет, {name}!
                     <TextDivider />
                     Поздравляю с{'\u00A0'}началом первого рабочего дня! А{'\u00A0'}у{'\u00A0'}меня
@@ -19,7 +19,7 @@ export const getMessages = (name) => (
                     ему нужна помощь. <UnderlinedText color={'green'}>Узнай, что случилось,
                     и{'\u00A0'}предложи решение этой проблемы</UnderlinedText>. Весь
                     офис, коллеги и{'\u00A0'}я в{'\u00A0'}твоем распоряжении. Мы в{'\u00A0'}тебя верим!
-                </>
+                </TextSm>
             ),
             type: 'interlocutor',
             color: 'green',
