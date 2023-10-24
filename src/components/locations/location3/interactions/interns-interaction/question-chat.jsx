@@ -120,6 +120,7 @@ export const QuestionChat = ({ onClose }) => {
                 )}
                 <BottomAbsoluteButton
                     type={'light'}
+                    disabled={!question}
                     onClick={handleClick}
                 >
                     {chosenQuestion ? 'Спасибо!' : 'Ответить'}

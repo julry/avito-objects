@@ -72,7 +72,13 @@ export const QuestionChat = ({ onChooseQuestion }) => {
                         />
                     </Answers>
                 </QuestionBlock>
-                <Button type={'light'} onClick={() => onChooseQuestion(question)}> Ответить </Button>
+                <Button
+                    type={'light'}
+                    disabled={!question}
+                    onClick={() => onChooseQuestion(question)}
+                >
+                    Ответить
+                </Button>
             </Wrapper>
         </ModalWrapper>
     );
