@@ -7,9 +7,8 @@ import { Chat } from '../../../../shared/chat';
 import { QuestionTitle } from '../../../../shared/question-title';
 import { scaleStaticAppear } from '../../../../shared/keyframes';
 import { ANIMATION_DURATION, SEX_TYPES } from '../../../../../constants';
-import { MessageWrapper } from '../../../../shared/message-wrapper';
 import { BottomAbsoluteButton } from '../../../../shared/button';
-import { TextSm } from '../../../../shared/texts';
+import { Answers } from '../../../../shared/answers';
 import { getAnswerMessages, getPeopleInteractionMessages } from './utils';
 
 const Wrapper = styled(FlexWrapper)`
@@ -25,31 +24,6 @@ const QuestionBlock = styled.div`
 
 const QuestionTitleStyled = styled(QuestionTitle)`
   margin-bottom: min(12px, 3vw);
-`;
-
-const Answers = styled(FlexWrapper)`
-  width: 100%;
-  align-items: stretch;
-`;
-
-const AnswerText = styled.div`
-  display: flex;
-  align-items: flex-start;
-`;
-
-const Answer = styled(MessageWrapper)`
-  width: 100%;
-  padding: min(7px, 1.8vw) min(12px, 3.2vw) !important;
-  box-shadow: ${({$isActive}) => $isActive ? 'inset 0 0 0 3px var(--main_blue)' : ''};
-  
-  & + & {
-    margin-top: min(8px, 2vw);
-  }
-`;
-
-const Number = styled(TextSm)`
-  color: var(--main_blue);
-  margin-right: min(14px, 3.7vw);
 `;
 
 export const QuestionChat = ({ onClose }) => {
@@ -86,36 +60,22 @@ export const QuestionChat = ({ onClose }) => {
                 ) : (
                     <QuestionBlock>
                         <QuestionTitleStyled>Выбери свой вопрос</QuestionTitleStyled>
-                        <Answers>
-                            <Answer
-                                onClick={() => setQuestion('1')}
-                                $isActive={question === '1'}
-                                type={'main'}
-                                text={() => (
-                                    <AnswerText>
-                                        <Number>1</Number>
-                                        <TextSm>
-                                            Я сегодня начал{sex === SEX_TYPES.female ? 'а' : ''} работать
-                                            с{'\u00A0'}«Дивными диванами». Пока думаю, что им предложить
-                                        </TextSm>
-                                    </AnswerText>
-                                )}
-                            />
-                            <Answer
-                                onClick={() => setQuestion('2')}
-                                $isActive={question === '2'}
-                                type={'main'}
-                                text={() => (
-                                    <AnswerText>
-                                        <Number>2</Number>
-                                        <TextSm>
-                                            Я сегодня начал{sex === SEX_TYPES.female ? 'а' : ''} работать
-                                            с{'\u00A0'}«Дивными диванами». Может, кто-то с ними уже работал?
-                                        </TextSm>
-                                    </AnswerText>
-                                )}
-                            />
-                        </Answers>
+                        <Answers answers={[
+                            {
+                                id: '1',
+                                onClick: () => setQuestion("1"),
+                                isActive: question === "1",
+                                text: `Я сегодня начал${sex === SEX_TYPES.female ? "а" : ""}` + 
+                                        'работать с «Дивными диванами». Пока думаю, что им предложить',
+                            }, 
+                            {
+                                id: '2',
+                                onClick: () => setQuestion("2"),
+                                isActive: question === "2",
+                                text: `Я сегодня начал${sex === SEX_TYPES.female ? "а" : ""}` + 
+                                'работать с «Дивными диванами». Может, кто-то с ними уже работал?',
+                            }
+                        ]}/>
                     </QuestionBlock>
                 )}
                 <BottomAbsoluteButton

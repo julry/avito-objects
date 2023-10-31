@@ -7,8 +7,8 @@ const NoteStyled = styled.div`
   position: absolute;
   inset: 0;
   z-index: 2;
-  background: url(${note}) no-repeat center center;
-  background-size: cover;
+  background: url(${note}) no-repeat center 100%;
+  background-size: contain;
 `;
 
 const ButtonStyled = styled(BottomAbsoluteButton)`

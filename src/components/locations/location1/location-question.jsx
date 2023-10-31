@@ -3,7 +3,7 @@ import { ANIMATION_DURATION } from '../../../constants';
 import { FlexWrapper } from '../../shared/flex-wrapper';
 import { Chat } from '../../shared/chat';
 import { scaleStaticAppear } from '../../shared/keyframes';
-import { MessageWrapper } from '../../shared/message-wrapper';
+import { Answers } from '../../shared/answers';
 import { QuestionTitle } from '../../shared/question-title';
 import { getQuestionMessages } from './utils';
 
@@ -17,46 +17,28 @@ const QuestionBlock = styled.div`
   margin: min(33px, 8.8vw) 0 0;
 `;
 
-const Answers = styled.div`
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: stretch;
-`;
-
-const Answer = styled(MessageWrapper)`
-  width: calc((100% - 12px) / 2);
-  box-shadow: ${({$isActive}) => $isActive ? '0 0 0 3px var(--main_blue)' : ''};
-  padding-right: min(10px, 2.5vw);
-  cursor: pointer;
-  
-  &:first-child {
-    margin-right: 12px;
-  }
-`;
 
 export const LocationQuestion = ({ chosenAnswer, onChooseAnswer }) => (
     <Wrapper>
         <Chat messages={[getQuestionMessages()[0]]}/>
         <QuestionBlock>
             <QuestionTitle>Выбери свой вопрос</QuestionTitle>
-            <Answers>
-                <Answer
-                    onClick={() => onChooseAnswer('1')}
-                    $isActive={chosenAnswer === '1'}
-                    type={'main'}
-                    title={'1'}
-                    text={'Я могу обратиться за\u00A0помощью к\u00A0коллегам?'}
-                />
-                <Answer
-                    onClick={() => onChooseAnswer('2')}
-                    $isActive={chosenAnswer === '2'}
-                    type={'main'}
-                    title={'2'}
-                    text={'Я буду работать только с\u00A0продавцом диванов или\u00A0у\u00A0меня будут и\u00A0другие клиенты?'}
-                />
-            </Answers>
+            <Answers 
+              answers={[
+                {
+                  id: '1',
+                  onClick: () => onChooseAnswer('1'),
+                  isActive: chosenAnswer === '1',
+                  text: 'Я могу обратиться за\u00A0помощью к\u00A0коллегам?'
+                },
+                {
+                  id: '2',
+                  onClick: () => onChooseAnswer('2'),
+                  isActive: chosenAnswer === '2',
+                  text: 'Я буду работать только с\u00A0продавцом диванов или\u00A0у\u00A0меня будут и\u00A0другие клиенты?'
+                },
+              ]}
+            />
         </QuestionBlock>
     </Wrapper>
 );
-

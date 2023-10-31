@@ -46,19 +46,19 @@ export const message = keyframes`
 
 export const shakeWithStop = keyframes`
   10% {
-    transform: translate3d(-2px, 0, 0);
+    transform: translate3d(-3px, 0, 0);
   }
 
   20% {
-    transform: translate3d(2px, 0, 0);
+    transform: translate3d(3px, 0, 0);
   }
 
   30%{
-    transform: translate3d(-2px, 0, 0);
+    transform: translate3d(-3px, 0, 0);
   }
 
   40% {
-    transform: translate3d(2px, 0, 0);
+    transform: translate3d(3px, 0, 0);
   }
   
   50% {

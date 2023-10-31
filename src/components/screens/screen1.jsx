@@ -27,8 +27,8 @@ const Image = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
-  height: 82.4vw;
-  max-height: 48vh;
+  height: 68.5vw;
+  max-height: 40vh;
   z-index: 0;
   background: url(${startBg}) no-repeat center 0;
   background-size: cover;

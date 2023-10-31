@@ -68,11 +68,12 @@ const SexImage = styled.div`
 
 const Image = styled.div`
   position: absolute;
-  top: min(49.42px, 13.06vw);
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 0;
+  height: 68.5vw;
+  max-height: 40vh;
   background: url(${meetingBg}) no-repeat center 0;
   background-size: cover;
 `;

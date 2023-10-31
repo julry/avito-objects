@@ -2,6 +2,8 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import bookClosed from '../../../../assets/images/bookClosed.svg';
 import bookOpened from '../../../../assets/images/bookOpened.svg';
+import { useProgress } from '../../../../hooks/useProgress';
+import { SEX_TYPES } from '../../../../constants';
 import { ModalWrapper } from '../../../shared/modal-wrapper';
 import { PopUp } from '../../../shared/pop-up';
 import { TextMd } from '../../../shared/texts';
@@ -63,6 +65,7 @@ const CloseBtn = styled(Button)`
 `;
 
 export const FolderInteraction = ({onClose}) => {
+    const { sex } = useProgress();
     const [isOpened, setIsOpened] = useState(false);
 
     return (
@@ -86,7 +89,7 @@ export const FolderInteraction = ({onClose}) => {
                     <Opened>
                         <PopUp>
                             <TextMd>
-                                Ой, кажется, это гид по интересным странам и выгодным маршрутам… Зря открыл(а)
+                                Ой, кажется, это гид по интересным странам и выгодным маршрутам… Зря открыл{sex === SEX_TYPES.female ? 'а' : ''}
                             </TextMd>
                             <BookOpened />
                         </PopUp>

@@ -252,7 +252,7 @@ export const Screen8 = () => {
                                     <Input
                                         value={contact}
                                         onChange={(e) => setContact(e.target.value)}
-                                        placeholder={'+7 (999) 123-45-67 / E-mail'}
+                                        placeholder={'E-mail'}
                                     />
                                     <SendButton
                                         disabled={!isAgreed || !contact || isSending}

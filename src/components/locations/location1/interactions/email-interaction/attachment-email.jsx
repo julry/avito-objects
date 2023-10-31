@@ -53,7 +53,7 @@ const Chart = styled.div`
   }
 `;
 
-export const AttachmentEmail = () => (
+export const AttachmentEmail = (props) => (
     <EmailWrapper>
       <Content>
           <Table>
@@ -101,5 +101,6 @@ export const AttachmentEmail = () => (
               <EmailChart />
           </Chart>
       </Content>
+      {props.children}
     </EmailWrapper>
 );

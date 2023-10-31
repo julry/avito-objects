@@ -71,7 +71,7 @@ export const TextXs = styled.p`
 `;
 
 export const HighlightedText = styled.span`
-  background: var(--main_${({color}) => color});
+  background: var(--main_${({color}) => color ?? 'blue'});
   border-radius: 20px;
   color: white;
   padding: 0 7px 2px;
