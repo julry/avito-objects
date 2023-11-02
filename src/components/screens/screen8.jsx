@@ -52,8 +52,12 @@ const InputWrapper = styled.div`
   margin: var(--screen_padding) 0;
   
   & input {
-    width: 100%;
   }
+`;
+
+const InputStyled = styled(Input)`
+    width: 100%;
+    border-color: var(--main_${({$isCorrect}) => $isCorrect ? 'purple' : 'red'});
 `;
 
 const SendButton = styled.button`
@@ -166,7 +170,24 @@ export const Screen8 = () => {
     const [isAgreed, setIsAgreed] = useState(false);
     const [isSend, setIsSend] = useState(false);
     const [isSending, setIsSending] = useState(false);
-    const [contact, setContact] = useState('');
+    const [isCorrect, setIsCorrect] = useState(true);
+    const [email, setEmail] = useState('');
+
+    const emailRegExp = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+    
+    const handleBlur = () => {
+      if (email.match(emailRegExp) || !email) {
+          setIsCorrect(true);
+      } else {
+          setIsCorrect(false);
+      }
+  };
+
+  const handleChange = (e) => {
+      setIsCorrect(true);
+      setEmail(e.target.value);
+  };
+
 
     const handleSubmit = () => {
         if (isSending) return;
@@ -174,12 +195,12 @@ export const Screen8 = () => {
         const GOOGLE_FORM_ACTION_URL = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSf6qnE9YLykqeS06pkYdu6MH8ZjP5dOPYvfnGKbUbeZ94MDaQ/formResponse';
         const NAME_ID = 'entry.1376185839';
         const SEX_ID = 'entry.428680492';
-        const CONTACT_ID = 'entry.1839573744';
+        const EMAIL_ID = 'entry.1839573744';
         const formData = new FormData();
 
         formData.append(NAME_ID, progress?.name);
         formData.append(SEX_ID, progress?.sex);
-        formData.append(CONTACT_ID, contact);
+        formData.append(EMAIL_ID, email);
 
         const myInit = {
             method: 'POST',
@@ -219,7 +240,7 @@ export const Screen8 = () => {
                             </>
                         )
                         }
-                        <UnderlinedText color="blue">Продажи </UnderlinedText> — это{'\u00A0'}важная составляющая
+                        <UnderlinedText color="blue">Продажи</UnderlinedText> — это{'\u00A0'}важная составляющая
                         любого бизнеса, поэтому в{'\u00A0'}Авито выстроена программа обучения, а{'\u00A0'}коллеги
                         всегда готовы прийти на{'\u00A0'}помощь.
                         <TextDivider />
@@ -249,13 +270,15 @@ export const Screen8 = () => {
                         ): (
                             <>
                                 <InputWrapper>
-                                    <Input
-                                        value={contact}
-                                        onChange={(e) => setContact(e.target.value)}
+                                    <InputStyled
+                                        $isCorrect={isCorrect}
+                                        value={email}
+                                        onChange={handleChange}
+                                        onBlur={handleBlur}
                                         placeholder={'E-mail'}
                                     />
                                     <SendButton
-                                        disabled={!isAgreed || !contact || isSending}
+                                        disabled={!isAgreed || !email || isSending || !isCorrect}
                                         onClick={handleSubmit}
                                     >
                                         <svg width="23" height="18" viewBox="0 0 23 18" fill="none" xmlns="http://www.w3.org/2000/svg">

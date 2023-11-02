@@ -73,8 +73,8 @@ export const Screen7 = () => {
                 <TextWrapper>
                     <TextMd>
                         Итак, твоей задачей было предложить решение, которое поможет компании
-                        «Дивные диваны» <UnderlinedText color="blue"> увеличить количество продаж их основного товара </UnderlinedText>
-                        — диванов.
+                        «Дивные диваны» <UnderlinedText color="blue">увеличить количество продаж их основного товара</UnderlinedText>
+                         — диванов.
                         <TextDivider />
                         Что выберешь?
                     </TextMd>

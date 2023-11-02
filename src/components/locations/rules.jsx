@@ -4,6 +4,7 @@ import { ANIMATION_DURATION } from '../../constants';
 import { ModalWrapper } from '../shared/modal-wrapper';
 import { HighlightedText, TextDivider, TextMd, UnderlinedText } from '../shared/texts';
 import { FlexWrapper } from '../shared/flex-wrapper';
+import { useRef } from 'react';
 
 const Wrapper = styled(ModalWrapper)`
   z-index: 98;
@@ -49,6 +50,7 @@ const CloseRect = styled.div`
 
 const CloseRectWrapper = styled.div`
   padding: 15px 20px 0;
+  touch-action: none;
 `;
 
 const Content = styled.div`
@@ -62,6 +64,26 @@ const Content = styled.div`
 
 export const Rules = ({onClose}) => {
     const [isClosing, setIsClosing] = useState(false);
+    const $touch = useRef(null);
+
+    const handleTouchStart = (e) => {
+        e.preventDefault();
+        $touch.current = e?.touches[0].clientY;
+    };
+
+    const handleTouchEnd = (e) => {
+      if (e?.changedTouches[0].clientY >= $touch.current) handleClose();
+    };
+
+    const handleMouseDown = (e) => {
+      e.preventDefault();
+      $touch.current = e?.clientY;
+    }
+
+    const handleMouseUp = (e) => {
+      e.preventDefault();
+      if (e?.clientY >= $touch.current) handleClose();
+    }
 
     const handleClose = () => {
         if (isClosing) return;
@@ -71,8 +93,15 @@ export const Rules = ({onClose}) => {
 
     return (
         <Wrapper>
-            <RulesWrapper $isClosing={isClosing}>
-                <CloseRectWrapper onClick={handleClose} onMouseDown={handleClose} onTouchStart={handleClose}>
+            <RulesWrapper 
+              $isClosing={isClosing} 
+              onMouseUp={handleMouseUp} 
+            >
+                <CloseRectWrapper 
+                  onMouseDown={handleMouseDown} 
+                  onTouchStart={handleTouchStart} 
+                  onTouchEnd={handleTouchEnd}
+                >
                     <CloseRect />
                 </CloseRectWrapper>
                 <Content>
@@ -85,8 +114,8 @@ export const Rules = ({onClose}) => {
                         помогут тебе найти решение.
                         <TextDivider/>
                         <UnderlinedText color='blue'>
-                            Исследуй локации в{'\u00A0'}офисе, общайся с{'\u00A0'}коллегами и{'\u00A0'}ищи зацепки.
-                        </UnderlinedText> Нажимай на{'\u00A0'}подсвеченные предметы, чтобы увидеть,
+                            Исследуй локации в{'\u00A0'}офисе, общайся с{'\u00A0'}коллегами и{'\u00A0'}ищи зацепки
+                        </UnderlinedText>. Нажимай на{'\u00A0'}подсвеченные предметы, чтобы увидеть,
                             какая информация в{'\u00A0'}них прячется.
                     </TextMd>
                 </Content>

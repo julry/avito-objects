@@ -54,7 +54,7 @@ export const Screen1 = () => {
                         помочь клиенту <UnderlinedText color={'blue'}>повысить прибыль</UnderlinedText>. Подключай свои навыки ведения переговоров,
                         задавай правильные вопросы и{'\u00A0'}развивай бизнес!
                         <TextDivider />
-                        Чтобы решить задачу, <HighlightedText color={'blue'}>ищи зацепки.</HighlightedText>
+                        Чтобы решить задачу, <HighlightedText color={'blue'}>ищи зацепки</HighlightedText>.
                         {'\n'}
                         Ценная информация <UnderlinedText color={'blue'}>прячется{'\u00A0'}в{'\u00A0'}мелочах</UnderlinedText>.
                         <TextDivider />

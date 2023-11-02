@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.db8e729d.css",
-    "main.js": "./static/js/main.bf55e120.js",
+    "main.js": "./static/js/main.4bb3c35b.js",
     "static/media/Aeroport-bold.ttf": "./static/media/Aeroport-bold.2f517d3ff8af390ca151.ttf",
     "static/media/Aeroport-regular.ttf": "./static/media/Aeroport-regular.74434805ce020eaa1ae3.ttf",
     "static/media/Aeroport-light.ttf": "./static/media/Aeroport-light.f48ed83a242f97e4496f.ttf",
@@ -42,10 +42,10 @@
     "static/media/capLeftGreen.svg": "./static/media/capLeftGreen.ef96b28eb1715cd5e226321575f87a93.svg",
     "static/media/infoSign.svg": "./static/media/infoSign.925d52b4cb75d26a435fa750b4ecf4cb.svg",
     "main.db8e729d.css.map": "./static/css/main.db8e729d.css.map",
-    "main.bf55e120.js.map": "./static/js/main.bf55e120.js.map"
+    "main.4bb3c35b.js.map": "./static/js/main.4bb3c35b.js.map"
   },
   "entrypoints": [
     "static/css/main.db8e729d.css",
-    "static/js/main.bf55e120.js"
+    "static/js/main.4bb3c35b.js"
   ]
 }

@@ -80,15 +80,38 @@ export const HighlightedText = styled.span`
 
 export const UnderlinedText = styled.span`
   position: relative;
+  /* border-bottom: 4px solid var(--main_${({color}) => color});
+  padding-bottom: 0;
+
+  &::before, &::after {
+    content: '';
+    height: 4px;
+    width: 4px;
+    background-color: var(--main_${({color}) => color});
+    border-radius: 4px;
+    position: relative;
+    z-index: 3;
+    display: inline-block;
+    vertical-align: text-bottom;
+    margin-bottom: -4px;
+  }
+
+  &::before {
+    left: -1.5px;
+  }
+
+  &::after {
+      right: -1.5px;
+  } */
 
   --capImageLeft_blue: url(${capLeftB});
   --capImageRight_blue: url(${capRightB});
   --capImageRight_green: url(${capRightG});
   --capImageLeft_green: url(${capLeftG});
   --underline-color: var(--main_${({color}) => color});
-  --underline-intrinsic-width: 2;
-  --underline-width: 2;
-  --underline-cap-width: 1px;
+  --underline-intrinsic-width: 4;
+  --underline-width: 4;
+  --underline-cap-width: 2px;
   --underline-offset-y: 0px;
   --underline-padding-x: 0px;
   --underline-width-scale: calc(var(--underline-width) / var(--underline-intrinsic-width));
