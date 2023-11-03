@@ -41,11 +41,11 @@ export const TextSm = styled.p`
   }
   
   @media screen and (min-height: 700px) {
-    font-size: 17px;
+    font-size: 15px;
   }
   
   @media screen and (min-height: 900px) {
-    font-size: 19px;
+    font-size: 17px;
   }
 `;
 
@@ -80,7 +80,7 @@ export const HighlightedText = styled.span`
 
 export const UnderlinedText = styled.span`
   position: relative;
-  /* border-bottom: 4px solid var(--main_${({color}) => color});
+  border-bottom: 4px solid var(--main_${({color}) => color});
   padding-bottom: 0;
 
   &::before, &::after {
@@ -101,10 +101,10 @@ export const UnderlinedText = styled.span`
   }
 
   &::after {
-      right: -1.5px;
-  } */
+    right: -1.5px;
+  }
 
-  --capImageLeft_blue: url(${capLeftB});
+  /* --capImageLeft_blue: url(${capLeftB});
   --capImageRight_blue: url(${capRightB});
   --capImageRight_green: url(${capRightG});
   --capImageLeft_green: url(${capLeftG});
@@ -133,7 +133,7 @@ export const UnderlinedText = styled.span`
   background-size:
           calc(100% - calc(var(--underline-cap-width) * var(--underline-width-scale) * 2)) calc(var(--underline-width) * 1px),
           auto calc(var(--underline-width) * 1px),
-          auto calc(var(--underline-width) * 1px);
+          auto calc(var(--underline-width) * 1px); */
 `;
 
 export const TextDivider = styled.span`

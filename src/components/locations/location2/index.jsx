@@ -11,6 +11,7 @@ import { LocationField } from './location-field';
 import { OBJECTS_LENGTH } from './constants';
 
 const Wrapper = styled.div`
+  position: relative;
   height: 100%;
   width: 100%;
   

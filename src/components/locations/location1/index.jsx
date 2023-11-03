@@ -9,10 +9,11 @@ import { LocationChat } from './location-chat';
 import { OBJECTS_LENGTH } from './constants';
 
 const Wrapper = styled.div`
+  position: relative;
   height: 100%;
   width: 100%;
-  
-  & .object, & #person_location1 {
+
+  & .object, & .person_location1 {
     opacity: ${({$isHideAdditional}) => $isHideAdditional ? 0 : 1};
   }
 

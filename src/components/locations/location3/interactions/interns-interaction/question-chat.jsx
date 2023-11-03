@@ -65,14 +65,14 @@ export const QuestionChat = ({ onClose }) => {
                                 id: '1',
                                 onClick: () => setQuestion("1"),
                                 isActive: question === "1",
-                                text: `Я сегодня начал${sex === SEX_TYPES.female ? "а" : ""}` + 
+                                text: `Я сегодня начал${sex === SEX_TYPES.female ? "а" : ""} ` + 
                                         'работать с «Дивными диванами». Пока думаю, что им предложить',
                             }, 
                             {
                                 id: '2',
                                 onClick: () => setQuestion("2"),
                                 isActive: question === "2",
-                                text: `Я сегодня начал${sex === SEX_TYPES.female ? "а" : ""}` + 
+                                text: `Я сегодня начал${sex === SEX_TYPES.female ? "а" : ""} ` + 
                                 'работать с «Дивными диванами». Может, кто-то с ними уже работал?',
                             }
                         ]}/>

@@ -51,12 +51,12 @@ export const Screen1 = () => {
                         <TextDivider />
                         Сегодня тебе предстоит почувствовать себя сотрудником отдела продаж и{'\u00A0'}погрузиться во{'\u00A0'}
                         внутреннюю кухню Авито. Приготовься — тебе нужно будет выполнить важное задание и{'\u00A0'}
-                        помочь клиенту <UnderlinedText color={'blue'}>повысить прибыль</UnderlinedText>. Подключай свои навыки ведения переговоров,
+                        помочь клиенту <UnderlinedText color={'blue'}>повысить прибыль.</UnderlinedText> Подключай свои навыки ведения переговоров,
                         задавай правильные вопросы и{'\u00A0'}развивай бизнес!
                         <TextDivider />
-                        Чтобы решить задачу, <HighlightedText color={'blue'}>ищи зацепки</HighlightedText>.
+                        Чтобы решить задачу, <HighlightedText color={'blue'}>ищи зацепки.</HighlightedText>
                         {'\n'}
-                        Ценная информация <UnderlinedText color={'blue'}>прячется{'\u00A0'}в{'\u00A0'}мелочах</UnderlinedText>.
+                        Ценная информация <UnderlinedText color={'blue'}>прячется{'\u00A0'}в{'\u00A0'}мелочах.</UnderlinedText>
                         <TextDivider />
                         Удачи, друллега!
                     </TextMd>
