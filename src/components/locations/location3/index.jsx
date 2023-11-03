@@ -13,16 +13,16 @@ const Wrapper = styled.div`
   height: 100%;
   width: 100%;
   
-  & .object {
-    opacity: ${({$isHideAdditional}) => $isHideAdditional ? 0 : 1};
-  }
-  
   & #cup {
-    opacity: ${({$isCupHidden}) => $isCupHidden ? 0 : 1};
+    opacity: ${({$isCupHidden, $isHideAdditional}) => $isCupHidden || $isHideAdditional ? 0 : 1};
   }
 
   & #video {
-    opacity: ${({$isVideoHidden}) => $isVideoHidden ? 0 : 1};
+    opacity: ${({$isVideoHidden, $isHideAdditional}) => $isVideoHidden || $isHideAdditional ? 0 : 1};
+  }
+
+   & .object {
+    opacity: ${({$isHideAdditional}) => $isHideAdditional ? 0 : 1};
   }
 `;
 
