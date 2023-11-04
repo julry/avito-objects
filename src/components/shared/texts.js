@@ -80,20 +80,20 @@ export const HighlightedText = styled.span`
 
 export const UnderlinedText = styled.span`
   position: relative;
-  border-bottom: 4px solid var(--main_${({color}) => color});
+  border-bottom: 3px solid var(--main_${({color}) => color});
   padding-bottom: 0;
 
   &::before, &::after {
     content: '';
-    height: 4px;
-    width: 4px;
+    height: 3px;
+    width: 3px;
     background-color: var(--main_${({color}) => color});
-    border-radius: 4px;
+    border-radius: 3px;
     position: relative;
     z-index: 3;
     display: inline-block;
     vertical-align: text-bottom;
-    margin-bottom: -4px;
+    margin-bottom: -3px;
   }
 
   &::before {

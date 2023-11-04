@@ -17,7 +17,6 @@ const QuestionBlock = styled.div`
   margin: min(33px, 8.8vw) 0 0;
 `;
 
-
 export const LocationQuestion = ({ chosenAnswer, onChooseAnswer }) => (
     <Wrapper>
         <Chat messages={[getQuestionMessages()[0]]}/>

@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 import styled from 'styled-components';
 import { useProgress } from '../../../hooks/useProgress';
 import { LocationStart } from '../../shared/location-start';
+import { BottomAbsoluteButton } from '../../shared/button';
 import { PersonInteraction } from './interactions/person-interaction';
 import { EmailInteraction } from './interactions/email-interaction';
 import { LocationField } from './location-field';
@@ -20,6 +21,14 @@ const Wrapper = styled.div`
   & .object {
     cursor: pointer;
   }
+
+  & #monitor_loc1 {
+    display: ${({$isShowMonitor}) => $isShowMonitor ? 'block' : 'none'};
+  }
+
+  & #email_loc1 {
+    opacity: ${({$isShowMonitor}) => $isShowMonitor ? 0 : 1};
+  }
 `;
 
 export const Location1 = ({ onStart }) => {
@@ -28,6 +37,7 @@ export const Location1 = ({ onStart }) => {
     const [isChat, setIsChat] = useState(false);
     const [clicked, setClicked] = useState(null);
     const [picked, setPicked] = useState([]);
+    const [isSawEmail, setIsSawEmail] = useState(false);
 
     const isShowObjects = useMemo(() => isStartPopup || isChat, [isStartPopup, isChat]);
 
@@ -49,19 +59,27 @@ export const Location1 = ({ onStart }) => {
     };
 
     const handleClose = () => {
+        setIsSawEmail(false);
         if (picked.length === OBJECTS_LENGTH) next();
         else setClicked(null);
     }
 
     return (
-        <Wrapper $isHideAdditional={isShowObjects}>
+        <Wrapper $isHideAdditional={isShowObjects} $isShowMonitor={clicked === 'email' && !isSawEmail}>
             {isStartPopup && (
                 <LocationStart text={'Место силы'} title={'Твое рабочее место'} onDisappear={handleDisappear} />
             )}
             <LocationField onObjectClick={handleObjectClick}/>
             {isChat && <LocationChat name={progress.name} onStart={handleStart} />}
             {clicked === 'gosha' && <PersonInteraction onClose={handleClose} />}
-            {clicked === 'email' && <EmailInteraction onClose={handleClose} />}
+            {clicked === 'email' && (
+                isSawEmail ? ( <EmailInteraction onClose={handleClose} />) : (
+                    <BottomAbsoluteButton type="light" onClick={() => setIsSawEmail(true)}>
+                        Посмотреть
+                    </BottomAbsoluteButton>
+                )
+            )
+           }
         </Wrapper>
     );
 };

@@ -1,11 +1,15 @@
 import { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { FlexWrapper } from '../../../../shared/flex-wrapper';
-import { ModalWrapper } from '../../../../shared/modal-wrapper';
 import { MessageWrapper } from '../../../../shared/message-wrapper';
-import { Laptop } from './laptop';
 import { QuestionVideo } from './question-video';
 import { AnswerVideo } from './answer-video';
+
+const ModalWrapper = styled(FlexWrapper)`
+  position: absolute;
+  inset: 0;
+  z-index: 100;
+`;
 
 const Wrapper = styled(FlexWrapper)`
   width: 100%;
@@ -16,13 +20,7 @@ const Wrapper = styled(FlexWrapper)`
   z-index: 2;
 `;
 
-const LaptopStyled = styled(Laptop)`
-  position: absolute;
-  z-index: 1;
-  inset: 0;
-`;
-
-export const VideoInteraction = ({ onClose }) => {
+export const VideoInteraction = ({ onClose, onChangePart }) => {
     const [part, setPart] = useState(0);
     const [questions, setQuestions] = useState([]);
     const $timeout = useRef(null);
@@ -53,29 +51,26 @@ export const VideoInteraction = ({ onClose }) => {
     const handleNextQuestions = (selectedQuestions) => {
         setQuestions(selectedQuestions);
         setPart(prevPart => prevPart + 1);
+        onChangePart?.()
     };
 
     return (
-        <>
-            <ModalWrapper onClick={handleWrapperClick}>
-                <Wrapper $isCentered={part === 0}>
-                    {part === 0 && (
-                        <MessageWrapper
-                            type="main"
-                            text={
-                                'Коллеги, привет! \n\n' +
-                                'Спасибо, что пришли на мастер-класс. ' +
-                                'Сегодня поговорим о тарифах Авито и инструментах, ' +
-                                'которые мы используем для улучшения эффективности бизнеса клиентов'
-                            }
-                        />
-                    )}
-                    {part === 1 && <QuestionVideo onNext={handleNextQuestions} />}
-                    {part === 2 && <AnswerVideo questions={questions} onNext={onClose} />}
-                </Wrapper>
-                {part !== 2 && <LaptopStyled />}
-            </ModalWrapper>
-            {part === 2 && <LaptopStyled />}
-        </>
+        <ModalWrapper onClick={handleWrapperClick}>
+            <Wrapper $isCentered={part === 0}>
+                {part === 0 && (
+                    <MessageWrapper
+                        type="main"
+                        text={
+                            'Коллеги, привет! \n\n' +
+                            'Спасибо, что пришли на мастер-класс. ' +
+                            'Сегодня поговорим о тарифах Авито и инструментах, ' +
+                            'которые мы используем для улучшения эффективности бизнеса клиентов'
+                        }
+                    />
+                )}
+                {part === 1 && <QuestionVideo onNext={handleNextQuestions} />}
+                {part === 2 && <AnswerVideo questions={questions} onNext={onClose} />}
+            </Wrapper>
+        </ModalWrapper>
     );
 };

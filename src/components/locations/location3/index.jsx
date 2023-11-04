@@ -19,10 +19,26 @@ const Wrapper = styled.div`
 
   & #video {
     opacity: ${({$isVideoHidden, $isHideAdditional}) => $isVideoHidden || $isHideAdditional ? 0 : 1};
+  } 
+  
+  & #laptop_people {
+    opacity: ${({$isVideoHidden}) => $isVideoHidden ? 0 : 1};
   }
 
    & .object {
     opacity: ${({$isHideAdditional}) => $isHideAdditional ? 0 : 1};
+  }
+
+  & #laptop_maxim {
+    opacity: ${({$isMaxShown}) => $isMaxShown ? 1 : 0};
+  }
+
+  & #maxim_active {
+    display: ${({$isVideoHidden, $isLaptopInactive}) => $isVideoHidden && !$isLaptopInactive ? 'block' : 'none'};
+  }
+
+  & #maxim_inactive {
+    display: ${({$isVideoHidden, $isLaptopInactive}) => $isVideoHidden && $isLaptopInactive ? 'block' : 'none'};
   }
 `;
 
@@ -31,6 +47,7 @@ export const Location3 = () => {
     const [isStartPopup, setIsStartPopup] = useState(!isFinished);
     const [clicked, setClicked] = useState(null);
     const [picked, setPicked] = useState([]);
+    const [isLaptopInactive, setIsLaptopInactive] = useState(false);
 
     const isCupHidden = useMemo(() => clicked === 'cup',[clicked]);
     const isVideoHidden = useMemo(() => clicked === 'video',[clicked]);
@@ -43,6 +60,7 @@ export const Location3 = () => {
     };
 
     const handleClose = () => {
+        setIsLaptopInactive(false);
         if (picked.length === OBJECTS_LENGTH) next();
         else setClicked(null);
     };
@@ -52,6 +70,8 @@ export const Location3 = () => {
             $isHideAdditional={isStartPopup}
             $isCupHidden={isCupHidden}
             $isVideoHidden={isVideoHidden}
+            $isMaxShown={isVideoHidden}
+            $isLaptopInactive={isLaptopInactive}
         >
             <LocationField onObjectClick={handleObjectClick}/>
             {isStartPopup && (
@@ -62,7 +82,7 @@ export const Location3 = () => {
                 />
             )}
             {clicked === 'cup' && <CupInteraction onClose={handleClose} />}
-            {clicked === 'video' && <VideoInteraction onClose={handleClose} />}
+            {clicked === 'video' && <VideoInteraction onClose={handleClose} onChangePart={() => setIsLaptopInactive(true)}/>}
             {clicked === 'meeting' && <InternsInteraction onClose={handleClose} />}
         </Wrapper>
     );

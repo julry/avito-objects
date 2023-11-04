@@ -74,7 +74,7 @@ export const Screen6 = () => {
                     </TextMd>
                     <Text>
                         Ты можешь еще погулять по{'\u00A0'}офису и{'\u00A0'}заглянуть в{'\u00A0'}подсказки.
-                        Если уже придумал, <UnderlinedText color="blue"> как помочь «Дивным диванам» повысить продажи,</UnderlinedText>
+                        Если уже придумал, <UnderlinedText color="blue">как помочь «Дивным диванам» повысить продажи,</UnderlinedText>
                         — поделись своими мыслями с бадди
                     </Text>
                 </TextWrapper>
