@@ -63,7 +63,7 @@ export const AttachmentEmail = (props) => (
                   </TdLeft>
                   <TdRight $borderRadius={'border-top-right-radius: 10px'}>
                       <TextXs>
-                          высокая конкуренция в{'\u00A0'}Зеленоградске — {'\n'}столице кошек
+                          высокая конкуренция в{'\u00A0'}Зеленоградске{'\u00A0'}— столице{'\u00A0'}кошек
                       </TextXs>
                   </TdRight>
               </tr>

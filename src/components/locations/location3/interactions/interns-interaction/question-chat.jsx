@@ -66,7 +66,7 @@ export const QuestionChat = ({ onClose }) => {
                                 onClick: () => setQuestion("1"),
                                 isActive: question === "1",
                                 text: `Я сегодня начал${sex === SEX_TYPES.female ? "а" : ""} ` + 
-                                        'работать с «Дивными диванами». Пока думаю, что им предложить',
+                                        'работать с «Дивными диванами». Пока думаю, что им предложить.',
                             }, 
                             {
                                 id: '2',

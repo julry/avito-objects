@@ -249,7 +249,12 @@ export const Screen8 = () => {
                     </TextMd>
                 </TextWrapper>
                 <ButtonWrapper>
-                    <Button type="dark">Откликнуться</Button>
+                    <Button 
+                      type="dark" 
+                      onClick={() => window.open('https://career.avito.com/vacancies/prodazhi/1091/', '_blank')}
+                    >
+                        Откликнуться
+                    </Button>
                 </ButtonWrapper>
                 {progress.isFinalCorrect && (
                     <Form>

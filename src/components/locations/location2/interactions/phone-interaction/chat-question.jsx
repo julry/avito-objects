@@ -81,7 +81,7 @@ export const ChatQuestion = () => {
                             </Message>
                             <Message $isActive={answer === 2} onClick={() => setAnswer(2)}>
                                 <TextSm>2</TextSm>
-                                <TextSm>всем салют))</TextSm>
+                                <TextSm>Всем салют))</TextSm>
                             </Message>
                         </MessagesWrapper>
                     </>

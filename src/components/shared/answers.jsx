@@ -27,6 +27,7 @@ const Answer = styled(MessageWrapper)`
 
 const Number = styled(TextSm)`
   color: var(--main_blue);
+  width: 1ex;
   margin-right: min(14px, 3.7vw);
 `;
 

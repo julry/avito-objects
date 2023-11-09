@@ -106,7 +106,7 @@ export const Rules = ({onClose}) => {
                 </CloseRectWrapper>
                 <Content>
                     <TextMd>
-                        <HighlightedText $isFirstWord>Счётчик</HighlightedText> сверху показывает,
+                        <HighlightedText $isFirstWord>Счетчик</HighlightedText> сверху показывает,
                         сколько подсказок и{'\u00A0'}взаимодействий тебе осталось пройти во{'\u00A0'}всей{'\u00A0'}игре.
                         <TextDivider/>
                         Видишь{'\u00A0'}<HighlightedText>подсвеченные иконки</HighlightedText>?{'\n'}

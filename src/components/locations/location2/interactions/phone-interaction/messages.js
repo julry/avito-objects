@@ -28,7 +28,7 @@ export const getStartMessages = () => [
         color: 'green',
         text: 'Коллеги, когда спрос невелик, покупателя ' +
             'можно замотивировать купить товар на\u00A0будущее. ' +
-            'Это будет дешевле, чем когда все ринутся его покупать',
+            'Это будет дешевле, чем когда все ринутся его покупать.',
     },
     {
         id: 'phone_chat_3',
@@ -55,7 +55,7 @@ export const getNextMessages = (answer) => [
         time: '5 сек назад',
         avatar: player,
         color: 'blue',
-        text: answer === 1 ? 'Привет!' : 'всем салют))',
+        text: answer === 1 ? 'Привет!' : 'Всем салют))',
         delay: 0,
     },
     {
@@ -64,7 +64,7 @@ export const getNextMessages = (answer) => [
         time: '2 сек назад',
         avatar: kolya,
         color: 'red',
-        text:  answer === 1 ? 'Добрый день, дорогие друзья' : 'о, приятно видеть новые лица!',
+        text:  answer === 1 ? 'Добрый день, дорогие друзья.' : 'о, приятно видеть новые лица!',
         delay: 500,
     },
     {
@@ -82,7 +82,7 @@ export const getNextMessages = (answer) => [
         time: '1 cек назад',
         avatar: sveta,
         color: 'green',
-        text: 'Я тоже уже подготовила несколько',
+        text: 'Я тоже уже подготовила несколько.',
         delay: 700,
     },
     {

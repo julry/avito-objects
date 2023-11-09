@@ -3,7 +3,7 @@ export const SEX_TYPES = {
     male: 'male',
 };
 
-export const POPUP_DELAY = 1500;
+export const POPUP_DELAY = 2200;
 
 export const ANIMATION_DURATION = 500;
 

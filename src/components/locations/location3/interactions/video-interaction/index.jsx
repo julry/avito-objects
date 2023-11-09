@@ -38,7 +38,7 @@ export const VideoInteraction = ({ onClose, onChangePart }) => {
 
     useEffect(() => {
         if (part === 0)
-            $timeout.current = setTimeout(() => setPart(prevPart => prevPart + 1), 2000);
+            $timeout.current = setTimeout(() => setPart(prevPart => prevPart + 1), 3000);
 
         return () => {
             if ($timeout.current) {
@@ -64,7 +64,7 @@ export const VideoInteraction = ({ onClose, onChangePart }) => {
                             'Коллеги, привет! \n\n' +
                             'Спасибо, что пришли на мастер-класс. ' +
                             'Сегодня поговорим о тарифах Авито и инструментах, ' +
-                            'которые мы используем для улучшения эффективности бизнеса клиентов'
+                            'которые мы используем для улучшения эффективности бизнеса клиентов.'
                         }
                     />
                 )}

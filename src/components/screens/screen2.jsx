@@ -59,10 +59,10 @@ const SexImage = styled.div`
   cursor: pointer;
   
   @media screen and (min-width: 640px) {
-    height: calc((56vh - 30px - 2 * var(--screen_padding)) / 2);
-    width: calc((56vh - 30px - 2 * var(--screen_padding)) / 2);
-    min-height: calc((360px - 2 * var(--screen_padding)) / 2);
-    min-width: calc((360px - 2 * var(--screen_padding)) / 2);
+    height: calc((56vh - 60px - 2 * var(--screen_padding)) / 2);
+    width: calc((56vh - 60px - 2 * var(--screen_padding)) / 2);
+    min-height: calc((310px - 2 * var(--screen_padding)) / 2);
+    min-width: calc((310px - 2 * var(--screen_padding)) / 2);
   }
 `;
 
@@ -96,7 +96,7 @@ export const Screen2 = () => {
                     <TextMd>
                         <HighlightedText color={'purple'} $isFirstWord>Давай знакомиться</HighlightedText>,
                         {'\n'}
-                        чтобы коллеги знали, как к{'\u00A0'}тебе правильно{'\u00A0'}обращаться
+                        чтобы коллеги знали, как к{'\u00A0'}тебе правильно{'\u00A0'}обращаться.
                     </TextMd>
                 </TextWrapper>
                 <InputStyled
