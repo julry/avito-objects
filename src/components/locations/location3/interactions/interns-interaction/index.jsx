@@ -22,7 +22,7 @@ export const InternsInteraction = ({onClose}) => {
         <>
             {stage === 0 && (
                 <LocationStart
-                    title={'Встреча со стажёрами'}
+                    title={'Встреча со стажерами'}
                     text={'Интересно, о чем они\nразговаривают?'}
                     onDisappear={() => setStage(prevStage => prevStage + 1)}
                 />

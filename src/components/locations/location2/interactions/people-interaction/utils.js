@@ -5,7 +5,7 @@ import { SEX_TYPES } from '../../../../../constants';
 export const getPeopleInteractionMessages = (sex) => [
     {
         id: 'loc2_person0',
-        sender: 'Коллега-стажёр',
+        sender: 'Коллега-стажер',
         avatar: colleague,
         color: 'green',
         text: 'У меня сразу после мастер-класса назначен созвон с\u00A0клиентом. ' +
@@ -23,7 +23,7 @@ export const getPeopleInteractionMessages = (sex) => [
     },
     {
         id: 'loc2_person2',
-        sender: 'Коллега-стажёр',
+        sender: 'Коллега-стажер',
         avatar: colleague,
         color: 'green',
         text: 'Привет! Я тут рассказываю коллеге про одного своего клиента. ' +
@@ -44,7 +44,7 @@ export const getPeopleInteractionAnswerMessages = () => [
     },
     {
         id: 'loc2_person5',
-        sender: 'Коллега-стажёр',
+        sender: 'Коллега-стажер',
         avatar: colleague,
         color: 'green',
         text: 'Пять категорий — это товары, недвижимость, авто, услуги и\u00A0работа. ' +

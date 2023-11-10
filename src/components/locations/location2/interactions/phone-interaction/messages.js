@@ -6,7 +6,7 @@ import player from '../../../../../assets/images/player.svg';
 export const getStartMessages = () => [
     {
         id: 'phone_chat_0',
-        sender: 'Ваня стажёр',
+        sender: 'Ваня стажер',
         time: '3 мин назад',
         avatar: vanya,
         color: 'green',
@@ -14,7 +14,7 @@ export const getStartMessages = () => [
     },
     {
         id: 'phone_chat_1',
-        sender: 'Коля стажёр',
+        sender: 'Коля стажер',
         time: '3 мин назад',
         avatar: kolya,
         color: 'red',
@@ -22,7 +22,7 @@ export const getStartMessages = () => [
     },
     {
         id: 'phone_chat_2',
-        sender: 'Света стажёрка',
+        sender: 'Света стажерка',
         time: '2 мин назад',
         avatar: sveta,
         color: 'green',
@@ -32,7 +32,7 @@ export const getStartMessages = () => [
     },
     {
         id: 'phone_chat_3',
-        sender: 'Ваня стажёр',
+        sender: 'Ваня стажер',
         time: '2 мин назад',
         avatar: vanya,
         color: 'green',
@@ -40,7 +40,7 @@ export const getStartMessages = () => [
     },
     {
         id: 'phone_chat_4',
-        sender: 'Света стажёрка',
+        sender: 'Света стажерка',
         time: '1 мин назад',
         avatar: sveta,
         color: 'green',
@@ -60,7 +60,7 @@ export const getNextMessages = (answer) => [
     },
     {
         id: 'phone_chat_6',
-        sender: 'Коля стажёр',
+        sender: 'Коля стажер',
         time: '2 сек назад',
         avatar: kolya,
         color: 'red',
@@ -69,7 +69,7 @@ export const getNextMessages = (answer) => [
     },
     {
         id: 'phone_chat_7',
-        sender: 'Ваня стажёр',
+        sender: 'Ваня стажер',
         time: '2 cек назад',
         avatar: vanya,
         color: 'green',
@@ -78,7 +78,7 @@ export const getNextMessages = (answer) => [
     },
     {
         id: 'phone_chat_8',
-        sender: 'Света стажёрка',
+        sender: 'Света стажерка',
         time: '1 cек назад',
         avatar: sveta,
         color: 'green',
@@ -87,7 +87,7 @@ export const getNextMessages = (answer) => [
     },
     {
         id: 'phone_chat_9',
-        sender: 'Коля стажёр',
+        sender: 'Коля стажер',
         time: 'сейчас',
         avatar: kolya,
         color: 'red',
@@ -96,7 +96,7 @@ export const getNextMessages = (answer) => [
     },
     {
         id: 'phone_chat_10',
-        sender: 'Ваня стажёр',
+        sender: 'Ваня стажер',
         time: 'сейчас',
         avatar: vanya,
         color: 'green',

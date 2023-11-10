@@ -137,7 +137,7 @@ export const PosterInteraction = ({onClose}) => {
                     $isAnswered={isAnswered}
                 >
                     <Number>3</Number>
-                    <TextSm>Один из стажёров</TextSm>
+                    <TextSm>Один из стажеров</TextSm>
                     {isAnswered && answer === 3 && (
                         <AdditionalText $isError>
                             Почти! Так любит говорить твой{'\u00A0'}наставник

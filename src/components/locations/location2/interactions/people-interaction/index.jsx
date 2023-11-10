@@ -28,7 +28,7 @@ export const PeopleInteraction = ({onClose}) => {
         <>
             {stage === 0 && (
                 <LocationStart
-                    title={'Компания стажёров'}
+                    title={'Компания стажеров'}
                     text={'Время познакомиться\nс коллегами!'}
                     onDisappear={() => setStage(prevStage => prevStage + 1)}
                 />
