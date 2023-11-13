@@ -17,9 +17,9 @@ const QuestionBlock = styled.div`
   margin: min(33px, 8.8vw) 0 0;
 `;
 
-export const LocationQuestion = ({ chosenAnswer, onChooseAnswer }) => (
+export const LocationQuestion = ({ chosenAnswer, onChooseAnswer, sex }) => (
     <Wrapper>
-        <Chat messages={[getQuestionMessages()[0]]}/>
+        <Chat messages={[getQuestionMessages(sex)[0]]}/>
         <QuestionBlock>
             <QuestionTitle>Выбери свой вопрос</QuestionTitle>
             <Answers 

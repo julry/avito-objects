@@ -8,13 +8,11 @@ const Wrapper = styled.div`
   padding: var(--screen_padding);
 `;
 
-export const AnswerVideo = ({ questions, onNext }) => {
-    return (
-        <ModalWrapper>
-            <Wrapper>
-                <Chat messages={getMessages(...questions)} />
-            </Wrapper>
-            <BottomAbsoluteButton type="light" onClick={onNext}>Спасибо за мастер-класс!</BottomAbsoluteButton>
-        </ModalWrapper>
-    );
-};
+export const AnswerVideo = ({ questions, onNext, sex }) => (
+    <ModalWrapper>
+        <Wrapper>
+            <Chat messages={getMessages(...questions, sex)} />
+        </Wrapper>
+        <BottomAbsoluteButton type="light" onClick={onNext}>Спасибо за мастер-класс!</BottomAbsoluteButton>
+    </ModalWrapper>
+);

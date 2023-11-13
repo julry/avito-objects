@@ -4,6 +4,7 @@ import people from '../../../../../assets/images/zoomedPeople.svg';
 import { LocationStart } from '../../../../shared/location-start';
 import { QuestionChat } from './question-chat';
 import { AnswerChat } from './answer-chat';
+import { useProgress } from '../../../../../hooks/useProgress';
 
 const People = styled.div`
   position: absolute;
@@ -17,6 +18,7 @@ const People = styled.div`
 `;
 
 export const PeopleInteraction = ({onClose}) => {
+    const { sex } = useProgress();
     const [stage, setStage] = useState(0);
 
     const handleChooseQuestion = (id) => {
@@ -34,7 +36,7 @@ export const PeopleInteraction = ({onClose}) => {
                 />
             )}
             {stage === 1 && (<QuestionChat onChooseQuestion={handleChooseQuestion} />)}
-            {stage === 2 && (<AnswerChat onClose={onClose} />)}
+            {stage === 2 && (<AnswerChat onClose={onClose} sex={sex}/>)}
             <People $isFront={stage === 0} />
         </>
     );

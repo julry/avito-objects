@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
+import { useProgress } from '../../../../../hooks/useProgress';
 import { FlexWrapper } from '../../../../shared/flex-wrapper';
 import { MessageWrapper } from '../../../../shared/message-wrapper';
 import { QuestionVideo } from './question-video';
@@ -21,6 +22,7 @@ const Wrapper = styled(FlexWrapper)`
 `;
 
 export const VideoInteraction = ({ onClose, onChangePart }) => {
+    const { sex } = useProgress();
     const [part, setPart] = useState(0);
     const [questions, setQuestions] = useState([]);
     const $timeout = useRef(null);
@@ -69,7 +71,7 @@ export const VideoInteraction = ({ onClose, onChangePart }) => {
                     />
                 )}
                 {part === 1 && <QuestionVideo onNext={handleNextQuestions} />}
-                {part === 2 && <AnswerVideo questions={questions} onNext={onClose} />}
+                {part === 2 && <AnswerVideo questions={questions} onNext={onClose} sex={sex} />}
             </Wrapper>
         </ModalWrapper>
     );

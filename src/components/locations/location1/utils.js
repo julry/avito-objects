@@ -1,9 +1,11 @@
 import buddy from '../../../assets/images/buddy.svg';
 import player from '../../../assets/images/player.svg';
+import playerF from '../../../assets/images/playerF.svg';
 import gosha from '../../../assets/images/gosha-avatar.svg';
 import { TextDivider, TextSm, UnderlinedText } from '../../shared/texts';
+import { SEX_TYPES } from '../../../constants';
 
-export const getMessages = (name) => (
+export const getMessages = (name, sex) => (
     [
         {
             id: 'loc1_0',
@@ -31,12 +33,12 @@ export const getMessages = (name) => (
             text: 'Спасибо! Задача понятна. Можно сразу задать пару вопросов?',
             type: 'main',
             delay: 2000,
-            avatar: player,
+            avatar: sex === SEX_TYPES.female ? playerF : player,
         }
     ]
 );
 
-export const getQuestionMessages = (questionNumber) => (
+export const getQuestionMessages = (questionNumber, sex) => (
     [
         {
             id: 'loc1_2',
@@ -51,7 +53,7 @@ export const getQuestionMessages = (questionNumber) => (
             text: questionNumber === '1' ? 'Я могу обратиться за помощью к коллегам?' : 'Я буду работать только с продавцом диванов или у меня будут и другие клиенты?',
             type: 'main',
             delay: 0,
-            avatar: player,
+            avatar: sex === SEX_TYPES.female ? playerF : player,
         },
         {
             id: 'loc1_4',
@@ -81,7 +83,7 @@ export const getQuestionMessages = (questionNumber) => (
 );
 
 
-export const getPersonMessages = () => [
+export const getPersonMessages = (sex) => [
     {
         id: 'loc1_person0',
         sender: 'Гоша коллега',
@@ -97,7 +99,7 @@ export const getPersonMessages = () => [
         text: 'Корпоративный массажист? Не хватает только спортзала.',
         type: 'main',
         delay: 1000,
-        avatar: player,
+        avatar: sex === SEX_TYPES.female ? playerF : player,
     },
     {
         id: 'loc1_person2',

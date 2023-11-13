@@ -5,6 +5,7 @@ import { FlexWrapper } from '../shared/flex-wrapper';
 import { LogoHead } from '../shared/logo-head';
 import { HighlightedText, TextDivider, TextMd, UnderlinedText } from '../shared/texts';
 import { Button } from '../shared/button';
+import { reachMetrikaGoal } from '../../utils/reachMetrikaGoal';
 
 const Wrapper = styled(FlexWrapper)`
   height: 100%;
@@ -41,6 +42,11 @@ const Image = styled.div`
 export const Screen1 = () => {
     const { next } = useProgress();
 
+    const handleNext = () => {
+      reachMetrikaGoal('start');
+      next();
+    };
+
     return (
         <>
             <Wrapper>
@@ -62,7 +68,7 @@ export const Screen1 = () => {
                         Удачи, друг!
                     </TextMd>
                 </TextWrapper>
-                <Button type={'dark'} onClick={next}>Исследовать</Button>
+                <Button type={'dark'} onClick={handleNext}>Исследовать</Button>
             </Wrapper>
             <Image />
         </>

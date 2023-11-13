@@ -7,6 +7,7 @@ import { Chat } from '../../shared/chat';
 import { LocationQuestion } from './location-question';
 import { LocationAnswer } from './location-answer';
 import { getMessages } from './utils';
+import { useProgress } from '../../../hooks/useProgress';
 
 const ModalWrapperStyled = styled(ModalWrapper)`
   padding: var(--screen_padding) min(16px, 4.2vw);
@@ -29,6 +30,7 @@ const Buddy = styled.div`
 `;
 
 export const LocationChat = ({ name, onStart }) => {
+    const { sex } = useProgress();
     const [part, setPart] = useState(0);
     const [questionNumber, setQuestionNumber] = useState(null);
 
@@ -39,10 +41,10 @@ export const LocationChat = ({ name, onStart }) => {
     }), []);
 
     const partComponent = useMemo(() => ({
-        0: () => <ChatStyled messages={getMessages(name)} />,
-        1: () => <LocationQuestion chosenAnswer={questionNumber} onChooseAnswer={(q) => setQuestionNumber(q)}/>,
-        2: () => <LocationAnswer chosenAnswer={questionNumber} />,
-    }), [questionNumber, setQuestionNumber, name]);
+        0: () => <ChatStyled messages={getMessages(name, sex)} />,
+        1: () => <LocationQuestion chosenAnswer={questionNumber} onChooseAnswer={(q) => setQuestionNumber(q)} sex={sex}/>,
+        2: () => <LocationAnswer chosenAnswer={questionNumber} sex={sex}/>,
+    }), [questionNumber, setQuestionNumber, name, sex]);
 
     useEffect(() => {
         if (part > 2) onStart?.();

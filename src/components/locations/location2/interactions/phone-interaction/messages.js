@@ -2,6 +2,8 @@ import vanya from '../../../../../assets/images/vanya.svg';
 import sveta from '../../../../../assets/images/sveta.svg';
 import kolya from '../../../../../assets/images/kolya.svg';
 import player from '../../../../../assets/images/player.svg';
+import playerF from '../../../../../assets/images/playerF.svg';
+import { SEX_TYPES } from '../../../../../constants';
 
 export const getStartMessages = () => [
     {
@@ -48,12 +50,12 @@ export const getStartMessages = () => [
     },
 ];
 
-export const getNextMessages = (answer) => [
+export const getNextMessages = (answer, sex) => [
     {
         id: 'phone_chat_5',
         sender: 'Я',
         time: '5 сек назад',
-        avatar: player,
+        avatar: sex === SEX_TYPES.female ? playerF : player,
         color: 'blue',
         text: answer === 1 ? 'Привет!' : 'Всем салют))',
         delay: 0,

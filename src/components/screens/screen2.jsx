@@ -11,6 +11,7 @@ import { HighlightedText, TextMd } from '../shared/texts';
 import { Button } from '../shared/button';
 import { Input } from '../shared/Input';
 import { Hexagon } from '../shared/hexagon';
+import { reachMetrikaGoal } from '../../utils/reachMetrikaGoal';
 
 const Wrapper = styled(FlexWrapper)`
   height: 100%;
@@ -85,6 +86,7 @@ export const Screen2 = () => {
 
     const handleNext = () => {
         updateProgress({ name, sex });
+        reachMetrikaGoal('name')
         next();
     };
 

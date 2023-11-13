@@ -45,12 +45,12 @@ const Message = styled.div`
 `;
 
 export const ChatQuestion = () => {
-    const {next} = useProgress();
+    const { next, sex } = useProgress();
     const [answer, setAnswer] = useState(null);
     const [isAnswered, setIsAnswered] = useState(false);
     const messages = useMemo(() => (
-        isAnswered ? getNextMessages(answer) : getStartMessages()
-    ), [isAnswered, answer]);
+        isAnswered ? getNextMessages(answer, sex) : getStartMessages()
+    ), [isAnswered, answer, sex]);
 
     const handleClick = () => {
         if (isAnswered) next();

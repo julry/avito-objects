@@ -6,6 +6,7 @@ import { Rules } from '../locations/rules';
 import { useProgress } from '../../hooks/useProgress';
 import { TOTAL_OBJECTS } from '../../constants';
 import { ButtonNoIcon } from './button';
+import { reachMetrikaGoal } from '../../utils/reachMetrikaGoal';
 
 const Wrapper = styled.div`
   position: absolute;
@@ -57,13 +58,18 @@ export const GameHeader = ({ isRules }) => {
     const [isShownRules, setIsShownRules] = useState(isRules);
     const { pickedObjects, isFinished, setToQuestionScreen } = useProgress();
 
+    const handleAnswer = () => {
+      reachMetrikaGoal('answer2');
+      setToQuestionScreen();
+    };
+
     return (
         <>
             <Wrapper>
                 <LogoStyled />
                 <InfoWrapper>
                     {isFinished ? (
-                        <ButtonNoIcon type='action' onClick={setToQuestionScreen}>Дать ответ</ButtonNoIcon>
+                        <ButtonNoIcon type='action' onClick={handleAnswer}>Дать ответ</ButtonNoIcon>
                     ) : (
                         <Count>
                             <Picked>{pickedObjects?.length ?? 0}</Picked>/{TOTAL_OBJECTS}

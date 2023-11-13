@@ -8,6 +8,9 @@ import { LogoHead } from '../shared/logo-head';
 import { FlexWrapper } from '../shared/flex-wrapper';
 import { HighlightedText, TextMd, UnderlinedText } from '../shared/texts';
 import { Button, ButtonNoIcon } from '../shared/button';
+import { useEffect, useRef } from 'react';
+import { reachMetrikaGoal } from '../../utils/reachMetrikaGoal';
+import { SEX_TYPES } from '../../constants';
 
 const Wrapper = styled(FlexWrapper)`
   height: 100%;
@@ -64,6 +67,24 @@ const ButtonsWrapper = styled.div`
 export const Screen6 = () => {
     const { next, sex, resetToFirstLocation } = useProgress();
 
+    const metrika = useRef(false);
+
+    useEffect(() => {
+        if (metrika.current) return;
+        reachMetrikaGoal('final1');
+        metrika.current = true;
+    }, []);
+
+    const handleThink = () => {
+      reachMetrikaGoal('start2');
+      resetToFirstLocation();
+    };
+
+    const handleAnswer = () => {
+      reachMetrikaGoal('answer1');
+      next();
+    }
+
     return (
         <>
             <Wrapper>
@@ -74,13 +95,13 @@ export const Screen6 = () => {
                     </TextMd>
                     <Text>
                         Ты можешь еще погулять по{'\u00A0'}офису и{'\u00A0'}заглянуть в{'\u00A0'}подсказки.
-                        Если уже придумал, <UnderlinedText color="blue">как помочь «Дивным диванам» повысить продажи,</UnderlinedText>
+                        Если уже придумал{sex === SEX_TYPES.female ? 'а' : ''}, <UnderlinedText color="blue">как помочь «Дивным диванам» повысить продажи,</UnderlinedText>
                         — поделись своими мыслями с бадди.
                     </Text>
                 </TextWrapper>
                 <ButtonsWrapper>
-                    <Button type="dark" onClick={next}>Дать ответ</Button>
-                    <ButtonNoIcon type="dark" onClick={resetToFirstLocation}>Еще подумать</ButtonNoIcon>
+                    <Button type="dark" onClick={handleAnswer}>Дать ответ</Button>
+                    <ButtonNoIcon type="dark" onClick={handleThink}>Еще подумать</ButtonNoIcon>
                 </ButtonsWrapper>
             </Wrapper>
             <Background>

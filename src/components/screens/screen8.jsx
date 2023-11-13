@@ -8,6 +8,7 @@ import { Button } from '../shared/button';
 import { HighlightedText, TextDivider, TextMd, UnderlinedText } from '../shared/texts';
 import { LogoHead } from '../shared/logo-head';
 import { FlexWrapper } from '../shared/flex-wrapper';
+import { reachMetrikaGoal } from '../../utils/reachMetrikaGoal';
 
 const Wrapper = styled.div`
   height: 100%;
@@ -94,7 +95,8 @@ const RadioIconStyled = styled.div`
   flex-shrink: 0;
   width: 13px;
   height: 13px;
-  background-color: var(--main_purple);
+  background-color: white;
+  border: 2px solid var(--main_purple);
   border-radius: 3px;
   margin: 3px min(10px, 2.6vw) 0 0;
 
@@ -113,41 +115,8 @@ const RadioButtonLabel = styled.label`
   width: 100%;
   text-align: left;
   
-  & ${InputRadioButton}:checked + ${RadioIconStyled}:after {
-    content: '';
-    position: absolute;
-    top: 3px;
-    left: 6.5px;
-    display: inline-block;
-    width: 2px;
-    height: 7px;
-    background: white;
-    border-radius: 3px;
-    transform: rotate(39deg);
-
-    @media screen and (min-height: 750px) {
-      left: 7.5px;
-      width: 3px;
-      height: 8px;
-    }
-  }
-
- & ${InputRadioButton}:checked + ${RadioIconStyled}:before {
-   content: '';
-   position: absolute;
-   top: 5.5px;
-   left: 4px;
-   display: inline-block;
-   width: 2px;
-   height: 4px;
-   background: white;
-   border-radius: 3px;
-   transform: rotate(-45deg);
-
-   @media screen and (min-height: 750px) {
-     width: 3px;
-     height: 6px;
-   }
+ & ${InputRadioButton}:checked + ${RadioIconStyled} {
+   background: var(--main_purple);
  }
 `;
 
@@ -171,6 +140,9 @@ export const Screen8 = () => {
     const [isSend, setIsSend] = useState(false);
     const [isSending, setIsSending] = useState(false);
     const [isCorrect, setIsCorrect] = useState(true);
+    const [isLinkClicked, setIsLinkClicked] = useState(false);
+    const [isMetrikaClickedActive, setIsMetrikaClickedActive] = useState(false);
+
     const [email, setEmail] = useState('');
 
     const emailRegExp = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
@@ -188,6 +160,21 @@ export const Screen8 = () => {
       setEmail(e.target.value);
   };
 
+  const handleOpenLink = () => {
+    setIsLinkClicked(true);
+    if (!isMetrikaClickedActive) {
+      if (isSend) {
+         reachMetrikaGoal('respond1');
+         setIsMetrikaClickedActive(true);
+      }
+      if (!progress.isFinalCorrect) {
+        reachMetrikaGoal('respond2');
+        setIsMetrikaClickedActive(true);
+      }
+     
+    }
+    window.open('https://career.avito.com/vacancies/prodazhi/1091/', '_blank');
+  }
 
     const handleSubmit = () => {
         if (isSending) return;
@@ -212,9 +199,15 @@ export const Screen8 = () => {
 
         fetch(myRequest).then(() => {
             setIsSend(true);
+            reachMetrikaGoal('email');
+            if (!isMetrikaClickedActive && isLinkClicked) {
+              reachMetrikaGoal('respond1');
+              setIsMetrikaClickedActive(true);
+            }
         }).finally(() => {
             setIsSending(false);
         });
+
         setIsSend(true);
     };
 
@@ -251,7 +244,7 @@ export const Screen8 = () => {
                 <ButtonWrapper>
                     <Button 
                       type="dark" 
-                      onClick={() => window.open('https://career.avito.com/vacancies/prodazhi/1091/', '_blank')}
+                      onClick={handleOpenLink}
                     >
                         Откликнуться
                     </Button>

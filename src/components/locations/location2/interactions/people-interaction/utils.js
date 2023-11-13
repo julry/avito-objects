@@ -1,5 +1,6 @@
 import colleague from '../../../../../assets/images/colleague-avatar.svg';
 import player from '../../../../../assets/images/player.svg';
+import playerF from '../../../../../assets/images/playerF.svg';
 import { SEX_TYPES } from '../../../../../constants';
 
 export const getPeopleInteractionMessages = (sex) => [
@@ -19,7 +20,7 @@ export const getPeopleInteractionMessages = (sex) => [
         text: 'Всем привет! Что обсуждаете?',
         type: 'main',
         delay: 1000,
-        avatar: player,
+        avatar: sex === SEX_TYPES.female ? playerF : player,
     },
     {
         id: 'loc2_person2',
@@ -33,14 +34,14 @@ export const getPeopleInteractionMessages = (sex) => [
     }
 ];
 
-export const getPeopleInteractionAnswerMessages = () => [
+export const getPeopleInteractionAnswerMessages = (sex) => [
     {
         id: 'loc2_person4',
         sender: 'Я',
         text: 'Ого! А что за категории?',
         type: 'main',
         delay: 0,
-        avatar: player,
+        avatar: sex === SEX_TYPES.female ? playerF : player,
     },
     {
         id: 'loc2_person5',

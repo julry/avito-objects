@@ -12,8 +12,8 @@ const MessageStyled = styled(Message)`
   margin-bottom: var(--screen_padding);
 `;
 
-export const LocationAnswer = ({ chosenAnswer }) => {
-    const messages = getQuestionMessages(chosenAnswer);
+export const LocationAnswer = ({ chosenAnswer, sex }) => {
+    const messages = getQuestionMessages(chosenAnswer, sex);
     const chatMessages = messages.slice(1);
 
     return (

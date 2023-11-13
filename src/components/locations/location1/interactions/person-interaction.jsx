@@ -17,10 +17,10 @@ const ButtonStyled = styled(Button)`
   margin: min(28px, 7.5vw) auto 0;
 `;
 
-export const PersonInteraction = ({ onClose }) => (
+export const PersonInteraction = ({ onClose, sex }) => (
     <ModalWrapper>
         <Wrapper>
-            <Chat messages={getPersonMessages()} />
+            <Chat messages={getPersonMessages(sex)} />
             <ButtonStyled type="light" onClick={onClose}>Вернуться к работе</ButtonStyled>
         </Wrapper>
     </ModalWrapper>

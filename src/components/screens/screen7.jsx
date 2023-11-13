@@ -7,6 +7,7 @@ import { TextDivider, TextMd, TextSm, UnderlinedText } from '../shared/texts';
 import { Button } from '../shared/button';
 import { useState } from 'react';
 import { useProgress } from '../../hooks/useProgress';
+import { reachMetrikaGoal } from '../../utils/reachMetrikaGoal';
 
 const Wrapper = styled.div`
   height: 100%;
@@ -62,7 +63,12 @@ export const Screen7 = () => {
     const [chosenAnswer, setChosenAnswer] = useState(0);
 
     const handleNext = () => {
-        if (chosenAnswer === 0) updateProgress({isFinalCorrect: true});
+        if (chosenAnswer === 0) {
+            reachMetrikaGoal('right');
+            updateProgress({isFinalCorrect: true})
+        } else {
+            reachMetrikaGoal('wrong' + chosenAnswer);
+        }
         next();
     };
 

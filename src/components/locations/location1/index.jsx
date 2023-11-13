@@ -32,7 +32,7 @@ const Wrapper = styled.div`
 `;
 
 export const Location1 = ({ onStart }) => {
-    const { next, progress, isFinished, setPickedObjects } = useProgress();
+    const { next, progress, isFinished, setPickedObjects, sex } = useProgress();
     const [isStartPopup, setIsStartPopup] =  useState(!isFinished);
     const [isChat, setIsChat] = useState(false);
     const [clicked, setClicked] = useState(null);
@@ -71,7 +71,7 @@ export const Location1 = ({ onStart }) => {
             )}
             <LocationField onObjectClick={handleObjectClick}/>
             {isChat && <LocationChat name={progress.name} onStart={handleStart} />}
-            {clicked === 'gosha' && <PersonInteraction onClose={handleClose} />}
+            {clicked === 'gosha' && <PersonInteraction onClose={handleClose} sex={sex}/>}
             {clicked === 'email' && (
                 isSawEmail ? ( <EmailInteraction onClose={handleClose} />) : (
                     <BottomAbsoluteButton type="light" onClick={() => setIsSawEmail(true)}>

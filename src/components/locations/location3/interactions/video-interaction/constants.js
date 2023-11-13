@@ -1,5 +1,7 @@
 import player from '../../../../../assets/images/player.svg';
+import playerF from '../../../../../assets/images/playerF.svg';
 import speaker from '../../../../../assets/images/speaker.svg';
+import { SEX_TYPES } from '../../../../../constants';
 
 const questionsMessages = {
     1: {
@@ -22,11 +24,11 @@ const questionsMessages = {
     }
 };
 
-export const getMessages = (question1, question2) => [
+export const getMessages = (question1, question2, sex) => [
     {
         id: 'video_chat_0',
         sender: 'Я',
-        avatar: player,
+        avatar: sex === SEX_TYPES.female ? playerF : player,
         type: 'main',
         color: 'blue',
         text: questionsMessages[question1]?.question,
@@ -44,7 +46,7 @@ export const getMessages = (question1, question2) => [
         id: 'phone_chat_5',
         sender: 'Я',
         type: 'main',
-        avatar: player,
+        avatar: sex === SEX_TYPES.female ? playerF : player,
         color: 'blue',
         text: questionsMessages[question2]?.question,
         delay: 1400,

@@ -1,6 +1,7 @@
 import vanya from '../../../../../assets/images/vanya.svg';
 import sveta from '../../../../../assets/images/sveta.svg';
 import player from '../../../../../assets/images/player.svg';
+import playerF from '../../../../../assets/images/playerF.svg';
 import kolya from '../../../../../assets/images/kolya.svg';
 import intern from '../../../../../assets/images/intern.svg';
 import { SEX_TYPES } from '../../../../../constants';
@@ -41,7 +42,7 @@ export const getAnswerMessages = (question, sex) => [
             (question === '1' ? 'Пока думаю, что им предложить.' : 'Может, кто-то с ними уже работал?'),
         type: 'main',
         delay: 0,
-        avatar: player,
+        avatar: sex === SEX_TYPES.female ? playerF : player,
     },
     {
         id: 'loc2_person5',
