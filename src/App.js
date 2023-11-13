@@ -35,8 +35,8 @@ const ComponentWrapper = styled(FlexWrapper)`
   overflow: hidden;
 
   @media screen and (min-width: 640px) {
-    max-width: calc(56vh - 40px);
-    min-width: 375px;
+    --width: calc(56vh - 40px);
+    width: max(375px, var(--width));
     border: 3px solid black;
     border-radius: 20px;
     margin: var(--screen_padding) 0;

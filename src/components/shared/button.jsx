@@ -111,4 +111,12 @@ export const BottomAbsoluteButton = styled(Button)`
   @media screen and (max-height: 650px) {
     bottom: min(20px, 5.3vw);
   }
+
+  @media screen and (min-width: 640px) and (max-height: 700px) {
+    bottom: 10px;
+  }
+
+  @media screen and (min-width: 640px) and (max-height: 600px) {
+    bottom: 5px;
+  }
 `;

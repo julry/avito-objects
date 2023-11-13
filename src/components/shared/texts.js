@@ -80,7 +80,7 @@ export const HighlightedText = styled.span`
 
 export const UnderlinedText = styled.span`
   position: relative;
-  border-bottom: 3px solid var(--main_${({color}) => color});
+  /* border-bottom: 3px solid var(--main_${({color}) => color});
   padding-bottom: 0;
 
   &::before, &::after {
@@ -102,16 +102,16 @@ export const UnderlinedText = styled.span`
 
   &::after {
     right: -1.5px;
-  }
+  } */
 
-  /* --capImageLeft_blue: url(${capLeftB});
+  --capImageLeft_blue: url(${capLeftB});
   --capImageRight_blue: url(${capRightB});
   --capImageRight_green: url(${capRightG});
   --capImageLeft_green: url(${capLeftG});
   --underline-color: var(--main_${({color}) => color});
-  --underline-intrinsic-width: 4;
-  --underline-width: 4;
-  --underline-cap-width: 2px;
+  --underline-intrinsic-width: 2;
+  --underline-width: 2;
+  --underline-cap-width: 1px;
   --underline-offset-y: 0px;
   --underline-padding-x: 0px;
   --underline-width-scale: calc(var(--underline-width) / var(--underline-intrinsic-width));
@@ -133,7 +133,7 @@ export const UnderlinedText = styled.span`
   background-size:
           calc(100% - calc(var(--underline-cap-width) * var(--underline-width-scale) * 2)) calc(var(--underline-width) * 1px),
           auto calc(var(--underline-width) * 1px),
-          auto calc(var(--underline-width) * 1px); */
+          auto calc(var(--underline-width) * 1px);
 `;
 
 export const TextDivider = styled.span`
