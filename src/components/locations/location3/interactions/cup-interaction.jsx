@@ -1,12 +1,12 @@
-import styled from 'styled-components';
-import { ModalWrapper } from '../../../shared/modal-wrapper';
-import { PopUp } from '../../../shared/pop-up';
-import { FlexWrapper } from '../../../shared/flex-wrapper';
-import { TextMd } from '../../../shared/texts';
-import { Button } from '../../../shared/button';
+import styled from "styled-components";
+import { ModalWrapper } from "../../../shared/modal-wrapper";
+import { PopUp } from "../../../shared/pop-up";
+import { FlexWrapper } from "../../../shared/flex-wrapper";
+import { TextMd } from "../../../shared/texts";
+import { Button } from "../../../shared/button";
 
 const ModalWrapperStyled = styled(ModalWrapper)`
-    background: transparent;
+  background: transparent;
 `;
 
 const Wrapper = styled(FlexWrapper)`
@@ -23,17 +23,18 @@ const ButtonStyled = styled(Button)`
   margin: var(--screen_padding) auto 0;
 `;
 
-
-export const CupInteraction = ({onClose}) => (
-    <ModalWrapperStyled>
-        <Wrapper>
-            <PopUp title={'Взбодриться не помешает!'}>
-                <TextMd>
-                    Кстати, слово «кофеин» вошло в{'\u00A0'}словарь только
-                    в{'\u00A0'}1819{'\u00A0'}году.{'\n'}Как люди вообще жили без{'\u00A0'}кофе?
-                </TextMd>
-            </PopUp>
-            <ButtonStyled type={'light'} onClick={onClose}>Пили чай!</ButtonStyled>
-        </Wrapper>
-    </ModalWrapperStyled>
+export const CupInteraction = ({ onClose }) => (
+  <ModalWrapperStyled>
+    <Wrapper>
+      <PopUp title={"Взбодриться не помешает!"}>
+        <TextMd>
+          Кстати, слово «кофеин» вошло в{"\u00A0"}словарь только в{"\u00A0"}1819
+          {"\u00A0"}году.{"\n"}Как люди вообще жили без{"\u00A0"}кофе?
+        </TextMd>
+      </PopUp>
+      <ButtonStyled type={"light"} onClick={onClose}>
+        Пили чай!
+      </ButtonStyled>
+    </Wrapper>
+  </ModalWrapperStyled>
 );

@@ -1,17 +1,17 @@
-import { useState } from 'react';
-import styled from 'styled-components';
-import meetingBg from '../../assets/images/meeting-bg.svg';
-import male from '../../assets/images/male.svg';
-import female from '../../assets/images/female.svg';
-import { useProgress } from '../../hooks/useProgress';
-import { SEX_TYPES } from '../../constants';
-import { FlexWrapper } from '../shared/flex-wrapper';
-import { LogoHead } from '../shared/logo-head';
-import { HighlightedText, TextMd } from '../shared/texts';
-import { Button } from '../shared/button';
-import { Input } from '../shared/Input';
-import { Hexagon } from '../shared/hexagon';
-import { reachMetrikaGoal } from '../../utils/reachMetrikaGoal';
+import { useState } from "react";
+import styled from "styled-components";
+import meetingBg from "../../assets/images/meeting-bg.svg";
+import male from "../../assets/images/male.svg";
+import female from "../../assets/images/female.svg";
+import { reachMetrikaGoal } from "../../utils/reachMetrikaGoal";
+import { useProgress } from "../../hooks/useProgress";
+import { SEX_TYPES } from "../../constants";
+import { FlexWrapper } from "../shared/flex-wrapper";
+import { LogoHead } from "../shared/logo-head";
+import { HighlightedText, TextMd } from "../shared/texts";
+import { Button } from "../shared/button";
+import { Input } from "../shared/Input";
+import { Hexagon } from "../shared/hexagon";
 
 const Wrapper = styled(FlexWrapper)`
   height: 100%;
@@ -58,7 +58,7 @@ const SexImage = styled.div`
   height: calc((100vw - 2 * var(--screen_padding) - 10px) / 2);
   border-radius: 12px;
   cursor: pointer;
-  
+
   @media screen and (min-width: 640px) {
     height: calc((56vh - 60px - 2 * var(--screen_padding)) / 2);
     width: calc((56vh - 60px - 2 * var(--screen_padding)) / 2);
@@ -80,63 +80,62 @@ const Image = styled.div`
 `;
 
 export const Screen2 = () => {
-    const [name, setName] = useState('');
-    const [sex, setSex] = useState('');
-    const {next, updateProgress} = useProgress();
+  const [name, setName] = useState("");
+  const [sex, setSex] = useState("");
+  const { next, updateProgress } = useProgress();
 
-    const handleNext = () => {
-        updateProgress({ name, sex });
-        reachMetrikaGoal('name')
-        next();
-    };
+  const handleNext = () => {
+    updateProgress({ name, sex });
+    reachMetrikaGoal("name");
+    next();
+  };
 
-    return (
-        <>
-            <Wrapper>
-                <LogoHead />
-                <TextWrapper>
-                    <TextMd>
-                        <HighlightedText color={'purple'} $isFirstWord>Давай знакомиться</HighlightedText>,
-                        {'\n'}
-                        чтобы коллеги знали, как к{'\u00A0'}тебе правильно{'\u00A0'}обращаться.
-                    </TextMd>
-                </TextWrapper>
-                <InputStyled
-                    placeholder={'Имя'}
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                />
-                <SexWrapper>
-                    <SexBlock>
-                        <SexTitle onClick={() => setSex(SEX_TYPES.male)}>
-                            <TextMd>
-                                M
-                            </TextMd>
-                        </SexTitle>
-                        <SexImage
-                            onClick={() => setSex(SEX_TYPES.male)}
-                            src={male}
-                            $isActive={sex === SEX_TYPES.male}
-                        />
-                    </SexBlock>
-                    <SexBlock>
-                        <SexTitle onClick={() => setSex(SEX_TYPES.female)}>
-                            <TextMd>
-                                Ж
-                            </TextMd>
-                        </SexTitle>
-                        <SexImage
-                            onClick={() => setSex(SEX_TYPES.female)}
-                            src={female}
-                            $isActive={sex === SEX_TYPES.female}
-                        />
-                    </SexBlock>
-                </SexWrapper>
-                <Button type={'dark'} onClick={handleNext} disabled={!name || !sex}>
-                    Готово
-                </Button>
-            </Wrapper>
-            <Image />
-        </>
-    );
+  return (
+    <>
+      <Wrapper>
+        <LogoHead />
+        <TextWrapper>
+          <TextMd>
+            <HighlightedText color={"purple"} $isFirstWord>
+              Давай знакомиться
+            </HighlightedText>
+            ,{"\n"}
+            чтобы коллеги знали, как к{"\u00A0"}тебе правильно{"\u00A0"}
+            обращаться.
+          </TextMd>
+        </TextWrapper>
+        <InputStyled
+          placeholder={"Имя"}
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+        <SexWrapper>
+          <SexBlock>
+            <SexTitle onClick={() => setSex(SEX_TYPES.male)}>
+              <TextMd>M</TextMd>
+            </SexTitle>
+            <SexImage
+              onClick={() => setSex(SEX_TYPES.male)}
+              src={male}
+              $isActive={sex === SEX_TYPES.male}
+            />
+          </SexBlock>
+          <SexBlock>
+            <SexTitle onClick={() => setSex(SEX_TYPES.female)}>
+              <TextMd>Ж</TextMd>
+            </SexTitle>
+            <SexImage
+              onClick={() => setSex(SEX_TYPES.female)}
+              src={female}
+              $isActive={sex === SEX_TYPES.female}
+            />
+          </SexBlock>
+        </SexWrapper>
+        <Button type={"dark"} onClick={handleNext} disabled={!name || !sex}>
+          Готово
+        </Button>
+      </Wrapper>
+      <Image />
+    </>
+  );
 };

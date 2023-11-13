@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { TextMd } from './texts';
+import styled from "styled-components";
+import { TextMd } from "./texts";
 
 export const QuestionTitle = styled(TextMd)`
   padding: 5px 20px 6px;

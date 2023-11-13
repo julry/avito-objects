@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import note from '../../../../assets/images/note.svg';
-import { ModalWrapper } from '../../../shared/modal-wrapper';
-import { BottomAbsoluteButton } from '../../../shared/button';
+import styled from "styled-components";
+import note from "../../../../assets/images/note.svg";
+import { ModalWrapper } from "../../../shared/modal-wrapper";
+import { BottomAbsoluteButton } from "../../../shared/button";
 
 const NoteStyled = styled.div`
   position: absolute;
@@ -15,9 +15,11 @@ const ButtonStyled = styled(BottomAbsoluteButton)`
   z-index: 4;
 `;
 
-export const NoteInteraction = ({onClose}) => (
-    <ModalWrapper>
-        <NoteStyled />
-        <ButtonStyled type="light" onClick={onClose}>Точно!</ButtonStyled>
-    </ModalWrapper>
+export const NoteInteraction = ({ onClose }) => (
+  <ModalWrapper>
+    <NoteStyled />
+    <ButtonStyled type="light" onClick={onClose}>
+      Точно!
+    </ButtonStyled>
+  </ModalWrapper>
 );

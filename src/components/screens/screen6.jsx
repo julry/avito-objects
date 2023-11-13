@@ -1,16 +1,16 @@
-import styled from 'styled-components';
-import persMale from '../../assets/images/preQuestionMale.svg';
-import persFemale from '../../assets/images/preQuestionFemale.svg';
-import buddy from '../../assets/images/preQuestionBuddy.svg';
-import bg from '../../assets/images/preQuestionBg.svg';
-import { useProgress } from '../../hooks/useProgress';
-import { LogoHead } from '../shared/logo-head';
-import { FlexWrapper } from '../shared/flex-wrapper';
-import { HighlightedText, TextMd, UnderlinedText } from '../shared/texts';
-import { Button, ButtonNoIcon } from '../shared/button';
-import { useEffect, useRef } from 'react';
-import { reachMetrikaGoal } from '../../utils/reachMetrikaGoal';
-import { SEX_TYPES } from '../../constants';
+import { useEffect, useRef } from "react";
+import styled from "styled-components";
+import persMale from "../../assets/images/preQuestionMale.svg";
+import persFemale from "../../assets/images/preQuestionFemale.svg";
+import buddy from "../../assets/images/preQuestionBuddy.svg";
+import bg from "../../assets/images/preQuestionBg.svg";
+import { reachMetrikaGoal } from "../../utils/reachMetrikaGoal";
+import { SEX_TYPES } from "../../constants";
+import { useProgress } from "../../hooks/useProgress";
+import { LogoHead } from "../shared/logo-head";
+import { FlexWrapper } from "../shared/flex-wrapper";
+import { HighlightedText, TextMd, UnderlinedText } from "../shared/texts";
+import { Button, ButtonNoIcon } from "../shared/button";
 
 const Wrapper = styled(FlexWrapper)`
   height: 100%;
@@ -24,7 +24,7 @@ const TextWrapper = styled.div`
 `;
 
 const Text = styled(TextMd)`
-    margin-top: 10px;
+  margin-top: 10px;
 `;
 
 const Background = styled.div`
@@ -65,49 +65,59 @@ const ButtonsWrapper = styled.div`
 `;
 
 export const Screen6 = () => {
-    const { next, sex, resetToFirstLocation } = useProgress();
+  const { next, sex, resetToFirstLocation } = useProgress();
 
-    const metrika = useRef(false);
+  const metrika = useRef(false);
 
-    useEffect(() => {
-        if (metrika.current) return;
-        reachMetrikaGoal('final1');
-        metrika.current = true;
-    }, []);
+  useEffect(() => {
+    if (metrika.current) return;
+    reachMetrikaGoal("final1");
+    metrika.current = true;
+  }, []);
 
-    const handleThink = () => {
-      reachMetrikaGoal('start2');
-      resetToFirstLocation();
-    };
+  const handleThink = () => {
+    reachMetrikaGoal("start2");
+    resetToFirstLocation();
+  };
 
-    const handleAnswer = () => {
-      reachMetrikaGoal('answer1');
-      next();
-    }
+  const handleAnswer = () => {
+    reachMetrikaGoal("answer1");
+    next();
+  };
 
-    return (
-        <>
-            <Wrapper>
-                <LogoHead $centered/>
-                <TextWrapper>
-                    <TextMd>
-                        <HighlightedText $isFirstWord color="blue">Пора рассказать о своей идее!</HighlightedText>
-                    </TextMd>
-                    <Text>
-                        Ты можешь еще погулять по{'\u00A0'}офису и{'\u00A0'}заглянуть в{'\u00A0'}подсказки.
-                        Если уже придумал{sex === SEX_TYPES.female ? 'а' : ''}, <UnderlinedText color="blue">как помочь «Дивным диванам» повысить продажи,</UnderlinedText>
-                        — поделись своими мыслями с бадди.
-                    </Text>
-                </TextWrapper>
-                <ButtonsWrapper>
-                    <Button type="dark" onClick={handleAnswer}>Дать ответ</Button>
-                    <ButtonNoIcon type="dark" onClick={handleThink}>Еще подумать</ButtonNoIcon>
-                </ButtonsWrapper>
-            </Wrapper>
-            <Background>
-                <Person $sex={sex} />
-                <Buddy />
-            </Background>
-        </>
-    );
+  return (
+    <>
+      <Wrapper>
+        <LogoHead $centered />
+        <TextWrapper>
+          <TextMd>
+            <HighlightedText $isFirstWord color="blue">
+              Пора рассказать о своей идее!
+            </HighlightedText>
+          </TextMd>
+          <Text>
+            Ты можешь еще погулять по{"\u00A0"}офису и{"\u00A0"}заглянуть в
+            {"\u00A0"}подсказки. Если уже придумал
+            {sex === SEX_TYPES.female ? "а" : ""},{" "}
+            <UnderlinedText color="blue">
+              как помочь «Дивным диванам» повысить продажи,
+            </UnderlinedText>
+            — поделись своими мыслями с бадди.
+          </Text>
+        </TextWrapper>
+        <ButtonsWrapper>
+          <Button type="dark" onClick={handleAnswer}>
+            Дать ответ
+          </Button>
+          <ButtonNoIcon type="dark" onClick={handleThink}>
+            Еще подумать
+          </ButtonNoIcon>
+        </ButtonsWrapper>
+      </Wrapper>
+      <Background>
+        <Person $sex={sex} />
+        <Buddy />
+      </Background>
+    </>
+  );
 };

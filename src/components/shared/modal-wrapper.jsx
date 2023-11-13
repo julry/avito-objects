@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { FlexWrapper } from './flex-wrapper';
+import styled from "styled-components";
+import { FlexWrapper } from "./flex-wrapper";
 
 const Wrapper = styled(FlexWrapper)`
   position: absolute;
@@ -8,4 +8,4 @@ const Wrapper = styled(FlexWrapper)`
   z-index: 100;
 `;
 
-export const ModalWrapper = (props) => <Wrapper {...props} />
+export const ModalWrapper = (props) => <Wrapper {...props} />;

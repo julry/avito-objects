@@ -32,20 +32,20 @@ const Number = styled(TextSm)`
 `;
 
 export const Answers = (props) => (
-    <Wrapper>
-        {props.answers.map(answer => (
-            <Answer
-                key={answer.id}
-                onClick={answer.onClick}
-                $isActive={answer.isActive}
-                type={"main"}
-                text={() => (
-            <AnswerText>
-                <Number>{answer.id}</Number>
-                <TextSm>{answer.text}</TextSm>
-            </AnswerText>
-            )}
-        />
-        ))}
-    </Wrapper>
+  <Wrapper>
+    {props.answers.map((answer) => (
+      <Answer
+        key={answer.id}
+        onClick={answer.onClick}
+        $isActive={answer.isActive}
+        type={"main"}
+        text={() => (
+          <AnswerText>
+            <Number>{answer.id}</Number>
+            <TextSm>{answer.text}</TextSm>
+          </AnswerText>
+        )}
+      />
+    ))}
+  </Wrapper>
 );

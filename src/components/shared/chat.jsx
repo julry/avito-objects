@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { Message } from './message';
-import { message } from './keyframes';
+import styled from "styled-components";
+import { Message } from "./message";
+import { message } from "./keyframes";
 
 const MessageStyled = styled(Message)`
   transform-origin: 0 100%;

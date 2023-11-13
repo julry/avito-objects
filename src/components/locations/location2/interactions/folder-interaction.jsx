@@ -1,13 +1,13 @@
-import { useState } from 'react';
-import styled from 'styled-components';
-import bookClosed from '../../../../assets/images/bookClosed.svg';
-import bookOpened from '../../../../assets/images/bookOpened.svg';
-import { useProgress } from '../../../../hooks/useProgress';
-import { SEX_TYPES } from '../../../../constants';
-import { ModalWrapper } from '../../../shared/modal-wrapper';
-import { PopUp } from '../../../shared/pop-up';
-import { TextMd } from '../../../shared/texts';
-import { Button, ButtonNoIcon } from '../../../shared/button';
+import { useState } from "react";
+import styled from "styled-components";
+import bookClosed from "../../../../assets/images/bookClosed.svg";
+import bookOpened from "../../../../assets/images/bookOpened.svg";
+import { useProgress } from "../../../../hooks/useProgress";
+import { SEX_TYPES } from "../../../../constants";
+import { ModalWrapper } from "../../../shared/modal-wrapper";
+import { PopUp } from "../../../shared/pop-up";
+import { TextMd } from "../../../shared/texts";
+import { Button, ButtonNoIcon } from "../../../shared/button";
 
 const Wrapper = styled.div`
   position: absolute;
@@ -20,7 +20,7 @@ const Wrapper = styled.div`
 `;
 
 const Question = styled.div`
-  visibility: ${({$isOpened}) => $isOpened ? 'hidden' : 'visible'};
+  visibility: ${({ $isOpened }) => ($isOpened ? "hidden" : "visible")};
 `;
 
 const Book = styled.div`
@@ -65,39 +65,47 @@ const CloseBtn = styled(Button)`
   margin-top: min(33px, 8.8vw);
 `;
 
-export const FolderInteraction = ({onClose}) => {
-    const { sex } = useProgress();
-    const [isOpened, setIsOpened] = useState(false);
+export const FolderInteraction = ({ onClose }) => {
+  const { sex } = useProgress();
+  const [isOpened, setIsOpened] = useState(false);
 
-    return (
-        <ModalWrapper>
-            <Wrapper>
-                <Question $isOpened={isOpened}>
-                    <PopUp title={'Папка «Выгодно»'}>
-                        <TextMd>
-                            В папке должно быть что-то полезное... в{'\u00A0'}теории.
-                            Но она закрытая, а{'\u00A0'}еще на{'\u00A0'}ней имя твоего наставника.
-                            Не{'\u00A0'}похоже, что это официальные документы, бумага разноцветная…
-                        </TextMd>
-                        <BookClosed/>
-                    </PopUp>
-                    <ButtonsWrapper>
-                        <ButtonStyled $color={'blue'} onClick={() => setIsOpened(true)}>Открыть</ButtonStyled>
-                        <ButtonStyled $color={'red'} onClick={onClose}>Не открывать</ButtonStyled>
-                    </ButtonsWrapper>
-                </Question>
-                {isOpened && (
-                    <Opened>
-                        <PopUp>
-                            <TextMd>
-                                Ой, кажется, это гид по интересным странам и выгодным маршрутам… Зря открыл{sex === SEX_TYPES.female ? 'а' : ''}
-                            </TextMd>
-                            <BookOpened />
-                        </PopUp>
-                        <CloseBtn type="light" onClick={onClose}>Упс</CloseBtn>
-                    </Opened>
-                )}
-            </Wrapper>
-        </ModalWrapper>
-    );
+  return (
+    <ModalWrapper>
+      <Wrapper>
+        <Question $isOpened={isOpened}>
+          <PopUp title={"Папка «Выгодно»"}>
+            <TextMd>
+              В папке должно быть что-то полезное... в{"\u00A0"}теории. Но она
+              закрытая, а{"\u00A0"}еще на{"\u00A0"}ней имя твоего наставника. Не
+              {"\u00A0"}похоже, что это официальные документы, бумага
+              разноцветная…
+            </TextMd>
+            <BookClosed />
+          </PopUp>
+          <ButtonsWrapper>
+            <ButtonStyled $color={"blue"} onClick={() => setIsOpened(true)}>
+              Открыть
+            </ButtonStyled>
+            <ButtonStyled $color={"red"} onClick={onClose}>
+              Не открывать
+            </ButtonStyled>
+          </ButtonsWrapper>
+        </Question>
+        {isOpened && (
+          <Opened>
+            <PopUp>
+              <TextMd>
+                Ой, кажется, это гид по интересным странам и выгодным маршрутам…
+                Зря открыл{sex === SEX_TYPES.female ? "а" : ""}
+              </TextMd>
+              <BookOpened />
+            </PopUp>
+            <CloseBtn type="light" onClick={onClose}>
+              Упс
+            </CloseBtn>
+          </Opened>
+        )}
+      </Wrapper>
+    </ModalWrapper>
+  );
 };

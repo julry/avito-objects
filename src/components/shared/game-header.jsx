@@ -1,12 +1,12 @@
-import { useState } from 'react';
-import styled from 'styled-components';
-import logo from '../../assets/images/logo.svg';
-import info from '../../assets/images/infoSign.svg';
-import { Rules } from '../locations/rules';
-import { useProgress } from '../../hooks/useProgress';
-import { TOTAL_OBJECTS } from '../../constants';
-import { ButtonNoIcon } from './button';
-import { reachMetrikaGoal } from '../../utils/reachMetrikaGoal';
+import { useState } from "react";
+import styled from "styled-components";
+import logo from "../../assets/images/logo.svg";
+import info from "../../assets/images/infoSign.svg";
+import { reachMetrikaGoal } from "../../utils/reachMetrikaGoal";
+import { Rules } from "../locations/rules";
+import { useProgress } from "../../hooks/useProgress";
+import { TOTAL_OBJECTS } from "../../constants";
+import { ButtonNoIcon } from "./button";
 
 const Wrapper = styled.div`
   position: absolute;
@@ -50,35 +50,40 @@ const InfoButton = styled.div`
   height: min(23px, 6.1vw);
   background: url(${info}) no-repeat center center;
   background-size: cover;
-  opacity: ${({disabled}) => disabled ? 0.2 : 1};
+  opacity: ${({ disabled }) => (disabled ? 0.2 : 1)};
   margin-left: 20px;
 `;
 
 export const GameHeader = ({ isRules }) => {
-    const [isShownRules, setIsShownRules] = useState(isRules);
-    const { pickedObjects, isFinished, setToQuestionScreen } = useProgress();
+  const [isShownRules, setIsShownRules] = useState(isRules);
+  const { pickedObjects, isFinished, setToQuestionScreen } = useProgress();
 
-    const handleAnswer = () => {
-      reachMetrikaGoal('answer2');
-      setToQuestionScreen();
-    };
+  const handleAnswer = () => {
+    reachMetrikaGoal("answer2");
+    setToQuestionScreen();
+  };
 
-    return (
-        <>
-            <Wrapper>
-                <LogoStyled />
-                <InfoWrapper>
-                    {isFinished ? (
-                        <ButtonNoIcon type='action' onClick={handleAnswer}>Дать ответ</ButtonNoIcon>
-                    ) : (
-                        <Count>
-                            <Picked>{pickedObjects?.length ?? 0}</Picked>/{TOTAL_OBJECTS}
-                        </Count>
-                    )}
-                    <InfoButton onClick={() => setIsShownRules(true)} disabled={isShownRules}/>
-                </InfoWrapper>
-            </Wrapper>
-            {isShownRules && <Rules onClose={() => setIsShownRules(false)}/>}
-        </>
-    );
+  return (
+    <>
+      <Wrapper>
+        <LogoStyled />
+        <InfoWrapper>
+          {isFinished ? (
+            <ButtonNoIcon type="action" onClick={handleAnswer}>
+              Дать ответ
+            </ButtonNoIcon>
+          ) : (
+            <Count>
+              <Picked>{pickedObjects?.length ?? 0}</Picked>/{TOTAL_OBJECTS}
+            </Count>
+          )}
+          <InfoButton
+            onClick={() => setIsShownRules(true)}
+            disabled={isShownRules}
+          />
+        </InfoWrapper>
+      </Wrapper>
+      {isShownRules && <Rules onClose={() => setIsShownRules(false)} />}
+    </>
+  );
 };

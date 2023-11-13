@@ -1,6 +1,6 @@
 export const SEX_TYPES = {
-    female: 'female',
-    male: 'male',
+  female: "female",
+  male: "male",
 };
 
 export const POPUP_DELAY = 2200;

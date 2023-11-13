@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Input = styled.input`
   outline: none;
@@ -7,7 +7,7 @@ export const Input = styled.input`
   padding: 12px;
   font-size: 16px;
   border-radius: 12px;
-  
+
   @media screen and (max-height: 700px) {
     font-size: 15px;
   }

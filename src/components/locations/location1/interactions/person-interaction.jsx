@@ -1,9 +1,9 @@
-import styled from 'styled-components';
-import { ModalWrapper } from '../../../shared/modal-wrapper';
-import { FlexWrapper } from '../../../shared/flex-wrapper';
-import { Chat } from '../../../shared/chat';
-import { Button } from '../../../shared/button';
-import { getPersonMessages } from '../utils';
+import styled from "styled-components";
+import { ModalWrapper } from "../../../shared/modal-wrapper";
+import { FlexWrapper } from "../../../shared/flex-wrapper";
+import { Chat } from "../../../shared/chat";
+import { Button } from "../../../shared/button";
+import { getPersonMessages } from "../utils";
 
 const Wrapper = styled(FlexWrapper)`
   height: 100%;
@@ -18,10 +18,12 @@ const ButtonStyled = styled(Button)`
 `;
 
 export const PersonInteraction = ({ onClose, sex }) => (
-    <ModalWrapper>
-        <Wrapper>
-            <Chat messages={getPersonMessages(sex)} />
-            <ButtonStyled type="light" onClick={onClose}>Вернуться к работе</ButtonStyled>
-        </Wrapper>
-    </ModalWrapper>
-)
+  <ModalWrapper>
+    <Wrapper>
+      <Chat messages={getPersonMessages(sex)} />
+      <ButtonStyled type="light" onClick={onClose}>
+        Вернуться к работе
+      </ButtonStyled>
+    </Wrapper>
+  </ModalWrapper>
+);

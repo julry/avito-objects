@@ -1,13 +1,14 @@
-import styled from 'styled-components';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import bg from '../../assets/images/questionBg.svg';
-import { LogoHead } from '../shared/logo-head';
-import { TextDivider, TextMd, TextSm, UnderlinedText } from '../shared/texts';
-import { Button } from '../shared/button';
-import { useState } from 'react';
-import { useProgress } from '../../hooks/useProgress';
-import { reachMetrikaGoal } from '../../utils/reachMetrikaGoal';
+import { useState } from "react";
+import styled from "styled-components";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import bg from "../../assets/images/questionBg.svg";
+import { useProgress } from "../../hooks/useProgress";
+import { reachMetrikaGoal } from "../../utils/reachMetrikaGoal";
+import { LogoHead } from "../shared/logo-head";
+import { TextDivider, TextMd, TextSm, UnderlinedText } from "../shared/texts";
+import { Button } from "../shared/button";
+
 
 const Wrapper = styled.div`
   height: 100%;
@@ -59,82 +60,88 @@ const ButtonWrapper = styled.div`
 `;
 
 export const Screen7 = () => {
-    const { next, updateProgress } = useProgress();
-    const [chosenAnswer, setChosenAnswer] = useState(0);
+  const { next, updateProgress } = useProgress();
+  const [chosenAnswer, setChosenAnswer] = useState(0);
 
-    const handleNext = () => {
-        if (chosenAnswer === 0) {
-            reachMetrikaGoal('right');
-            updateProgress({isFinalCorrect: true})
-        } else {
-            reachMetrikaGoal('wrong' + chosenAnswer);
-        }
-        next();
-    };
+  const handleNext = () => {
+    if (chosenAnswer === 0) {
+      reachMetrikaGoal("right");
+      updateProgress({ isFinalCorrect: true });
+    } else {
+      reachMetrikaGoal("wrong" + chosenAnswer);
+    }
+    next();
+  };
 
-    return (
-        <>
-            <Wrapper>
-                <LogoHead $centered/>
-                <TextWrapper>
-                    <TextMd>
-                        Итак, твоей задачей было предложить решение, которое поможет компании
-                        «Дивные диваны» <UnderlinedText color="blue">увеличить количество продаж их основного товара</UnderlinedText>
-                         — диванов.
-                        <TextDivider />
-                        Что выберешь?
-                    </TextMd>
-                </TextWrapper>
-                <SliderStyled
-                    centeredSlides
-                    grabCursor
-                    mousewheel
-                    spaceBetween={20}
-                    slidesPerView={1.3}
-                    onSlideChange={(s) => setChosenAnswer(s.activeIndex)}
-                >
-                    <SwiperSlide>
-                        {({ isActive }) => (
-                            <Answer $isActive={isActive}>
-                                <Title>a</Title>
-                                <TextMd>
-                                    Нужно предложить «Дивным диванам» оформить максимальный тариф.
-                                    Тогда они смогут выделить свой бренд на фоне конкурентов за счет
-                                    оформления магазина и скрытия предложений других компаний из блока рекомендаций.
-                                </TextMd>
-                            </Answer>
-                        )}
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        {({ isActive }) => (
-                            <Answer $isActive={isActive}>
-                                <Title>б</Title>
-                                <TextMd>
-                                    Я предложу «Дивным диванам» поставить все товары по скидке.
-                                    Тогда они будут дешевле, чем товары конкурентов, а соответственно —
-                                    будут лучше продаваться в такой сезон.
-                                </TextMd>
-                            </Answer>
-                        )}
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        {({ isActive }) => (
-                            <Answer $isActive={isActive}>
-                                <Title>в</Title>
-                                <TextMd>
-                                    Я думаю, «Дивным диванам» нужно оформить базовый тариф.
-                                    Тогда они получат доступ к расширенной статистике и будут знать, 
-                                    на что обращают внимание клиенты.
-                                </TextMd>
-                            </Answer>
-                        )}
-                    </SwiperSlide>
-                </SliderStyled>
-                <ButtonWrapper>
-                    <Button type="dark" onClick={handleNext}>Сделать выбор</Button>
-                </ButtonWrapper>
-            </Wrapper>
-            <Background />
-        </>
-    );
+  return (
+    <>
+      <Wrapper>
+        <LogoHead $centered />
+        <TextWrapper>
+          <TextMd>
+            Итак, твоей задачей было предложить решение, которое поможет
+            компании «Дивные диваны»{" "}
+            <UnderlinedText color="blue">
+              увеличить количество продаж их основного товара
+            </UnderlinedText>
+            — диванов.
+            <TextDivider />
+            Что выберешь?
+          </TextMd>
+        </TextWrapper>
+        <SliderStyled
+          centeredSlides
+          grabCursor
+          mousewheel
+          spaceBetween={20}
+          slidesPerView={1.3}
+          onSlideChange={(s) => setChosenAnswer(s.activeIndex)}
+        >
+          <SwiperSlide>
+            {({ isActive }) => (
+              <Answer $isActive={isActive}>
+                <Title>a</Title>
+                <TextMd>
+                  Нужно предложить «Дивным диванам» оформить максимальный тариф.
+                  Тогда они смогут выделить свой бренд на фоне конкурентов за
+                  счет оформления магазина и скрытия предложений других компаний
+                  из блока рекомендаций.
+                </TextMd>
+              </Answer>
+            )}
+          </SwiperSlide>
+          <SwiperSlide>
+            {({ isActive }) => (
+              <Answer $isActive={isActive}>
+                <Title>б</Title>
+                <TextMd>
+                  Я предложу «Дивным диванам» поставить все товары по скидке.
+                  Тогда они будут дешевле, чем товары конкурентов, а
+                  соответственно — будут лучше продаваться в такой сезон.
+                </TextMd>
+              </Answer>
+            )}
+          </SwiperSlide>
+          <SwiperSlide>
+            {({ isActive }) => (
+              <Answer $isActive={isActive}>
+                <Title>в</Title>
+                <TextMd>
+                  Я думаю, «Дивным диванам» нужно оформить базовый тариф. Тогда
+                  они получат доступ к расширенной статистике и будут знать, на
+                  что обращают внимание клиенты.
+                </TextMd>
+              </Answer>
+            )}
+          </SwiperSlide>
+        </SliderStyled>
+        <ButtonWrapper>
+          <Button type="dark" onClick={handleNext}>
+            Сделать выбор
+          </Button>
+        </ButtonWrapper>
+      </Wrapper>
+      <Background />
+    </>
+  );
 };

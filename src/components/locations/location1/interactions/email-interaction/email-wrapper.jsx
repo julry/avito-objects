@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Wrapper = styled.div`
   position: absolute;
@@ -30,14 +30,14 @@ const FakeButton = styled.div`
 `;
 
 export const EmailWrapper = ({ children }) => (
-    <Wrapper>
-        <Header>
-            <ButtonsWrapper>
-                <FakeButton color={'green'}/>
-                <FakeButton color={'purple'}/>
-                <FakeButton color={'red'}/>
-            </ButtonsWrapper>
-        </Header>
-        {children}
-    </Wrapper>
+  <Wrapper>
+    <Header>
+      <ButtonsWrapper>
+        <FakeButton color={"green"} />
+        <FakeButton color={"purple"} />
+        <FakeButton color={"red"} />
+      </ButtonsWrapper>
+    </Header>
+    {children}
+  </Wrapper>
 );

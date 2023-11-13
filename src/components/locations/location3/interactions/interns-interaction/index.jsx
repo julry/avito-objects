@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import styled from 'styled-components';
-import interns from '../../../../../assets/images/interns.svg';
-import { LocationStart } from '../../../../shared/location-start';
-import { QuestionChat } from './question-chat';
+import { useState } from "react";
+import styled from "styled-components";
+import interns from "../../../../../assets/images/interns.svg";
+import { LocationStart } from "../../../../shared/location-start";
+import { QuestionChat } from "./question-chat";
 
 const People = styled.div`
   position: absolute;
@@ -15,20 +15,20 @@ const People = styled.div`
   z-index: 101;
 `;
 
-export const InternsInteraction = ({onClose}) => {
-    const [stage, setStage] = useState(0);
+export const InternsInteraction = ({ onClose }) => {
+  const [stage, setStage] = useState(0);
 
-    return (
-        <>
-            {stage === 0 && (
-                <LocationStart
-                    title={'Встреча со стажерами'}
-                    text={'Интересно, о чем они\nразговаривают?'}
-                    onDisappear={() => setStage(prevStage => prevStage + 1)}
-                />
-            )}
-            {stage === 1 && (<QuestionChat onClose={onClose} />)}
-            {stage === 0 && <People />}
-        </>
-    );
+  return (
+    <>
+      {stage === 0 && (
+        <LocationStart
+          title={"Встреча со стажерами"}
+          text={"Интересно, о чем они\nразговаривают?"}
+          onDisappear={() => setStage((prevStage) => prevStage + 1)}
+        />
+      )}
+      {stage === 1 && <QuestionChat onClose={onClose} />}
+      {stage === 0 && <People />}
+    </>
+  );
 };
