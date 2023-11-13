@@ -35,11 +35,11 @@ export const PhoneHand = ({ onClick, ...props }) => (
             <path d="M135.148 463.544C134.64 463.876 133.793 464.622 133.617 465.916C133.395 467.795 132.665 470.089 129.549 470.069L116.033 469.985C116.033 469.985 113.633 469.971 110.56 469.952L97.044 469.868C93.9283 469.848 93.2267 467.546 93.0279 465.665C92.9096 464.369 92.03 463.611 91.5269 463.274L135.148 463.544Z" fill="#2D2B2B"/>
             <path d="M115.085 466.804L106.074 466.748C105.695 466.746 105.402 466.452 105.405 466.076C105.407 465.7 105.703 465.409 106.082 465.411L115.093 465.467C115.472 465.47 115.765 465.764 115.762 466.14C115.76 466.516 115.463 466.807 115.085 466.804Z" fill="white"/>
             <path d="M121.152 466.174C121.146 467.051 120.426 467.715 119.584 467.71C118.7 467.704 118.031 466.99 118.036 466.154C118.041 465.277 118.761 464.613 119.603 464.618C120.446 464.581 121.157 465.296 121.152 466.174Z" fill="white"/>
-            <path d="M78.8501 477.317L82.8505 477.342" stroke="white" stroke-width="1.4607" stroke-miterlimit="10" stroke-linecap="round"/>
-            <path d="M80.2296 478.956L78.6396 477.316L80.2496 475.738" stroke="white" stroke-width="1.4607" stroke-miterlimit="10" stroke-linecap="round"/>
-            <path d="M143.196 476.128L147.197 476.153" stroke="white" stroke-width="1.4607" stroke-miterlimit="10" stroke-linecap="round"/>
-            <path d="M143.187 477.716L147.187 477.741" stroke="white" stroke-width="1.4607" stroke-miterlimit="10" stroke-linecap="round"/>
-            <path d="M143.176 479.345L147.177 479.37" stroke="white" stroke-width="1.4607" stroke-miterlimit="10" stroke-linecap="round"/>
+            <path d="M78.8501 477.317L82.8505 477.342" stroke="white" strokeWidth="1.4607" strokeMiterlimit="10" strokeLinecap="round"/>
+            <path d="M80.2296 478.956L78.6396 477.316L80.2496 475.738" stroke="white" strokeWidth="1.4607" strokeMiterlimit="10" strokeLinecap="round"/>
+            <path d="M143.196 476.128L147.197 476.153" stroke="white" strokeWidth="1.4607" strokeMiterlimit="10" strokeLinecap="round"/>
+            <path d="M143.187 477.716L147.187 477.741" stroke="white" strokeWidth="1.4607" strokeMiterlimit="10" strokeLinecap="round"/>
+            <path d="M143.176 479.345L147.177 479.37" stroke="white" strokeWidth="1.4607" strokeMiterlimit="10" strokeLinecap="round"/>
             <path d="M146.376 520.143L96.6079 519.835C93.1553 519.813 90.3935 517.039 90.4147 513.613L90.4368 510.061C90.458 506.636 93.254 503.895 96.7066 503.917L140.243 504.187C143.696 504.208 146.458 506.983 146.436 510.409L146.376 520.143Z" fill="#00AAFF"/>
             <g opacity="0.5">
                 <path d="M140.791 510.833L96.118 510.556C95.3601 510.552 94.7324 509.921 94.7371 509.169C94.7417 508.417 95.3772 507.794 96.1351 507.799L140.85 508.076C141.608 508.081 142.236 508.711 142.231 509.464C142.184 510.257 141.591 510.838 140.791 510.833Z" fill="url(#paint1_linear_379_15572)"/>
@@ -83,8 +83,8 @@ export const PhoneHand = ({ onClick, ...props }) => (
             <path d="M59.9908 527.328C57.158 528.271 54.835 529.965 52.9305 532.224C50.7285 534.836 48.7979 537.704 46.7649 540.466C42.9776 545.589 38.9993 550.725 36.7551 556.775C36.5769 557.249 37.3267 557.49 37.49 557.033C39.6246 551.277 43.393 546.362 47.0022 541.458C48.9178 538.863 50.7976 536.206 52.7797 533.655C54.747 531.12 57.0671 529.123 60.1506 528.101C60.6351 527.927 60.4752 527.155 59.9908 527.328Z" fill="#2C2334"/>
         </g>
         <defs>
-            <filter id="filter0_d_505_6031" x="32.1685" y="449.144" width="79.1006" height="79.1003" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+            <filter id="filter0_d_505_6031" x="32.1685" y="449.144" width="79.1006" height="79.1003" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
                 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix>
                 <feOffset dy="4"></feOffset>
                 <feGaussianBlur stdDeviation="7.5"></feGaussianBlur>
@@ -93,8 +93,8 @@ export const PhoneHand = ({ onClick, ...props }) => (
                 <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_505_6031"></feBlend>
                 <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_505_6031" result="shape"></feBlend>
             </filter>
-            <filter id="filter0_d_379_15572" x="52.2432" y="459.559" width="54.0034" height="54.0032" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <filter id="filter0_d_379_15572" x="52.2432" y="459.559" width="54.0034" height="54.0032" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
                 <feOffset/>
                 <feGaussianBlur stdDeviation="7.5"/>
@@ -105,12 +105,12 @@ export const PhoneHand = ({ onClick, ...props }) => (
             </filter>
             <linearGradient id="paint0_linear_379_15572" x1="113.248" y1="479.91" x2="113.236" y2="481.752" gradientUnits="userSpaceOnUse">
                 <stop stopColor="#222221"/>
-                <stop offset="0.0965512" stopColor="#292928" stop-opacity="0.9034"/>
-                <stop offset="0.2377" stopColor="#3C3C3C" stop-opacity="0.7623"/>
-                <stop offset="0.4062" stopColor="#5C5C5C" stop-opacity="0.5938"/>
-                <stop offset="0.5959" stopColor="#898988" stop-opacity="0.4041"/>
-                <stop offset="0.8003" stopColor="#C1C1C1" stop-opacity="0.1997"/>
-                <stop offset="1" stopColor="white" stop-opacity="0"/>
+                <stop offset="0.0965512" stopColor="#292928" stopOpacity="0.9034"/>
+                <stop offset="0.2377" stopColor="#3C3C3C" stopOpacity="0.7623"/>
+                <stop offset="0.4062" stopColor="#5C5C5C" stopOpacity="0.5938"/>
+                <stop offset="0.5959" stopColor="#898988" stopOpacity="0.4041"/>
+                <stop offset="0.8003" stopColor="#C1C1C1" stopOpacity="0.1997"/>
+                <stop offset="1" stopColor="white" stopOpacity="0"/>
             </linearGradient>
             <linearGradient id="paint1_linear_379_15572" x1="106.383" y1="497.199" x2="130.355" y2="521.659" gradientUnits="userSpaceOnUse">
                 <stop stopColor="white"/>

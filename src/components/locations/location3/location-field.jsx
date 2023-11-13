@@ -2278,7 +2278,7 @@ export const LocationField = ({ onObjectClick, ...props }) => (
           />
         </g>
         <g id="laptop_maxim">
-          <g clip-path="url(#clip0_511_2)">
+          <g clipPath="url(#clip0_511_2)">
             <rect
               x="164.501"
               y="467.839"
@@ -2543,20 +2543,20 @@ export const LocationField = ({ onObjectClick, ...props }) => (
           />
         </g>
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M122.91 453.148C120.987 453.99 120.114 456.221 120.955 458.144L123.236 463.358C124.073 465.269 126.309 466.154 128.232 465.312L128.811 465.059C130.723 464.223 131.603 461.974 130.766 460.063L128.485 454.85C127.644 452.927 125.401 452.059 123.489 452.895L122.91 453.148Z"
           fill="white"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M136.233 447.32C134.309 448.161 133.436 450.393 134.278 452.316L136.558 457.529C137.395 459.44 139.631 460.325 141.554 459.484L142.134 459.23C144.045 458.394 144.925 456.146 144.089 454.234L141.808 449.021C140.966 447.098 138.723 446.23 136.812 447.066L136.233 447.32Z"
           fill="white"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M125.915 444.243C122.069 445.925 120.322 450.388 122.005 454.235L124.286 459.448L121.969 460.461L119.688 455.248C117.448 450.128 119.781 444.166 124.901 441.926L127.218 440.912C132.327 438.677 138.3 441.004 140.541 446.125L142.822 451.338L140.505 452.352L138.224 447.139C136.541 443.292 132.066 441.551 128.232 443.229L125.915 444.243Z"
           fill="white"
         />
@@ -2602,9 +2602,9 @@ export const LocationField = ({ onObjectClick, ...props }) => (
         width="91.0483"
         height="76.71"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -2655,9 +2655,9 @@ export const LocationField = ({ onObjectClick, ...props }) => (
         width="148.69"
         height="90.3457"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -2708,9 +2708,9 @@ export const LocationField = ({ onObjectClick, ...props }) => (
         width="87.9392"
         height="61.8735"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -2857,9 +2857,9 @@ export const LocationField = ({ onObjectClick, ...props }) => (
         width="91.0483"
         height="76.71"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+        <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -2892,9 +2892,9 @@ export const LocationField = ({ onObjectClick, ...props }) => (
         width="148.69"
         height="90.3457"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+        <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -2927,9 +2927,9 @@ export const LocationField = ({ onObjectClick, ...props }) => (
         width="87.9392"
         height="61.8735"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+        <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -2962,9 +2962,9 @@ export const LocationField = ({ onObjectClick, ...props }) => (
         width="67.4873"
         height="56.1484"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -2997,9 +2997,9 @@ export const LocationField = ({ onObjectClick, ...props }) => (
         width="134.458"
         height="83.1099"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -3032,9 +3032,9 @@ export const LocationField = ({ onObjectClick, ...props }) => (
         width="63.9692"
         height="44.1885"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -3068,8 +3068,8 @@ export const LocationField = ({ onObjectClick, ...props }) => (
         y2="551.784"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="white" />
-        <stop offset="1" stop-color="#231F20" />
+        <stop stopColor="white" />
+        <stop offset="1" stopColor="#231F20" />
       </linearGradient>
       <linearGradient
         id="paint1_linear_336_5863"
@@ -3079,7 +3079,7 @@ export const LocationField = ({ onObjectClick, ...props }) => (
         y2="642.567"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="white" />
+        <stop stopColor="white" />
         <stop offset="1" />
       </linearGradient>
       <clipPath id="clip0_336_5863">

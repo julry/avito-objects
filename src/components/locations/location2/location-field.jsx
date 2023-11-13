@@ -1597,7 +1597,7 @@ export const LocationField = ({ onObjectClick, ...props }) => (
                 <path d="M255.205 370.477C257.437 370.654 259.391 368.987 259.568 366.754C259.745 364.521 258.078 362.568 255.846 362.391C253.613 362.214 251.659 363.88 251.482 366.113C251.305 368.346 252.972 370.3 255.205 370.477Z" fill="white"/>
                 <path d="M255.205 370.477C252.144 370.234 249.345 371.724 247.774 374.123C246.546 375.996 248.288 378.065 250.521 378.242L258.606 378.883C260.839 379.06 262.885 377.292 261.968 375.248C260.794 372.631 258.265 370.719 255.205 370.477Z" fill="white"/>
             </g>
-            <g clip-path="url(#clip0_504_5)" id="note_object">
+            <g clipPath="url(#clip0_504_5)" id="note_object">
                 <path d="M274.578 495.473C272.029 493.931 267.434 491.563 264.699 490.432C255.876 486.801 255.916 493.361 247.105 489.73L253.96 504.697C255.43 508.052 258.2 510.618 261.282 512.41C264.364 514.202 267.76 515.29 271.132 516.378C279.012 518.9 288.254 547.622 296.134 550.145C293.731 536.123 283.937 501.151 274.578 495.473Z" fill="#FDBAA0"></path>
                 <path d="M241.533 520.246L246.345 518L247.253 517.579L251.576 515.561L260.019 511.621L273.274 505.435L274.898 504.679L283.695 526.309L283.229 527.273L283.193 527.331L283.089 527.555L282.949 527.837L281.876 530.069L280.407 533.1L280.781 533.188C280.781 533.188 284.512 537.306 288.304 541.493C288.879 542.128 289.442 542.751 290.005 543.374C291.35 544.862 292.635 546.281 293.675 547.423C294.408 548.23 295.02 548.911 295.448 549.384C295.852 549.834 296.097 550.099 296.121 550.134C296.252 553.167 301.17 566.502 306.589 580.357C310.831 591.227 315.392 602.408 318.189 609.211C318.189 609.211 318.19 609.223 318.202 609.234C318.951 611.034 319.563 612.532 320.013 613.623C320.15 613.948 320.275 614.25 320.375 614.505C320.243 614.507 320.026 614.51 319.738 614.514C318.86 614.537 317.382 614.591 315.903 614.634C315.47 614.652 315.037 614.657 314.617 614.675C314.148 614.692 313.691 614.698 313.282 614.715C312.922 614.72 312.597 614.736 312.321 614.74C311.96 614.745 311.683 614.748 311.515 614.75C311.118 614.744 310.733 614.737 310.336 614.731C308.592 614.696 306.811 614.637 304.981 614.545C304.536 614.527 304.103 614.498 303.657 614.48C301.515 614.357 299.323 614.199 297.071 613.995C296.698 613.965 296.337 613.935 295.951 613.893C294.169 613.73 292.338 613.532 290.482 613.311C290.145 613.269 289.819 613.227 289.482 613.184C287.699 612.963 285.891 612.718 284.046 612.439C283.962 612.428 283.866 612.418 283.781 612.396C283.733 612.385 283.673 612.374 283.625 612.374C283.42 612.342 283.215 612.31 283.01 612.277C282.841 612.256 282.672 612.224 282.491 612.203C280.997 611.977 279.466 611.775 277.924 611.574C277.598 611.532 277.273 611.489 276.936 611.447C275.887 611.309 274.827 611.183 273.755 611.057C273.405 611.015 273.056 610.973 272.706 610.931C272.297 610.878 271.875 610.837 271.465 610.784C271.031 610.731 270.598 610.69 270.164 610.637C269.08 610.511 267.984 610.397 266.887 610.284C266.562 610.253 266.237 610.21 265.9 610.18C265.707 610.159 265.514 610.138 265.333 610.117C264.9 610.076 264.466 610.024 264.02 609.983C263.683 609.952 263.346 609.922 263.021 609.879C262.869 607.033 262.669 604.164 262.433 601.331C262.285 599.512 262.114 597.716 261.93 595.944C261.066 587.353 259.947 579.442 259.093 573.943C259.013 573.454 258.946 572.988 258.879 572.545C258.84 572.301 258.8 572.068 258.772 571.846C258.733 571.614 258.693 571.392 258.666 571.171C258.334 569.109 258.07 567.607 257.926 566.803C257.899 566.64 257.873 566.5 257.847 566.396C257.821 566.233 257.807 566.139 257.807 566.139C257.795 566.14 257.795 566.128 257.783 566.128C257.541 566.038 257.299 565.936 257.045 565.834C256.815 565.744 256.597 565.653 256.355 565.552C254.77 564.895 253.025 564.055 251.37 562.757C248.205 560.278 245.376 556.148 244.669 548.465C244.655 548.301 244.64 548.15 244.626 547.998C244.584 547.602 244.542 547.217 244.488 546.821L244.488 546.809C244.446 546.46 244.393 546.11 244.339 545.761L244.339 545.714C244.312 545.563 244.286 545.411 244.272 545.26L244.271 545.225C244.27 545.178 244.258 545.143 244.257 545.097C244.257 545.073 244.244 545.038 244.244 545.015C243.356 539.669 241.684 534.917 240.04 531.215C239.854 530.797 239.667 530.391 239.493 530.008C239.493 529.996 239.48 529.985 239.48 529.973C239.431 529.869 239.381 529.776 239.331 529.671C237.356 525.519 235.61 523.032 235.61 523.032L241.533 520.246Z" fill="#FDBAA0"></path>
                 <path d="M251.399 563.13C254.234 565.252 257.586 566.621 261.118 567.134C261.431 567.177 261.448 566.698 261.135 566.656C257.687 566.152 254.42 564.795 251.658 562.73C251.415 562.546 251.156 562.947 251.399 563.13Z" fill="#2C2334"></path>
@@ -1721,13 +1721,13 @@ export const LocationField = ({ onObjectClick, ...props }) => (
                     <path d="M279.261 550.697L259.871 539.629C254.486 536.563 248.345 535.398 242.239 536.284L220.142 539.482C210.487 540.89 207.786 555.127 216.255 559.973L235.645 571.042C241.03 574.107 247.171 575.272 253.277 574.387L275.374 571.188C285.023 569.811 287.73 555.543 279.261 550.697Z" fill="#04E061"/>
                     <path d="M279.261 550.697L259.871 539.629C254.486 536.563 248.345 535.398 242.239 536.284L220.142 539.482C210.487 540.89 207.786 555.127 216.255 559.973L235.645 571.042C241.03 574.107 247.171 575.272 253.277 574.387L275.374 571.188C285.023 569.811 287.73 555.543 279.261 550.697Z" stroke="white"/>
                     </g>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M260.424 543.846C260.741 544.255 260.667 544.844 260.258 545.162L257.998 546.917C258.452 548.149 258.083 549.583 256.991 550.431L255.883 551.291L252.086 546.403L253.195 545.542C254.286 544.694 255.767 544.692 256.848 545.436L259.108 543.681C259.517 543.363 260.106 543.438 260.424 543.846ZM254.402 552.441L250.606 547.553L238.763 556.749L242.559 561.637L254.402 552.441ZM241.055 562.757L237.306 557.929C236.738 558.49 236.298 559.172 236.022 559.926L234.897 562.998C234.739 563.431 235.088 563.881 235.547 563.835L238.802 563.506C239.601 563.425 240.37 563.168 241.055 562.757ZM256.485 552.067L255.884 551.293L254.403 552.443L255.004 553.216C255.607 553.993 255.466 555.111 254.69 555.714L252.543 557.381C252.134 557.699 252.06 558.288 252.378 558.697C252.695 559.105 253.284 559.179 253.693 558.862L255.84 557.195C257.434 555.957 257.723 553.661 256.485 552.067Z" fill="white"/>
+                    <path fillRule="evenodd" clipRule="evenodd" d="M260.424 543.846C260.741 544.255 260.667 544.844 260.258 545.162L257.998 546.917C258.452 548.149 258.083 549.583 256.991 550.431L255.883 551.291L252.086 546.403L253.195 545.542C254.286 544.694 255.767 544.692 256.848 545.436L259.108 543.681C259.517 543.363 260.106 543.438 260.424 543.846ZM254.402 552.441L250.606 547.553L238.763 556.749L242.559 561.637L254.402 552.441ZM241.055 562.757L237.306 557.929C236.738 558.49 236.298 559.172 236.022 559.926L234.897 562.998C234.739 563.431 235.088 563.881 235.547 563.835L238.802 563.506C239.601 563.425 240.37 563.168 241.055 562.757ZM256.485 552.067L255.884 551.293L254.403 552.443L255.004 553.216C255.607 553.993 255.466 555.111 254.69 555.714L252.543 557.381C252.134 557.699 252.06 558.288 252.378 558.697C252.695 559.105 253.284 559.179 253.693 558.862L255.84 557.195C257.434 555.957 257.723 553.661 256.485 552.067Z" fill="white"/>
                 </g>
             </g>
         </g>
         <defs>
-            <filter id="filter0_dd_501_2" x="180.725" y="164.675" width="78.6738" height="66.7241" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <filter id="filter0_dd_501_2" x="180.725" y="164.675" width="78.6738" height="66.7241" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+            <feFlood floodOpacity="0" result="BackgroundImageFix"/>
             <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
             <feOffset/>
             <feGaussianBlur stdDeviation="7.5"/>
@@ -1742,8 +1742,8 @@ export const LocationField = ({ onObjectClick, ...props }) => (
             <feBlend mode="normal" in2="effect1_dropShadow_501_2" result="effect2_dropShadow_501_2"/>
             <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_501_2" result="shape"/>
             </filter>
-            <filter id="filter1_dd_501_2" x="263.163" y="223.734" width="108.07" height="82.7471" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <filter id="filter1_dd_501_2" x="263.163" y="223.734" width="108.07" height="82.7471" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+            <feFlood floodOpacity="0" result="BackgroundImageFix"/>
             <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
             <feOffset dy="4"/>
             <feGaussianBlur stdDeviation="10"/>
@@ -1758,8 +1758,8 @@ export const LocationField = ({ onObjectClick, ...props }) => (
             <feBlend mode="normal" in2="effect1_dropShadow_501_2" result="effect2_dropShadow_501_2"/>
             <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_501_2" result="shape"/>
             </filter>
-            <filter id="filter2_dd_501_2" x="213.815" y="340.244" width="84.1348" height="64.7354" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <filter id="filter2_dd_501_2" x="213.815" y="340.244" width="84.1348" height="64.7354" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+            <feFlood floodOpacity="0" result="BackgroundImageFix"/>
             <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
             <feOffset/>
             <feGaussianBlur stdDeviation="7.5"/>
@@ -1774,8 +1774,8 @@ export const LocationField = ({ onObjectClick, ...props }) => (
             <feBlend mode="normal" in2="effect1_dropShadow_501_2" result="effect2_dropShadow_501_2"/>
             <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_501_2" result="shape"/>
             </filter>
-            <filter id="filter3_d_501_2" x="190.681" y="517.495" width="114.152" height="79.6802" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <filter id="filter3_d_501_2" x="190.681" y="517.495" width="114.152" height="79.6802" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+            <feFlood floodOpacity="0" result="BackgroundImageFix"/>
             <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
             <feOffset dy="2"/>
             <feGaussianBlur stdDeviation="10"/>
@@ -1784,8 +1784,8 @@ export const LocationField = ({ onObjectClick, ...props }) => (
             <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_501_2"/>
             <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_501_2" result="shape"/>
             </filter>
-            <filter id="filter4_dd_501_2" x="195.681" y="520.495" width="104.152" height="69.6802" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <filter id="filter4_dd_501_2" x="195.681" y="520.495" width="104.152" height="69.6802" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+            <feFlood floodOpacity="0" result="BackgroundImageFix"/>
             <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
             <feOffset/>
             <feGaussianBlur stdDeviation="7.5"/>
@@ -1800,8 +1800,8 @@ export const LocationField = ({ onObjectClick, ...props }) => (
             <feBlend mode="normal" in2="effect1_dropShadow_501_2" result="effect2_dropShadow_501_2"/>
             <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_501_2" result="shape"/>
             </filter>
-            <filter id="filter0_d_504_5" x="175.604" y="163.675" width="88.6738" height="76.7241" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+            <filter id="filter0_d_504_5" x="175.604" y="163.675" width="88.6738" height="76.7241" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+            <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
             <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix>
             <feOffset dy="4"></feOffset>
             <feGaussianBlur stdDeviation="10"></feGaussianBlur>
@@ -1811,8 +1811,8 @@ export const LocationField = ({ onObjectClick, ...props }) => (
             <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_504_5" result="shape"></feBlend>
             </filter>
 
-            <filter id="filter2_d_504_5" x="267.712" y="224.734" width="99.7598" height="72.7471" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+            <filter id="filter2_d_504_5" x="267.712" y="224.734" width="99.7598" height="72.7471" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+            <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
             <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix>
             <feOffset></feOffset>
             <feGaussianBlur stdDeviation="7.5"></feGaussianBlur>
@@ -1821,8 +1821,8 @@ export const LocationField = ({ onObjectClick, ...props }) => (
             <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_504_5"></feBlend>
             <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_504_5" result="shape"></feBlend>
             </filter>
-            <filter id="filter3_d_504_5" x="263.041" y="223.734" width="108.07" height="82.7471" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+            <filter id="filter3_d_504_5" x="263.041" y="223.734" width="108.07" height="82.7471" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+            <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
             <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix>
             <feOffset dy="4"></feOffset>
             <feGaussianBlur stdDeviation="10"></feGaussianBlur>
@@ -1831,8 +1831,8 @@ export const LocationField = ({ onObjectClick, ...props }) => (
             <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_504_5"></feBlend>
             <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_504_5" result="shape"></feBlend>
             </filter>
-            <filter id="filter4_d_504_5" x="213.694" y="340.244" width="84.1349" height="64.7354" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+            <filter id="filter4_d_504_5" x="213.694" y="340.244" width="84.1349" height="64.7354" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+            <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
             <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix>
             <feOffset></feOffset>
             <feGaussianBlur stdDeviation="7.5"></feGaussianBlur>
@@ -1841,8 +1841,8 @@ export const LocationField = ({ onObjectClick, ...props }) => (
             <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_504_5"></feBlend>
             <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_504_5" result="shape"></feBlend>
             </filter>
-            <filter id="filter5_d_504_5" x="213.694" y="344.244" width="84.1349" height="64.7354" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+            <filter id="filter5_d_504_5" x="213.694" y="344.244" width="84.1349" height="64.7354" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+            <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
             <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix>
             <feOffset dy="4"></feOffset>
             <feGaussianBlur stdDeviation="7.5"></feGaussianBlur>
@@ -1851,8 +1851,8 @@ export const LocationField = ({ onObjectClick, ...props }) => (
             <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_504_5"></feBlend>
             <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_504_5" result="shape"></feBlend>
             </filter>
-            <filter id="filter6_d_504_5" x="191.06" y="517.995" width="113.153" height="78.6802" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+            <filter id="filter6_d_504_5" x="191.06" y="517.995" width="113.153" height="78.6802" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+            <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
             <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix>
             <feOffset dy="2"></feOffset>
             <feGaussianBlur stdDeviation="10"></feGaussianBlur>
@@ -1861,8 +1861,8 @@ export const LocationField = ({ onObjectClick, ...props }) => (
             <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_504_5"></feBlend>
             <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_504_5" result="shape"></feBlend>
             </filter>
-            <filter id="filter7_d_504_5" x="196.06" y="520.995" width="103.153" height="68.6802" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+            <filter id="filter7_d_504_5" x="196.06" y="520.995" width="103.153" height="68.6802" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+            <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
             <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix>
             <feOffset></feOffset>
             <feGaussianBlur stdDeviation="7.5"></feGaussianBlur>
@@ -1874,7 +1874,7 @@ export const LocationField = ({ onObjectClick, ...props }) => (
             <clipPath id="clip0_504_5">
             <rect width="375" height="667" fill="white"></rect>
             </clipPath>
-            <filter id="filter0_d_334_3" x="170.725" y="154.676" width="98.6738" height="86.7241" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <filter id="filter0_d_334_3" x="170.725" y="154.676" width="98.6738" height="86.7241" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
                 <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
                 <feOffset/>
@@ -1884,7 +1884,7 @@ export const LocationField = ({ onObjectClick, ...props }) => (
                 <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_334_3"/>
                 <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_334_3" result="shape"/>
             </filter>
-            <filter id="filter1_d_334_3" x="263.736" y="222.09" width="106.568" height="84.6636" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <filter id="filter1_d_334_3" x="263.736" y="222.09" width="106.568" height="84.6636" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
                 <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
                 <feOffset/>
@@ -1894,7 +1894,7 @@ export const LocationField = ({ onObjectClick, ...props }) => (
                 <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_334_3"/>
                 <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_334_3" result="shape"/>
             </filter>
-            <filter id="filter2_d_334_3" x="223.047" y="345.075" width="64.5757" height="48.3008" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <filter id="filter2_d_334_3" x="223.047" y="345.075" width="64.5757" height="48.3008" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
                 <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
                 <feOffset/>
@@ -1904,7 +1904,7 @@ export const LocationField = ({ onObjectClick, ...props }) => (
                 <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_334_3"/>
                 <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_334_3" result="shape"/>
             </filter>
-            <filter id="filter3_d_334_3" x="89.9336" y="576.166" width="103.153" height="68.6797" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <filter id="filter3_d_334_3" x="89.9336" y="576.166" width="103.153" height="68.6797" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
                 <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
                 <feOffset/>

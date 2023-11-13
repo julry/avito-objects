@@ -43,7 +43,7 @@ export const getMessages = (question1, question2, sex) => [
         delay: 600,
     },
     {
-        id: 'phone_chat_5',
+        id: 'video_chat_2',
         sender: 'Я',
         type: 'main',
         avatar: sex === SEX_TYPES.female ? playerF : player,
@@ -52,7 +52,7 @@ export const getMessages = (question1, question2, sex) => [
         delay: 1400,
     },
     {
-        id: 'phone_chat_5',
+        id: 'video_chat_3',
         sender: 'Спикер',
         avatar: speaker,
         color: 'green',
