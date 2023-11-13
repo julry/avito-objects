@@ -73,6 +73,7 @@ const Answer = styled.div`
 
 const Number = styled(TextSm)`
   color: var(--main_blue);
+  width: 1ex;
   margin-right: min(14px, 3.7vw);
 `;
 
@@ -144,7 +145,7 @@ export const PosterInteraction = ({onClose}) => {
                         </AdditionalText>
                     )}
                 </Answer>
-                <Button type={'light'} onClick={handleClick}>
+                <Button type={'light'} onClick={handleClick} disabled={!answer}>
                     {!isAnswered ? 'Выбрать' : answer === 1 ? 'Супер' : 'Теперь понятно'}
                 </Button>
             </Wrapper>

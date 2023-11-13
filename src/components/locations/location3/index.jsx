@@ -40,6 +40,14 @@ const Wrapper = styled.div`
   & #maxim_inactive {
     display: ${({$isVideoHidden, $isLaptopInactive}) => $isVideoHidden && $isLaptopInactive ? 'block' : 'none'};
   }
+
+  & #cup_active {
+    display: ${({$isCupHidden}) => $isCupHidden ? 'block' : 'none'};
+  }
+
+  & #interact_cup {
+    display: ${({$isCupHidden}) => $isCupHidden ? 'block' : 'none'};
+  }
 `;
 
 export const Location3 = () => {

@@ -21,7 +21,7 @@ export const PersonInteraction = ({ onClose }) => (
     <ModalWrapper>
         <Wrapper>
             <Chat messages={getPersonMessages()} />
-            <ButtonStyled type="dark" onClick={onClose}>Вернуться к работе</ButtonStyled>
+            <ButtonStyled type="light" onClick={onClose}>Вернуться к работе</ButtonStyled>
         </Wrapper>
     </ModalWrapper>
 )

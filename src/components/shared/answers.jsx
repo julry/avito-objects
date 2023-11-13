@@ -42,7 +42,7 @@ export const Answers = (props) => (
                 text={() => (
             <AnswerText>
                 <Number>{answer.id}</Number>
-                <TextSm> {answer.text}</TextSm>
+                <TextSm>{answer.text}</TextSm>
             </AnswerText>
             )}
         />

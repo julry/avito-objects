@@ -38,7 +38,7 @@ export const VideoInteraction = ({ onClose, onChangePart }) => {
 
     useEffect(() => {
         if (part === 0)
-            $timeout.current = setTimeout(() => setPart(prevPart => prevPart + 1), 3000);
+            $timeout.current = setTimeout(() => setPart(prevPart => prevPart + 1), 6000);
 
         return () => {
             if ($timeout.current) {

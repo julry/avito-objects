@@ -1,10 +1,13 @@
 import styled from 'styled-components';
-import { ModalWrapper } from '../../../../shared/modal-wrapper';
-import { PopUp } from '../../../../shared/pop-up';
-import { FlexWrapper } from '../../../../shared/flex-wrapper';
-import { TextMd } from '../../../../shared/texts';
-import { Button } from '../../../../shared/button';
-import { Cup } from './cup';
+import { ModalWrapper } from '../../../shared/modal-wrapper';
+import { PopUp } from '../../../shared/pop-up';
+import { FlexWrapper } from '../../../shared/flex-wrapper';
+import { TextMd } from '../../../shared/texts';
+import { Button } from '../../../shared/button';
+
+const ModalWrapperStyled = styled(ModalWrapper)`
+    background: transparent;
+`;
 
 const Wrapper = styled(FlexWrapper)`
   width: 100%;
@@ -20,14 +23,9 @@ const ButtonStyled = styled(Button)`
   margin: var(--screen_padding) auto 0;
 `;
 
-const CupStyled = styled(Cup)`
-  position: absolute;
-  z-index: 1;
-  inset: 0;
-`;
 
 export const CupInteraction = ({onClose}) => (
-    <ModalWrapper>
+    <ModalWrapperStyled>
         <Wrapper>
             <PopUp title={'Взбодриться не помешает!'}>
                 <TextMd>
@@ -37,6 +35,5 @@ export const CupInteraction = ({onClose}) => (
             </PopUp>
             <ButtonStyled type={'light'} onClick={onClose}>Пили чай!</ButtonStyled>
         </Wrapper>
-        <CupStyled/>
-    </ModalWrapper>
+    </ModalWrapperStyled>
 );

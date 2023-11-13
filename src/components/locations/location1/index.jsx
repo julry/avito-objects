@@ -27,7 +27,7 @@ const Wrapper = styled.div`
   }
 
   & #email_loc1 {
-    opacity: ${({$isShowMonitor}) => $isShowMonitor ? 0 : 1};
+    opacity: ${({$isShowMonitor, $isHideAdditional}) => $isHideAdditional || $isShowMonitor ? 0 : 1};
   }
 `;
 

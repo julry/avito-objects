@@ -3,9 +3,8 @@ import { useState } from 'react';
 import { PopUp } from '../../../../shared/pop-up';
 import { TextDivider, TextSm } from '../../../../shared/texts';
 import { QuestionTitle } from '../../../../shared/question-title';
-import { MessageWrapper } from '../../../../shared/message-wrapper';
-import { FlexWrapper } from '../../../../shared/flex-wrapper';
 import { Button } from '../../../../shared/button';
+import { Answers } from '../../../../shared/answers';
 
 const PopupStyled = styled(PopUp)`
   width: 100%;
@@ -17,28 +16,8 @@ const QuestionTitleStyled = styled(QuestionTitle)`
   margin: calc(0.85 * var(--screen_padding)) auto min(14px, 3.2vw);
 `;
 
-const AnswersWrapper = styled(FlexWrapper)`
-  align-items: stretch;
-  margin-bottom: var(--screen_padding);
-`;
-
-const AnswerText = styled.div`
-  display: flex;
-  align-items: flex-start;
-`;
-
-const Answer = styled(MessageWrapper)`
-  padding: min(7px, 1.8vw) min(12px, 3.2vw) !important;
-  box-shadow: ${({$isActive}) => $isActive ? 'inset 0 0 0 3px var(--main_blue)' : ''};
-  
-  & + & {
-    margin-top: min(8px, 2vw);
-  }
-`;
-
-const Number = styled(TextSm)`
-  color: var(--main_blue);
-  margin-right: min(14px, 3.7vw);
+const ButtonStyled = styled(Button)`
+  margin-top: var(--screen_padding);
 `;
 
 export const QuestionVideo = ({ onNext }) => {
@@ -63,42 +42,29 @@ export const QuestionVideo = ({ onNext }) => {
                 </TextSm>
             </PopupStyled>
             <QuestionTitleStyled>Выбери два вопроса</QuestionTitleStyled>
-            <AnswersWrapper>
-                <Answer
-                    type="main"
-                    $isActive={questions.includes(1)}
-                    onClick={() => handlePickAnswer(1)}
-                    text={() => (
-                        <AnswerText>
-                            <Number>1</Number>
-                            <TextSm>А зачем нужно оформлять профиль?</TextSm>
-                        </AnswerText>
-                    )}
-                />
-                <Answer
-                    type="main"
-                    $isActive={questions.includes(2)}
-                    onClick={() => handlePickAnswer(2)}
-                    text={() => (
-                        <AnswerText>
-                            <Number>2</Number>
-                            <TextSm>Но что делать, если у клиента много конкурентов?</TextSm>
-                        </AnswerText>
-                    )}
-                />
-                <Answer
-                    type="main"
-                    $isActive={questions.includes(3)}
-                    onClick={() => handlePickAnswer(3)}
-                    text={() => (
-                        <AnswerText>
-                            <Number>3</Number>
-                            <TextSm>А что делать с диванами?</TextSm>
-                        </AnswerText>
-                    )}
-                />
-            </AnswersWrapper>
-            <Button type="light" onClick={handleClick} disabled={questions.length !== 2}>Выбрать</Button>
+            <Answers 
+                answers={[
+                    {
+                        id: '1',
+                        onClick: () => handlePickAnswer(1),
+                        isActive: questions.includes(1),
+                        text: 'А зачем нужно оформлять профиль?'
+                    },
+                    {
+                        id: '2',
+                        onClick: () => handlePickAnswer(2),
+                        isActive: questions.includes(2),
+                        text: 'Но что делать, если у клиента много конкурентов?'
+                    },
+                    {
+                        id: '3',
+                        onClick: () => handlePickAnswer(3),
+                        isActive: questions.includes(3),
+                        text: 'А что делать с диванами?'
+                    },
+                ]} 
+            />
+            <ButtonStyled type="light" onClick={handleClick} disabled={questions.length !== 2}>Выбрать</ButtonStyled>
         </>
     );
 };

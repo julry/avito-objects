@@ -51,6 +51,7 @@ const ButtonStyled = styled(ButtonNoIcon)`
   color: var(--main_${({$color}) => $color});
   padding-left: min(36px, 9.6vw);
   padding-right: min(36px, 9.6vw);
+  background: white;
 `;
 
 const Opened = styled.div`
