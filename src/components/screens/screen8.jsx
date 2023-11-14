@@ -145,7 +145,6 @@ export const Screen8 = () => {
   const [isSend, setIsSend] = useState(false);
   const [isSending, setIsSending] = useState(false);
   const [isCorrect, setIsCorrect] = useState(true);
-  const [isLinkClicked, setIsLinkClicked] = useState(false);
   const [isMetrikaClickedActive, setIsMetrikaClickedActive] = useState(false);
 
   const [email, setEmail] = useState("");
@@ -167,16 +166,9 @@ export const Screen8 = () => {
   };
 
   const handleOpenLink = () => {
-    setIsLinkClicked(true);
     if (!isMetrikaClickedActive) {
-      if (isSend) {
-        reachMetrikaGoal("respond1");
-        setIsMetrikaClickedActive(true);
-      }
-      if (!progress.isFinalCorrect) {
-        reachMetrikaGoal("respond2");
-        setIsMetrikaClickedActive(true);
-      }
+      reachMetrikaGoal("respond" + (!progress.isFinalCorrect + 1));
+      setIsMetrikaClickedActive(true);
     }
     window.open("https://career.avito.com/vacancies/prodazhi/1091/", "_blank");
   };
@@ -207,10 +199,6 @@ export const Screen8 = () => {
       .then(() => {
         setIsSend(true);
         reachMetrikaGoal("email");
-        if (!isMetrikaClickedActive && isLinkClicked) {
-          reachMetrikaGoal("respond1");
-          setIsMetrikaClickedActive(true);
-        }
       })
       .finally(() => {
         setIsSending(false);
