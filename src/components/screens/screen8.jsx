@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import bg from "../../assets/images/finalBg.svg";
+import bgWrong from "../../assets/images/finalBgWrong.svg";
 import { reachMetrikaGoal } from "../../utils/reachMetrikaGoal";
 import { useProgress } from "../../hooks/useProgress";
 import { SEX_TYPES } from "../../constants";
@@ -30,7 +31,7 @@ const TextWrapper = styled.div`
 const Background = styled.div`
   position: absolute;
   inset: 0;
-  background: url(${bg}) no-repeat;
+  background: url(${({ $isCorrect }) => ($isCorrect ? bg : bgWrong)}) no-repeat;
   background-size: cover;
 `;
 
@@ -225,12 +226,12 @@ export const Screen8 = () => {
               </>
             ) : (
               <>
-                <HighlightedText color="red">
+                <HighlightedText color="red" $isFirstWord>
                   Это неверный ответ
                 </HighlightedText>
-                ,{"\u00A0"}
-                но ты все равно отлично сегодня поработал
-                {progress.sex === SEX_TYPES.female ? "а" : ""}!
+                .{"\n"}
+                Лучшее решение — предложить максимальный тариф, чтобы качественно выделить бренд среди конкурентов.
+                Но ты все равно отлично сегодня поработал{progress.sex === SEX_TYPES.female ? "а" : ""}!
                 <TextDivider />
               </>
             )}
@@ -330,7 +331,7 @@ export const Screen8 = () => {
           </Form>
         )}
       </Wrapper>
-      <Background />
+      <Background $isCorrect={progress.isFinalCorrect} />
     </>
   );
 };

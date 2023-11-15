@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import styled, { keyframes } from "styled-components";
 import { ANIMATION_DURATION } from "../../constants";
 import { ModalWrapper } from "../shared/modal-wrapper";
@@ -44,17 +44,37 @@ const disappear = keyframes`
 `;
 
 const CloseRect = styled.div`
-  background: white;
-  width: 58px;
-  height: 6px;
-  border-radius: 20px;
+  position: relative;
+  width: 20px;
+  height: 20px;
   margin: 0 auto 8px;
   cursor: pointer;
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 8.5px;
+    background: white;
+    width: 3px;
+    height: 20px;
+    border-radius: 3px;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
 `;
 
 const CloseRectWrapper = styled.div`
-  padding: 15px 20px 0;
+  --paddingRight: min(20px, 5.3%);
+  padding: 15px calc(var(--paddingRight) + 7px) 0 20px;
   touch-action: none;
+  margin-left: auto;
 `;
 
 const Content = styled.div`
@@ -68,26 +88,6 @@ const Content = styled.div`
 
 export const Rules = ({ onClose }) => {
   const [isClosing, setIsClosing] = useState(false);
-  const $touch = useRef(null);
-
-  const handleTouchStart = (e) => {
-    e.preventDefault();
-    $touch.current = e?.touches[0].clientY;
-  };
-
-  const handleTouchEnd = (e) => {
-    if (e?.changedTouches[0].clientY >= $touch.current) handleClose();
-  };
-
-  const handleMouseDown = (e) => {
-    e.preventDefault();
-    $touch.current = e?.clientY;
-  };
-
-  const handleMouseUp = (e) => {
-    e.preventDefault();
-    if (e?.clientY >= $touch.current) handleClose();
-  };
 
   const handleClose = () => {
     if (isClosing) return;
@@ -97,12 +97,8 @@ export const Rules = ({ onClose }) => {
 
   return (
     <Wrapper>
-      <RulesWrapper $isClosing={isClosing} onMouseUp={handleMouseUp}>
-        <CloseRectWrapper
-          onMouseDown={handleMouseDown}
-          onTouchStart={handleTouchStart}
-          onTouchEnd={handleTouchEnd}
-        >
+      <RulesWrapper $isClosing={isClosing}>
+        <CloseRectWrapper onClick={handleClose}>
           <CloseRect />
         </CloseRectWrapper>
         <Content>
