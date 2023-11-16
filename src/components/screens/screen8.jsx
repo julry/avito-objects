@@ -171,7 +171,7 @@ export const Screen8 = () => {
       reachMetrikaGoal("respond" + (!progress.isFinalCorrect + 1));
       setIsMetrikaClickedActive(true);
     }
-    window.open("https://career.avito.com/vacancies/prodazhi/1091/", "_blank");
+    window.open("https://career.avito.com/vacancies/prodazhi/1091/?utm_source=fut&utm_medium=game", "_blank");
   };
 
   const handleSubmit = () => {
