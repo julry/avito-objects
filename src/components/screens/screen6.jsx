@@ -102,7 +102,7 @@ export const Screen6 = () => {
             <UnderlinedText color="blue">
               как помочь «Дивным диванам» повысить продажи,
             </UnderlinedText>
-            — поделись своими мыслями с бадди.
+            — поделись своими мыслями с наставником.
           </Text>
         </TextWrapper>
         <ButtonsWrapper>
