@@ -84,7 +84,7 @@ export const Screen7 = () => {
             <UnderlinedText color="blue">
               увеличить количество продаж их основного товара
             </UnderlinedText>
-            — диванов.
+            {" "}— диванов.
             <TextDivider />
             Что выберешь?
           </TextMd>
